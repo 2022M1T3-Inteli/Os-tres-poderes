@@ -1,0 +1,74 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://temas/selected_button_themes.tres" type="StyleBox" id=1]
+[ext_resource path="res://Cenas/Cenas de IU/MainMenu.gd" type="Script" id=2]
+[ext_resource path="res://temas/planalto-central.jpg" type="Texture" id=3]
+
+[node name="MainMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 1.0
+margin_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="B" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Margin" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Margin"]
+margin_left = 780.0
+margin_top = 212.0
+margin_right = 1280.0
+margin_bottom = 507.0
+rect_min_size = Vector2( 500, 0 )
+size_flags_horizontal = 8
+size_flags_vertical = 4
+custom_constants/separation = 35
+
+[node name="Start" type="Button" parent="Margin/VBoxContainer"]
+margin_left = 75.0
+margin_right = 425.0
+margin_bottom = 75.0
+rect_min_size = Vector2( 350, 75 )
+size_flags_horizontal = 4
+custom_styles/hover = ExtResource( 1 )
+text = "Começar o Jogo"
+
+[node name="Sobre" type="Button" parent="Margin/VBoxContainer"]
+margin_left = 75.0
+margin_top = 110.0
+margin_right = 425.0
+margin_bottom = 185.0
+rect_min_size = Vector2( 350, 75 )
+size_flags_horizontal = 4
+custom_styles/hover = ExtResource( 1 )
+text = "Sobre"
+
+[node name="Sair" type="Button" parent="Margin/VBoxContainer"]
+margin_left = 75.0
+margin_top = 220.0
+margin_right = 425.0
+margin_bottom = 295.0
+rect_min_size = Vector2( 350, 75 )
+size_flags_horizontal = 4
+custom_styles/hover = ExtResource( 1 )
+text = "Sair"
+
+[connection signal="pressed" from="Margin/VBoxContainer/Start" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Margin/VBoxContainer/Start" to="." method="_on_Start_pressed"]
+[connection signal="pressed" from="Margin/VBoxContainer/Sair" to="." method="_on_Button3_pressed"]

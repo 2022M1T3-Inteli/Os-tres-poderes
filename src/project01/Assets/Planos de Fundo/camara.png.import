@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/camara.png-36f44471bc7316de85e5c34346d45699.stex"
+path="res://.import/camara.png-15312665ba18525015357ec45341ec81.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://temas/camara.png"
-dest_files=[ "res://.import/camara.png-36f44471bc7316de85e5c34346d45699.stex" ]
+source_file="res://Assets/Planos de Fundo/camara.png"
+dest_files=[ "res://.import/camara.png-15312665ba18525015357ec45341ec81.stex" ]
 
 [params]
 

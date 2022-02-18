@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/planalto-central.jpg-c9131bbe93b5dbf4b9f316e9f0b95ff5.stex"
+path="res://.import/oval.jpg-f3ea96f59454dbf233ade2cd48b07dfd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://temas/planalto-central.jpg"
-dest_files=[ "res://.import/planalto-central.jpg-c9131bbe93b5dbf4b9f316e9f0b95ff5.stex" ]
+source_file="res://Assets/Planos de Fundo/oval.jpg"
+dest_files=[ "res://.import/oval.jpg-f3ea96f59454dbf233ade2cd48b07dfd.stex" ]
 
 [params]
 

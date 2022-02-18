@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://temas/moço2.png" type="Texture" id=1]
-[ext_resource path="res://temas/aceattorney.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Sprites/moço2.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Planos de Fundo/juiz.png" type="Texture" id=2]
 [ext_resource path="res://Cenas/Cenas Principais/Jurídico.gd" type="Script" id=3]
-[ext_resource path="res://temas/selected_button_themes.tres" type="StyleBox" id=4]
+[ext_resource path="res://Assets/Botões/selected_button_themes.tres" type="StyleBox" id=4]
 
 [node name="Jurídico" type="Control"]
 anchor_right = 1.0

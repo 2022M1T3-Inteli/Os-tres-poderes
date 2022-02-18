@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/3 poderes.jpg-41bc4971424c59a7f2741c18840993df.stex"
+path="res://.import/3 poderes.jpg-d0db2eee6cb2ad7d7de52fc5058aa2ec.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://temas/3 poderes.jpg"
-dest_files=[ "res://.import/3 poderes.jpg-41bc4971424c59a7f2741c18840993df.stex" ]
+source_file="res://Assets/Planos de Fundo/3 poderes.jpg"
+dest_files=[ "res://.import/3 poderes.jpg-d0db2eee6cb2ad7d7de52fc5058aa2ec.stex" ]
 
 [params]
 

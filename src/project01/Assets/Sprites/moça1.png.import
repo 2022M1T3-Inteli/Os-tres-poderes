@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/aceattorney.png-904cfae2b2b837876594976e72e16559.stex"
+path="res://.import/moça1.png-fb03985078ef12d29ae7cb889388f007.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://temas/aceattorney.png"
-dest_files=[ "res://.import/aceattorney.png-904cfae2b2b837876594976e72e16559.stex" ]
+source_file="res://Assets/Sprites/moça1.png"
+dest_files=[ "res://.import/moça1.png-fb03985078ef12d29ae7cb889388f007.stex" ]
 
 [params]
 

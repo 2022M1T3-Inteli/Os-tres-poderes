@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/moço2.png-62c52cf11bf368e4fd2fc283a9c20809.stex"
+path="res://.import/moça2.png-de51bedbc0df3f1047b9029414d44c58.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://temas/moço2.png"
-dest_files=[ "res://.import/moço2.png-62c52cf11bf368e4fd2fc283a9c20809.stex" ]
+source_file="res://Assets/Sprites/moça2.png"
+dest_files=[ "res://.import/moça2.png-de51bedbc0df3f1047b9029414d44c58.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/moço1.png-770c64701bbd2b19cfcac9a459f6ebb8.stex"
+path="res://.import/planalto-central.jpg-5d953a085d2b16dc62a3b50c7dd46de5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://temas/moço1.png"
-dest_files=[ "res://.import/moço1.png-770c64701bbd2b19cfcac9a459f6ebb8.stex" ]
+source_file="res://Assets/Planos de Fundo/planalto-central.jpg"
+dest_files=[ "res://.import/planalto-central.jpg-5d953a085d2b16dc62a3b50c7dd46de5.stex" ]
 
 [params]
 

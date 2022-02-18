@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ocorotacomendo.png-a6f022fb8bc90c4dd98224f19ed30846.stex"
+path="res://.import/moço1.png-6261cb02c54bfb5734206859992afed6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://temas/ocorotacomendo.png"
-dest_files=[ "res://.import/ocorotacomendo.png-a6f022fb8bc90c4dd98224f19ed30846.stex" ]
+source_file="res://Assets/Sprites/moço1.png"
+dest_files=[ "res://.import/moço1.png-6261cb02c54bfb5734206859992afed6.stex" ]
 
 [params]
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://temas/selected_button_themes.tres" type="StyleBox" id=1]
-[ext_resource path="res://temas/oval.jpg" type="Texture" id=2]
+[ext_resource path="res://Assets/Botões/selected_button_themes.tres" type="StyleBox" id=1]
+[ext_resource path="res://Assets/Planos de Fundo/oval.jpg" type="Texture" id=2]
 [ext_resource path="res://Cenas/Cenas Principais/Executivo.gd" type="Script" id=3]
 
 [sub_resource type="StreamTexture" id=1]

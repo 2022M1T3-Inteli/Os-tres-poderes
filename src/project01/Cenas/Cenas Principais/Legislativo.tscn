@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://temas/camara.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Planos de Fundo/camara.png" type="Texture" id=1]
 [ext_resource path="res://Cenas/Cenas Principais/Legislativo.gd" type="Script" id=2]
-[ext_resource path="res://temas/selected_button_themes.tres" type="StyleBox" id=3]
+[ext_resource path="res://Assets/Botões/selected_button_themes.tres" type="StyleBox" id=3]
 
 [sub_resource type="StreamTexture" id=1]
 flags = 4

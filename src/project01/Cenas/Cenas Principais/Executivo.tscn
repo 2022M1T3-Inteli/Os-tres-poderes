@@ -3,10 +3,7 @@
 [ext_resource path="res://Assets/Botões/selected_button_themes.tres" type="StyleBox" id=1]
 [ext_resource path="res://Assets/Planos de Fundo/oval.jpg" type="Texture" id=2]
 [ext_resource path="res://Cenas/Cenas Principais/Executivo.gd" type="Script" id=3]
-
-[sub_resource type="StreamTexture" id=1]
-flags = 4
-load_path = "res://.import/moço1.png-770c64701bbd2b19cfcac9a459f6ebb8.stex"
+[ext_resource path="res://Assets/Sprites/moço1.png" type="Texture" id=4]
 
 [node name="Executivo" type="Control"]
 anchor_right = 1.0
@@ -28,9 +25,13 @@ __meta__ = {
 [node name="Presidente" type="TextureRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 652.0
-texture = SubResource( 1 )
+margin_left = -857.0
+margin_top = -259.0
+margin_right = 1644.0
+margin_bottom = 988.0
+texture = ExtResource( 4 )
 expand = true
+stretch_mode = 5
 __meta__ = {
 "_edit_use_anchors_": false
 }

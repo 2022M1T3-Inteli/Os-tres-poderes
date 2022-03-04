@@ -1,0 +1,3 @@
+[gd_scene format=2]
+
+[node name="Dano" type="Area2D"]

@@ -36,7 +36,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button" type="Button" parent="."]
+[node name="Ideia" type="Button" parent="."]
 margin_left = 145.0
 margin_top = 169.0
 margin_right = 295.0
@@ -47,7 +47,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button2" type="Button" parent="."]
+[node name="Imprensa" type="Button" parent="."]
 margin_left = 345.0
 margin_top = 170.0
 margin_right = 495.0
@@ -55,7 +55,8 @@ margin_bottom = 320.0
 custom_styles/hover = ExtResource( 1 )
 text = "Imprensa"
 
-[node name="Button3" type="Button" parent="."]
+[node name="Aprovar" type="Button" parent="."]
+visible = false
 margin_left = 145.0
 margin_top = 370.0
 margin_right = 295.0
@@ -63,7 +64,7 @@ margin_bottom = 520.0
 custom_styles/hover = ExtResource( 1 )
 text = "Aprovar Lei"
 
-[node name="Button4" type="Button" parent="."]
+[node name="Voltar" type="Button" parent="."]
 margin_left = 35.0
 margin_top = 620.0
 margin_right = 215.0
@@ -74,4 +75,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="pressed" from="Button4" to="." method="_on_Button4_pressed"]
+[connection signal="pressed" from="Ideia" to="." method="_on_Ideia_pressed"]
+[connection signal="pressed" from="Imprensa" to="." method="_on_Imprensa_pressed"]
+[connection signal="pressed" from="Aprovar" to="." method="_on_Aprovar_pressed"]
+[connection signal="pressed" from="Voltar" to="." method="_on_Button4_pressed"]

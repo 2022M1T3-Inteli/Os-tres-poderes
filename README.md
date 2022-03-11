@@ -8,7 +8,7 @@
 
 ## CF88
 
-## Integrantes: <a href="https://www.linkedin.com/in/victorbarq/">Eric Tachdjian</a>, <a href="https://www.linkedin.com/in/victorbarq/">Gabriel Pascoli</a>, <a href="https://www.linkedin.com/in/victorbarq/">Luiz Augusto Ferreira</a>, <a href="https://www.linkedin.com/in/victorbarq/">Pedro Munhoz</a>, <a href="https://www.linkedin.com/in/pedrocrezende/">Pedro Rezende</a>, <a href="https://www.linkedin.com/in/sergiobalucas/">Sergio Lucas</a>, <a href="https://www.linkedin.com/in/victorbarq/">Vinicius Souza</a>. 
+## Integrantes: <a href="https://www.linkedin.com/in/eric-tachdjian-27044b232/">Eric Tachdjian</a>, <a href="https://www.linkedin.com/in/gabriel-pascoli-73733b200/">Gabriel Pascoli</a>, <a href="https://www.linkedin.com/in/victorbarq/">Luiz Augusto Ferreira</a>, <a href="https://www.linkedin.com/in/pedro-munhoz-de-souza-rivero-340489216/">Pedro Munhoz</a>, <a href="https://www.linkedin.com/in/pedrocrezende/">Pedro Rezende</a>, <a href="https://www.linkedin.com/in/sergiobalucas/">Sergio Lucas</a>, <a href="https://www.linkedin.com/in/victorbarq/">Vinicius Souza</a>. 
 
 ## Descrição
 

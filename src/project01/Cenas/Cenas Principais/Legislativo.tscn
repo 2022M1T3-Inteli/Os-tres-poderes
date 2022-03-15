@@ -6,7 +6,6 @@
 
 [sub_resource type="StreamTexture" id=1]
 flags = 4
-load_path = "res://.import/moça2.png-8368c1d5328af26a91458a971f221e81.stex"
 
 [node name="Legislativo" type="Control"]
 anchor_right = 1.0

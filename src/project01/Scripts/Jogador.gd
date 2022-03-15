@@ -34,7 +34,6 @@ func _ready():
 		## Mesma coisa do código acima, porém para o sinal de morrer. 
 	OS.window_fullscreen = true 
 		## Faz o jogo rodar em tela cheia. 
-
 func _physics_process(delta):
 	## Função do Godot que cuida das propriedades físicas de acordo com o FPS (Frames por segundo)
 	match estado: 
@@ -89,8 +88,13 @@ func recompensar(addponto):
 		## Aqui, somamos cada ponto para a pontuação. Somente aciona com o sinal.  
 	Sinais.emit_signal("pontuar", pontos)
 		## Emite o sinal de pontuar para ser possível atualizá-lo. 
+	Singleton.pontosminigame = pontos
+	if pontos <= 30: 
+		Singleton.pontostotal = pontos * 0.1
 
 func morreu():
 	## Função para remover o jogador do jogo. 
 	queue_free()
-		## Remove o jogador da cena, somente aciona com o sinal. 
+		## Remove o jogador da cena, somente aciona com o sinal.
+	print(Singleton.pontosminigame) 
+	print(Singleton.pontostotal)

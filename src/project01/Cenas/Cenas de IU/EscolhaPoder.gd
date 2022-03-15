@@ -16,3 +16,6 @@ func _on_PE_pressed():
 func _on_PJ_pressed():
 	get_tree().change_scene("res://Cenas/Cenas Principais/Jurídico.tscn") 
 	#Escolhe o poder Judicial
+
+func _on_voltar_pressed():
+	get_tree().change_scene("res://Cenas/Cenas de IU/MainMenu.tscn")

@@ -10,7 +10,7 @@ func _on_Pegou_body_entered(body):
 	## Detecta se algo entrou em contato com a água
 	if body.name == "Jogador":
 		## Checa se é o jogador que esta tocando, para ter a certeza de que é o jogador que esta tocando a água e não outra coisa. 
-		Sinais.emit_signal("recompensar", 1)
+		Sinais.emit_signal("recompensar", 10)
 			## Emite o sinal para recompensar o jogador. Emitindo esse sinal, permite a outros scripts que utilizam desse chamado, alterar suas propriedades de acordo com os parâmetros. 
 		queue_free()
 			## Faz a água desaparecer quando for pega pelo Jogador. 

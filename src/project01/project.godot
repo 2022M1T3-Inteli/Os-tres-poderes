@@ -24,6 +24,8 @@ Global="*res://Global.gd"
 
 window/size/width=1280
 window/size/height=720
+window/per_pixel_transparency/allowed=true
+window/per_pixel_transparency/enabled=true
 
 [global]
 

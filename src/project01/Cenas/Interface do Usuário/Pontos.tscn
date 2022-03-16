@@ -25,6 +25,9 @@ custom_fonts/normal_font = SubResource( 2 )
 text = "0
 "
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="scoree" type="Label" parent="."]
 margin_right = 40.0

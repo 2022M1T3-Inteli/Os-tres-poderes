@@ -1,7 +1,19 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Assets/Planos de Fundo/cenario_mesa BM.jpg" type="Texture" id=1]
 [ext_resource path="res://Cenas/Cenas Principais/Ideia.gd" type="Script" id=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.329412, 0.356863, 0.427451, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [node name="Ideia" type="Control"]
 anchor_right = 1.0
@@ -30,6 +42,7 @@ margin_top = -23.0
 margin_right = -23.0
 margin_bottom = -3.0
 rect_scale = Vector2( 3, 3 )
+custom_styles/hover = SubResource( 1 )
 text = "Saúde"
 __meta__ = {
 "_edit_use_anchors_": false

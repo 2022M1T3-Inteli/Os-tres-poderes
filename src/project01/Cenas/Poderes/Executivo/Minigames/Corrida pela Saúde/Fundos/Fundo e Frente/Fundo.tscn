@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Cenas/Poderes/Executivo/Minigames/Corrida pela Saúde/Efeitos/Fundos/FundoInfinito.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Recursos/Planos de Fundo/fundo.jpg" type="Texture" id=2]
+[ext_resource path="res://Recursos/Shaders/FundoInfinito.gdshader" type="Shader" id=3]
+
+[sub_resource type="ShaderMaterial" id=2]
+resource_local_to_scene = true
+shader = ExtResource( 3 )
+shader_param/velocidade_rolamento = 0.1
+
+[node name="Fundo" type="Node2D"]
+
+[node name="FundoInfinito" parent="." instance=ExtResource( 1 )]
+material = SubResource( 2 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_scale = Vector2( 1.25, 1.4 )
+texture = ExtResource( 2 )

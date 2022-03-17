@@ -1,8 +1,18 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Assets/Botões/selected_button_themes.tres" type="StyleBox" id=1]
 [ext_resource path="res://Cenas/Cenas de IU/MainMenu.gd" type="Script" id=2]
 [ext_resource path="res://Assets/Planos de Fundo/planalto-central.jpg" type="Texture" id=3]
+[ext_resource path="res://Assets/soundtrack/main menu music .mp3" type="AudioStream" id=4]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://Recursos/Fontes/Kenney Mini Square.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 60
+font_data = SubResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
 
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
@@ -17,6 +27,8 @@ __meta__ = {
 [node name="B" type="TextureRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = 6.0
+margin_right = 6.0
 texture = ExtResource( 3 )
 expand = true
 __meta__ = {
@@ -26,6 +38,10 @@ __meta__ = {
 [node name="Margin" type="MarginContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = 6.0
+margin_top = 8.0
+margin_right = 6.0
+margin_bottom = 8.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -69,6 +85,23 @@ size_flags_horizontal = 4
 custom_styles/hover = ExtResource( 1 )
 text = "Sair"
 
-[connection signal="pressed" from="Margin/VBoxContainer/Start" to="." method="_on_Button_pressed"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+autoplay = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 260.0
+margin_top = 603.0
+margin_right = 1542.0
+margin_bottom = 803.0
+custom_colors/default_color = Color( 0.101961, 0.866667, 0.72549, 1 )
+custom_fonts/normal_font = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+text = "Os três poderes "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [connection signal="pressed" from="Margin/VBoxContainer/Start" to="." method="_on_Start_pressed"]
+[connection signal="pressed" from="Margin/VBoxContainer/Start" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Margin/VBoxContainer/Sair" to="." method="_on_Button3_pressed"]

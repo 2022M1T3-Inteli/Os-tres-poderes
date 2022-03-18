@@ -1,5 +1,6 @@
 extends Control
 
+onready var banner = $Banner
 onready var pontosfinais = $"HBoxContainer/Valor_Pontuação"
 
 func _ready():

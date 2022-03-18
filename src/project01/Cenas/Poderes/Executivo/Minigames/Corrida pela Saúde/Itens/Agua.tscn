@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scripts/Scripts de Minigames/Corrida Pela Saúde/Agua.gd" type="Script" id=1]
-[ext_resource path="res://Recursos/Sprites/Itens/Agua.png" type="Texture" id=2]
+[ext_resource path="res://Recursos/Sprites/Minigames/Corrida Pela Saúde/Itens/Agua.png" type="Texture" id=2]
 [ext_resource path="res://Cenas/Poderes/Executivo/Minigames/Corrida pela Saúde/Efeitos/Pegou.tscn" type="PackedScene" id=3]
 
 [node name="Agua" type="Node2D"]

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/pulo2.png-2d6652466761aff4dba0ad24908bcdb3.stex"
+path="res://.import/corredor1.png-49d7d33e243cfd35bdbedc76c3890145.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Recursos/Sprites/Jogador/pulo2.png"
-dest_files=[ "res://.import/pulo2.png-2d6652466761aff4dba0ad24908bcdb3.stex" ]
+source_file="res://Recursos/Sprites/Minigames/Corrida Pela Saúde/Jogador/corredor1.png"
+dest_files=[ "res://.import/corredor1.png-49d7d33e243cfd35bdbedc76c3890145.stex" ]
 
 [params]
 

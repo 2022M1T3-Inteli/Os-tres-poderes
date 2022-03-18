@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Barreira.png-cf093ada1187f159089112750ead44e6.stex"
+path="res://.import/p3.png-5e55168644e5482bacd90e177c6fb472.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Recursos/Sprites/Obstáculos/Barreira.png"
-dest_files=[ "res://.import/Barreira.png-cf093ada1187f159089112750ead44e6.stex" ]
+source_file="res://Recursos/Sprites/Minigames/Corrida Pela Saúde/Banner/p3.png"
+dest_files=[ "res://.import/p3.png-5e55168644e5482bacd90e177c6fb472.stex" ]
 
 [params]
 

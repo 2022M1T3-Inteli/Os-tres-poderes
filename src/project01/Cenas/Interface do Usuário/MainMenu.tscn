@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Recursos/Botões/selected_button_themes.tres" type="StyleBox" id=1]
 [ext_resource path="res://Scripts/Scripts das Interfaces/MainMenu.gd" type="Script" id=2]
 [ext_resource path="res://Recursos/Planos de Fundo/planalto-central.jpg" type="Texture" id=3]
+[ext_resource path="res://Recursos/Musicas/MainMenu.mp3" type="AudioStream" id=4]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.6, 0.6, 0.6, 0.0941176 )
@@ -73,6 +74,10 @@ size_flags_horizontal = 4
 custom_styles/hover = ExtResource( 1 )
 text = "Sair"
 
-[connection signal="pressed" from="Margin/VBoxContainer/Start" to="." method="_on_Button_pressed"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+autoplay = true
+
 [connection signal="pressed" from="Margin/VBoxContainer/Start" to="." method="_on_Start_pressed"]
+[connection signal="pressed" from="Margin/VBoxContainer/Start" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Margin/VBoxContainer/Sair" to="." method="_on_Button3_pressed"]

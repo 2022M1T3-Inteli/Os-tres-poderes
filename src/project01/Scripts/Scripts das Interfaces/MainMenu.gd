@@ -1,7 +1,7 @@
 extends Control
 
 func _ready():
-	OS.window_fullscreen = true
+	pass
 
 func _on_Button3_pressed():
 	get_tree().quit() #Sai do jogo

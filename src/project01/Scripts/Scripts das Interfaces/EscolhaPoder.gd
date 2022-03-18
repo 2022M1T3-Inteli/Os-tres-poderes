@@ -6,7 +6,7 @@ func _on_PE_pressed():
 
 func _on_PL_pressed():
 	if Global.etapa2:
-		get_tree().change_scene("res://Cenas/Poderes/Legislativo/Legislativo.tscn") 
+		get_tree().change_scene("res://Cenas/Poderes/Legislativo/Debates/Debate.tscn") 
 		#Escolhe o poder Legislativo
 
 func _on_PJ_pressed():

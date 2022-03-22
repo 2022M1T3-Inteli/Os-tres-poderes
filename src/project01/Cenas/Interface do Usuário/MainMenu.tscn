@@ -78,6 +78,6 @@ text = "Sair"
 stream = ExtResource( 4 )
 autoplay = true
 
-[connection signal="pressed" from="Margin/VBoxContainer/Start" to="." method="_on_Start_pressed"]
 [connection signal="pressed" from="Margin/VBoxContainer/Start" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Margin/VBoxContainer/Start" to="." method="_on_Start_pressed"]
 [connection signal="pressed" from="Margin/VBoxContainer/Sair" to="." method="_on_Button3_pressed"]

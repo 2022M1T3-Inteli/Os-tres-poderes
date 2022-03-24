@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/@whiteM2-Metade.png-8c1ffd5cdb2300405879c2eca07d05a4.stex"
+path="res://.import/@whiteM2-Metade2.png-3e87b9a4a75c4df913766b95951862c0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Recursos/Sprites/NPCs/@whiteM2-Metade.png"
-dest_files=[ "res://.import/@whiteM2-Metade.png-8c1ffd5cdb2300405879c2eca07d05a4.stex" ]
+source_file="res://Recursos/Sprites/NPCs/@whiteM2-Metade2.png"
+dest_files=[ "res://.import/@whiteM2-Metade2.png-3e87b9a4a75c4df913766b95951862c0.stex" ]
 
 [params]
 

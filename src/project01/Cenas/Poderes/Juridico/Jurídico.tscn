@@ -21,8 +21,8 @@ texture = ExtResource( 5 )
 expand = true
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 643, 597 )
-scale = Vector2( 2.2608, 1.51229 )
+position = Vector2( 631, 573 )
+scale = Vector2( 1.54329, 1.36983 )
 texture = ExtResource( 1 )
 
 [node name="TextureRect" type="TextureRect" parent="."]

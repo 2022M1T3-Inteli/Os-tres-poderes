@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Mulher-Justiça.jpg-590c91bb1b23e5eb99c4be1006c23720.stex"
+path="res://.import/Mulher-Justiça (1).jpg-e9095e98a86e8876b50cd27f3de255cf.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Recursos/Planos de Fundo/Mulher-Justiça.jpg"
-dest_files=[ "res://.import/Mulher-Justiça.jpg-590c91bb1b23e5eb99c4be1006c23720.stex" ]
+source_file="res://Recursos/Planos de Fundo/Mulher-Justiça (1).jpg"
+dest_files=[ "res://.import/Mulher-Justiça (1).jpg-e9095e98a86e8876b50cd27f3de255cf.stex" ]
 
 [params]
 

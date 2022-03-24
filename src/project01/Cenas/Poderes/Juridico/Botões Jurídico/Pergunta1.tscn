@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Recursos/Planos de Fundo/Frame-Card.png" type="Texture" id=1]
-[ext_resource path="res://Recursos/Planos de Fundo/Mulher-Justiça.jpg" type="Texture" id=2]
+[ext_resource path="res://Recursos/Planos de Fundo/Mulher-Justiça (1).jpg" type="Texture" id=2]
 [ext_resource path="res://Recursos/Sprites/NPCs/@whiteM-Metade.png" type="Texture" id=3]
 [ext_resource path="res://Cenas/Poderes/Juridico/Botões Jurídico/Pergunta1.gd" type="Script" id=4]
 
@@ -9,10 +9,10 @@
 script = ExtResource( 4 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_right = 1282.0
-margin_bottom = 725.0
+margin_left = -7.0
+margin_top = -123.0
+margin_right = 1275.0
+margin_bottom = 1173.0
 texture = ExtResource( 2 )
 expand = true
 __meta__ = {
@@ -20,8 +20,8 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 1076.88, 429.322 )
-scale = Vector2( 0.353906, 0.377418 )
+position = Vector2( 1067.5, 429.5 )
+scale = Vector2( 0.33437, 0.377604 )
 texture = ExtResource( 3 )
 
 [node name="TextureRect2" type="TextureRect" parent="."]
@@ -36,9 +36,9 @@ __meta__ = {
 }
 
 [node name="DadosJogador" type="Button" parent="."]
-margin_left = 300.0
+margin_left = 100.0
 margin_top = 200.0
-margin_right = 722.0
+margin_right = 522.0
 margin_bottom = 296.0
 text = "Dados do Jogador"
 __meta__ = {
@@ -46,9 +46,9 @@ __meta__ = {
 }
 
 [node name="DadosMinigame" type="Button" parent="."]
-margin_left = 300.0
+margin_left = 100.0
 margin_top = 305.0
-margin_right = 722.0
+margin_right = 522.0
 margin_bottom = 401.0
 text = "Dados do Minigame"
 __meta__ = {
@@ -56,11 +56,21 @@ __meta__ = {
 }
 
 [node name="DadosDebate" type="Button" parent="."]
-margin_left = 300.0
+margin_left = 100.0
 margin_top = 410.0
-margin_right = 722.0
+margin_right = 522.0
 margin_bottom = 506.0
 text = "Dados do Debate"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 35.0
+margin_top = 620.0
+margin_right = 215.0
+margin_bottom = 690.0
+text = "Voltar"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -68,3 +78,4 @@ __meta__ = {
 [connection signal="pressed" from="DadosJogador" to="." method="_on_DadosJogador_pressed"]
 [connection signal="pressed" from="DadosMinigame" to="." method="_on_DadosMinigame_pressed"]
 [connection signal="pressed" from="DadosDebate" to="." method="_on_DadosDebate_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

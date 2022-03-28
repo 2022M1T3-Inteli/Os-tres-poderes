@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/RGJogo.png-4f6120f0ff443f16a3224a75e3d43d75.stex"
+path="res://.import/fundo-torto(1).jpg-2851cca76787ed0434fcedb909120939.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Recursos/Planos de Fundo/RGJogo.png"
-dest_files=[ "res://.import/RGJogo.png-4f6120f0ff443f16a3224a75e3d43d75.stex" ]
+source_file="res://Recursos/Planos de Fundo/fundo-torto(1).jpg"
+dest_files=[ "res://.import/fundo-torto(1).jpg-2851cca76787ed0434fcedb909120939.stex" ]
 
 [params]
 

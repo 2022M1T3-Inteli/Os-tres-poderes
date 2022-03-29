@@ -19,3 +19,7 @@ func _ready():
 func _on_Button_pressed():
 	get_tree().change_scene("res://Cenas/Poderes/Juridico/Botões Jurídico/Pergunta1.tscn")
 #Botão de voltar
+
+
+func _on_TextureButton_pressed():
+	get_tree().change_scene("res://Cenas/Poderes/Juridico/Botões Jurídico/EasterEgg.tscn")

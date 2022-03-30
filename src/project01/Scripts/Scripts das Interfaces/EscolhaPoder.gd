@@ -15,7 +15,7 @@ func _on_voltar_pressed():
 
 
 func _on_Poder_Judicirio_pressed():
-	get_tree().change_scene("res://Cenas/Poderes/Juridico/Jurídico.tscn") 
+	get_tree().change_scene("res://Cenas/Poderes/Judiciário/Judiciário.tscn") 
 
 
 func _on_Poder_Executivo_pressed():

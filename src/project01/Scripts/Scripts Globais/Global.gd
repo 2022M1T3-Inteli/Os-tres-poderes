@@ -1,7 +1,7 @@
 extends Node
 
 var ideia = false
-var etapa2 = false
+var etapa2 = true
 
 var pontosminigame = 0.0
 

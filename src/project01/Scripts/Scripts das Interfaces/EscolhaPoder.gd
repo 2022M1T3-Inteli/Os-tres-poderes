@@ -11,8 +11,8 @@ func _on_PL_pressed():
 
 func _on_PJ_pressed():
 	if Global.etapa2:
-		get_tree().change_scene("res://Cenas/Poderes/Juridico/Jurídico.tscn") 
-		#Escolhe o poder Jurídico 
+		get_tree().change_scene("res://Cenas/Poderes/Judiciário/Judiciário.tscn") 
+		#Escolhe o poder Judiciário 
 
 func _on_voltar_pressed():
 	get_tree().change_scene("res://Cenas/Interface do Usuário/MainMenu.tscn")

@@ -27,6 +27,10 @@ func _on_Poder_Legislativo_pressed():
 		get_tree().change_scene("res://Cenas/Poderes/Legislativo/Debates/Debate.tscn") 
 		#Escolhe o poder Legislativo
 
+func _on_PJ_pressed():
+	if Global.etapa2:
+		get_tree().change_scene("res://Cenas/Poderes/Judiciário/Judiciário.tscn") 
+		#Escolhe o poder Judiciário 
 
 func _on_Poder_Executivo_mouse_entered():
 	Global.poder_escolhido = "Poder Executivo"

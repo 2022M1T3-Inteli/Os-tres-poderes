@@ -1,0 +1,297 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://health.gd" type="Script" id=1]
+[ext_resource path="res://NPCs/MulherBrancaLado.png" type="Texture" id=2]
+[ext_resource path="res://mesa_debate.png" type="Texture" id=3]
+[ext_resource path="res://BarraHP/HPOver.png" type="Texture" id=4]
+[ext_resource path="res://BarraHP/HPProgress.png" type="Texture" id=5]
+[ext_resource path="res://BarraHP/HPUnder.png" type="Texture" id=6]
+[ext_resource path="res://NPCs/HomemNegroLado.png" type="Texture" id=7]
+[ext_resource path="res://BalõesConversa/answer-removebg-previewhover.png" type="Texture" id=8]
+[ext_resource path="res://BalõesConversa/answer-removebg-preview.png" type="Texture" id=9]
+[ext_resource path="res://NPCs/MulherNegraLado.png" type="Texture" id=10]
+[ext_resource path="res://NPCs/HomemBrancoLado.png" type="Texture" id=11]
+[ext_resource path="res://BalõesConversa/ChatNormal.png" type="Texture" id=12]
+[ext_resource path="res://Botões/aceitar.png" type="Texture" id=13]
+[ext_resource path="res://Botões/recusar.png" type="Texture" id=14]
+[ext_resource path="res://debate_plano_de_fundo.jpg" type="Texture" id=15]
+
+[node name="Debate" type="Control"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fundo" type="TextureRect" parent="."]
+margin_top = 1.0
+margin_right = 1280.0
+margin_bottom = 721.0
+texture = ExtResource( 15 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Inimigos" type="Control" parent="."]
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Inimigo1" type="Sprite" parent="Inimigos"]
+position = Vector2( 1061.62, 391.563 )
+scale = Vector2( 1.03709, 1.06564 )
+texture = ExtResource( 2 )
+flip_h = true
+
+[node name="Inimigo2" type="Sprite" parent="Inimigos"]
+position = Vector2( 1184.88, 395.563 )
+scale = Vector2( 0.680594, 0.645686 )
+texture = ExtResource( 10 )
+
+[node name="Inimigo3" type="Sprite" parent="Inimigos"]
+position = Vector2( 958, 382.781 )
+scale = Vector2( 0.606232, 0.627387 )
+texture = ExtResource( 11 )
+flip_h = true
+
+[node name="Nome" type="Label" parent="Inimigos"]
+margin_left = 829.0
+margin_top = 58.0
+margin_right = 1256.0
+margin_bottom = 92.0
+custom_colors/font_color = Color( 1, 0.0705882, 0.0705882, 1 )
+text = "CCJC"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HP" type="TextureProgress" parent="Inimigos"]
+margin_left = 800.0
+margin_top = 77.0
+margin_right = 1751.0
+margin_bottom = 185.0
+rect_scale = Vector2( 0.5, 0.6 )
+texture_under = ExtResource( 6 )
+texture_over = ExtResource( 4 )
+texture_progress = ExtResource( 5 )
+fill_mode = 1
+tint_progress = Color( 0.980392, 0.0823529, 0.0823529, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Jogador" type="Control" parent="."]
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Nome" type="Label" parent="Jogador"]
+margin_left = 78.0
+margin_top = 58.0
+margin_right = 520.0
+margin_bottom = 84.0
+custom_colors/font_color = Color( 0.0823529, 1, 0.00392157, 1 )
+text = "jogador"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Personagem" type="Sprite" parent="Jogador"]
+position = Vector2( 304, 341 )
+scale = Vector2( 1.57858, 1.20412 )
+texture = ExtResource( 7 )
+
+[node name="HP" type="TextureProgress" parent="Jogador"]
+margin_left = 58.0
+margin_top = 77.0
+margin_right = 1009.0
+margin_bottom = 185.0
+rect_scale = Vector2( 0.5, 0.6 )
+texture_under = ExtResource( 6 )
+texture_over = ExtResource( 4 )
+texture_progress = ExtResource( 5 )
+tint_progress = Color( 0.176471, 0.972549, 0.0862745, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Frente" type="TextureRect" parent="."]
+margin_right = 1280.0
+margin_bottom = 720.0
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Resposta Certa" type="Control" parent="."]
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EscolhaCerta" type="TextureButton" parent="Resposta Certa"]
+margin_left = 396.0
+margin_top = 296.0
+margin_right = 1302.0
+margin_bottom = 546.0
+rect_scale = Vector2( 0.4, 0.4 )
+texture_normal = ExtResource( 9 )
+texture_hover = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texto" type="Label" parent="Resposta Certa"]
+margin_left = 470.0
+margin_top = 332.0
+margin_right = 702.0
+margin_bottom = 373.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Resposta Errada" type="Control" parent="."]
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EscolhaErrada1" type="TextureButton" parent="Resposta Errada"]
+margin_left = 397.0
+margin_top = 405.0
+margin_right = 1303.0
+margin_bottom = 655.0
+rect_scale = Vector2( 0.4, 0.4 )
+texture_normal = ExtResource( 9 )
+texture_hover = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texto" type="Label" parent="Resposta Errada"]
+margin_left = 467.0
+margin_top = 440.0
+margin_right = 707.0
+margin_bottom = 479.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Resposta Errada2" type="Control" parent="."]
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EscolhaErrada2" type="TextureButton" parent="Resposta Errada2"]
+margin_left = 399.0
+margin_top = 511.0
+margin_right = 1305.0
+margin_bottom = 761.0
+rect_scale = Vector2( 0.4, 0.4 )
+texture_normal = ExtResource( 9 )
+texture_hover = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texto" type="Label" parent="Resposta Errada2"]
+margin_left = 463.0
+margin_top = 545.0
+margin_right = 703.0
+margin_bottom = 587.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pergunta" type="Control" parent="."]
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fundo" type="TextureRect" parent="Pergunta"]
+margin_left = 523.0
+margin_top = 129.0
+margin_right = 1550.0
+margin_bottom = 369.0
+rect_scale = Vector2( 0.4, 0.5 )
+texture = ExtResource( 12 )
+flip_h = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texto" type="Label" parent="Pergunta"]
+margin_left = 588.0
+margin_top = 153.0
+margin_right = 866.0
+margin_bottom = 219.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Resposta Expandida" type="TextureRect" parent="."]
+visible = false
+margin_left = 80.0
+margin_top = 394.0
+margin_right = 1195.0
+margin_bottom = 546.0
+rect_scale = Vector2( 1, 2 )
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Aceitar" type="TextureButton" parent="Resposta Expandida"]
+margin_left = 940.0
+margin_top = 13.0
+margin_right = 1510.0
+margin_bottom = 626.0
+rect_scale = Vector2( 0.1, 0.04 )
+texture_normal = ExtResource( 13 )
+expand = true
+
+[node name="Recusar" type="TextureButton" parent="Resposta Expandida"]
+margin_left = 990.0
+margin_top = 12.0
+margin_right = 1520.0
+margin_bottom = 625.0
+rect_scale = Vector2( 0.1, 0.04 )
+texture_normal = ExtResource( 14 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Expansão" type="Label" parent="Resposta Expandida"]
+margin_left = 75.0
+margin_top = 48.0
+margin_right = 730.0
+margin_bottom = 115.0
+rect_scale = Vector2( 1.5, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "resposta expandida"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Resposta Certa/EscolhaCerta" to="." method="_on_EscolhaCerta_pressed"]
+[connection signal="pressed" from="Resposta Errada/EscolhaErrada1" to="." method="_on_EscolhaErrada1_pressed"]
+[connection signal="pressed" from="Resposta Errada2/EscolhaErrada2" to="." method="_on_EscolhaErrada2_pressed"]
+[connection signal="pressed" from="Resposta Expandida/Aceitar" to="." method="_on_Aceitar_pressed"]
+[connection signal="pressed" from="Resposta Expandida/Aceitar" to="." method="_on_botao_expancao_pressed"]
+[connection signal="pressed" from="Resposta Expandida/Recusar" to="." method="_on_Recusar_pressed"]

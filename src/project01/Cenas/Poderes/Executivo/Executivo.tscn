@@ -31,7 +31,7 @@ margin_top = 503.0
 margin_right = 952.0
 margin_bottom = 604.0
 custom_styles/hover = ExtResource( 1 )
-text = "Aprovar Lei"
+text = "Promulgação e Publicação"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -51,7 +51,7 @@ margin_top = 503.0
 margin_right = 952.0
 margin_bottom = 604.0
 custom_styles/hover = ExtResource( 1 )
-text = "Idéia de Lei"
+text = "Idéia de PEC"
 __meta__ = {
 "_edit_use_anchors_": false
 }

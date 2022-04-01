@@ -27,13 +27,11 @@ onready var animacao = $AnimatedSprite
 	## Identificamos o nó de animação no código utilizando o símbolo do sifrão e o guardamos em uma variável
 
 func _ready():
-	Sinais.connect("recompensar", self, "recompensar")
+	Global.connect("recompensar", self, "recompensar")
 		## Aqui conectamos o script do jogador ao sinal recompensa, ou seja, toda vez que esse sinal for emitido, esse script vai receber. Aplicamos ele nele mesmo, "self". E, ao receber esse sinal, acionamos a função "recompensar".
 
-	Sinais.connect("morreu", self, "morreu")
+	Global.connect("morreu", self, "morreu")
 		## Mesma coisa do código acima, porém para o sinal de morrer. 
-	OS.window_fullscreen = true 
-		## Faz o jogo rodar em tela cheia. 
 func _physics_process(delta):
 	## Função do Godot que cuida das propriedades físicas de acordo com o FPS (Frames por segundo)
 	match estado: 
@@ -86,7 +84,7 @@ func recompensar(addponto):
 	## Função para recompensar o jogador por pegar uma água.  
 	pontos += addponto
 		## Aqui, somamos cada ponto para a pontuação. Somente aciona com o sinal.  
-	Sinais.emit_signal("pontuar", pontos)
+	Global.emit_signal("pontuar", pontos)
 		## Emite o sinal de pontuar para ser possível atualizá-lo. 
 	Global.pontosminigame = pontos
 	if pontos <= 30: 

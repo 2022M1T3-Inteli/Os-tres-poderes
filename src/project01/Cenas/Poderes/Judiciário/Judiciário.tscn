@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Recursos/Sprites/NPCs/HomemBrancoFrente.png" type="Texture" id=1]
+[ext_resource path="res://Recursos/Planos de Fundo/MesaJud.png" type="Texture" id=1]
+[ext_resource path="res://Recursos/Sprites/NPCs/HomemBrancoBusto.png" type="Texture" id=2]
 [ext_resource path="res://Scripts/Scripts das Interfaces/Judiciário.gd" type="Script" id=3]
 [ext_resource path="res://Recursos/Botões/selected_button_themes.tres" type="StyleBox" id=4]
 [ext_resource path="res://Recursos/Planos de Fundo/poder-judiciario-geografia.jpg" type="Texture" id=5]
@@ -23,16 +24,16 @@ __meta__ = {
 }
 
 [node name="Juiz" type="Sprite" parent="."]
-position = Vector2( 631, 573 )
-scale = Vector2( 1.54329, 1.36983 )
-texture = ExtResource( 1 )
+position = Vector2( 631, 353 )
+scale = Vector2( 1.8, 1.8 )
+texture = ExtResource( 2 )
 
 [node name="Mesa" type="TextureRect" parent="."]
 margin_left = 6.0
 margin_top = -2.0
 margin_right = 1272.0
 margin_bottom = 720.0
-texture = ExtResource( 5 )
+texture = ExtResource( 1 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false

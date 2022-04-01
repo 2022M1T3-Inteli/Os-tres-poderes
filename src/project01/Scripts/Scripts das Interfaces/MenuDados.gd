@@ -3,7 +3,7 @@ extends Node2D
 onready var pc = $Background
 onready var botoes = $"Opções"
 var pcligado = load("res://Recursos/Planos de Fundo/fundo-torto(1).jpg")
-var pcdesligado = load("res://Recursos/Planos de Fundo/zyro-image.jpg")
+var pcdesligado = load("res://Recursos/Planos de Fundo/PCDesligado.jpg")
 
 func _ready():
 	pass 

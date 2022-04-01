@@ -1,0 +1,324 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://Recursos/Planos de Fundo/mesa.png" type="Texture" id=1]
+[ext_resource path="res://Recursos/BarraHP/HPOver.png" type="Texture" id=2]
+[ext_resource path="res://Recursos/BarraHP/HPProgress.png" type="Texture" id=3]
+[ext_resource path="res://Recursos/BarraHP/HPUnder.png" type="Texture" id=4]
+[ext_resource path="res://Recursos/Sprites/NPCs/HomemNegroLado.png" type="Texture" id=5]
+[ext_resource path="res://Recursos/Planos de Fundo/debate_plano_de_fundo.jpg" type="Texture" id=6]
+[ext_resource path="res://Recursos/BalõesConversa/answer-removebg-previewhover.png" type="Texture" id=7]
+[ext_resource path="res://Recursos/Botões/aceitar.png" type="Texture" id=8]
+[ext_resource path="res://Recursos/Sprites/NPCs/HomemBrancoLado.png" type="Texture" id=9]
+[ext_resource path="res://Recursos/BalõesConversa/answer-removebg-preview.png" type="Texture" id=10]
+[ext_resource path="res://Recursos/Botões/recusar.png" type="Texture" id=11]
+[ext_resource path="res://Recursos/Sprites/NPCs/MulherNegraLado.png" type="Texture" id=12]
+[ext_resource path="res://Recursos/BalõesConversa/ChatNormal.png" type="Texture" id=13]
+[ext_resource path="res://Recursos/Sprites/NPCs/MulherBrancaLado.png" type="Texture" id=14]
+[ext_resource path="res://Scripts/Scripts do Debate/Debate.gd" type="Script" id=15]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://Recursos/Fontes/Kenney Future Narrow.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFontData" id=3]
+font_path = "res://Recursos/Fontes/Kenney Future Narrow.ttf"
+
+[sub_resource type="DynamicFont" id=4]
+font_data = SubResource( 3 )
+
+[sub_resource type="DynamicFontData" id=5]
+font_path = "res://Recursos/Fontes/Kenney Future Narrow.ttf"
+
+[sub_resource type="DynamicFont" id=6]
+size = 21
+font_data = SubResource( 5 )
+
+[node name="Debate" type="Control"]
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fundo" type="TextureRect" parent="."]
+margin_top = 1.0
+margin_right = 1280.0
+margin_bottom = 721.0
+texture = ExtResource( 6 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Inimigos" type="Control" parent="."]
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Inimigo1" type="Sprite" parent="Inimigos"]
+position = Vector2( 1061.62, 391.563 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 14 )
+flip_h = true
+
+[node name="Inimigo2" type="Sprite" parent="Inimigos"]
+position = Vector2( 1184.88, 395.563 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 12 )
+
+[node name="Inimigo3" type="Sprite" parent="Inimigos"]
+position = Vector2( 958, 382.781 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 9 )
+flip_h = true
+
+[node name="HP" type="TextureProgress" parent="Inimigos"]
+margin_left = 799.0
+margin_top = 46.0
+margin_right = 1750.0
+margin_bottom = 154.0
+rect_scale = Vector2( 0.5, 0.6 )
+texture_under = ExtResource( 4 )
+texture_over = ExtResource( 2 )
+texture_progress = ExtResource( 3 )
+fill_mode = 1
+tint_progress = Color( 0.980392, 0.0823529, 0.0823529, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Nome" type="Label" parent="Inimigos"]
+margin_left = 826.0
+margin_top = 25.0
+margin_right = 1245.0
+margin_bottom = 55.0
+rect_min_size = Vector2( 100, 30 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 2 )
+text = "CCJC"
+align = 1
+valign = 1
+
+[node name="Jogador" type="Control" parent="."]
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Personagem" type="Sprite" parent="Jogador"]
+position = Vector2( 304, 341 )
+scale = Vector2( 0.7, 0.6 )
+texture = ExtResource( 5 )
+
+[node name="Nome" type="Label" parent="Jogador"]
+margin_left = 70.0
+margin_top = 20.0
+margin_right = 512.0
+margin_bottom = 46.0
+custom_fonts/font = SubResource( 4 )
+text = "jogador"
+align = 1
+valign = 1
+
+[node name="HP" type="TextureProgress" parent="Jogador"]
+margin_left = 50.0
+margin_top = 39.0
+margin_right = 1001.0
+margin_bottom = 147.0
+rect_scale = Vector2( 0.5, 0.6 )
+texture_under = ExtResource( 4 )
+texture_over = ExtResource( 2 )
+texture_progress = ExtResource( 3 )
+tint_progress = Color( 0.176471, 0.972549, 0.0862745, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Frente" type="TextureRect" parent="."]
+margin_right = 1280.0
+margin_bottom = 720.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Resposta Certa" type="Control" parent="."]
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EscolhaCerta" type="TextureButton" parent="Resposta Certa"]
+margin_left = 396.0
+margin_top = 296.0
+margin_right = 1756.0
+margin_bottom = 618.0
+rect_scale = Vector2( 0.4, 0.4 )
+texture_normal = ExtResource( 10 )
+texture_hover = ExtResource( 7 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texto" type="RichTextLabel" parent="Resposta Certa"]
+margin_left = 473.0
+margin_top = 347.0
+margin_right = 878.0
+margin_bottom = 391.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 6 )
+
+[node name="Resposta Errada" type="Control" parent="."]
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EscolhaErrada1" type="TextureButton" parent="Resposta Errada"]
+margin_left = 397.0
+margin_top = 405.0
+margin_right = 1757.0
+margin_bottom = 727.0
+rect_scale = Vector2( 0.4, 0.4 )
+texture_normal = ExtResource( 10 )
+texture_hover = ExtResource( 7 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texto" type="RichTextLabel" parent="Resposta Errada"]
+margin_left = 476.0
+margin_top = 457.0
+margin_right = 879.0
+margin_bottom = 496.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 6 )
+
+[node name="Resposta Errada2" type="Control" parent="."]
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EscolhaErrada2" type="TextureButton" parent="Resposta Errada2"]
+margin_left = 399.0
+margin_top = 511.0
+margin_right = 1759.0
+margin_bottom = 833.0
+rect_scale = Vector2( 0.4, 0.4 )
+texture_normal = ExtResource( 10 )
+texture_hover = ExtResource( 7 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texto" type="RichTextLabel" parent="Resposta Errada2"]
+margin_left = 471.0
+margin_top = 561.0
+margin_right = 881.0
+margin_bottom = 605.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 6 )
+
+[node name="Pergunta" type="Control" parent="."]
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fundo" type="TextureRect" parent="Pergunta"]
+margin_left = 339.0
+margin_top = 60.0
+margin_right = 1802.0
+margin_bottom = 486.0
+rect_scale = Vector2( 0.4, 0.5 )
+texture = ExtResource( 13 )
+expand = true
+flip_h = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texto" type="RichTextLabel" parent="Pergunta"]
+margin_left = 394.0
+margin_top = 114.0
+margin_right = 859.0
+margin_bottom = 209.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 6 )
+
+[node name="Resposta Expandida" type="TextureRect" parent="."]
+visible = false
+margin_left = 80.0
+margin_top = 394.0
+margin_right = 1195.0
+margin_bottom = 546.0
+rect_scale = Vector2( 1, 2 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Aceitar" type="TextureButton" parent="Resposta Expandida"]
+margin_left = 940.0
+margin_top = 13.0
+margin_right = 1510.0
+margin_bottom = 626.0
+rect_scale = Vector2( 0.1, 0.04 )
+texture_normal = ExtResource( 8 )
+expand = true
+
+[node name="Recusar" type="TextureButton" parent="Resposta Expandida"]
+margin_left = 990.0
+margin_top = 12.0
+margin_right = 1520.0
+margin_bottom = 625.0
+rect_scale = Vector2( 0.1, 0.04 )
+texture_normal = ExtResource( 11 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Expansão" type="RichTextLabel" parent="Resposta Expandida"]
+margin_left = 75.0
+margin_top = 50.0
+margin_right = 562.0
+margin_bottom = 109.0
+rect_scale = Vector2( 2, 1 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 6 )
+text = "resposta expandida"
+
+[node name="Explicar" type="TextureButton" parent="."]
+visible = false
+margin_left = -18.0
+margin_top = 367.0
+margin_right = 1301.0
+margin_bottom = 747.0
+texture_normal = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texto" type="RichTextLabel" parent="Explicar"]
+anchor_left = 0.069
+anchor_top = 0.316
+anchor_right = 0.069
+anchor_bottom = 0.316
+margin_left = -0.0110092
+margin_top = -0.0800018
+margin_right = 1159.99
+margin_bottom = 113.92
+rect_scale = Vector2( 1, 1.5 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 6 )
+
+[connection signal="pressed" from="Resposta Certa/EscolhaCerta" to="." method="_on_EscolhaCerta_pressed"]
+[connection signal="pressed" from="Resposta Errada/EscolhaErrada1" to="." method="_on_EscolhaErrada1_pressed"]
+[connection signal="pressed" from="Resposta Errada2/EscolhaErrada2" to="." method="_on_EscolhaErrada2_pressed"]
+[connection signal="pressed" from="Resposta Expandida/Aceitar" to="." method="_on_Aceitar_pressed"]
+[connection signal="pressed" from="Resposta Expandida/Recusar" to="." method="_on_Recusar_pressed"]
+[connection signal="pressed" from="Explicar" to="." method="_on_Explicar_pressed"]

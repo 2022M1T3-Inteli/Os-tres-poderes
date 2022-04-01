@@ -4,9 +4,9 @@ onready var banner = $Banner
 onready var pontosfinais = $"HBoxContainer/Valor_Pontuação"
 
 func _ready():
-	Sinais.connect("morreu", self, "fimdejogo")
+	Global.connect("morreu", self, "fimdejogo")
 	## Recebe o sinal que o jogador morreu
-	Sinais.connect("pontuar", self, "atualizarpontos")
+	Global.connect("pontuar", self, "atualizarpontos")
 
 func _on_Button_pressed():
 	get_tree().change_scene("res://Cenas/Poderes/Executivo/Executivo.tscn")

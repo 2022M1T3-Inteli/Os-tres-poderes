@@ -1,0 +1,83 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scripts/Scripts de Minigames/Voto Impresso/FimdeJogo.gd" type="Script" id=1]
+[ext_resource path="res://Recursos/Sprites/Minigames/Voto Impresso/paper_da_pontuação-removebg-preview.png" type="Texture" id=2]
+
+[sub_resource type="Theme" id=6]
+
+[sub_resource type="DynamicFontData" id=7]
+font_path = "res://Recursos/Fontes/Kenney Blocks.ttf"
+
+[sub_resource type="DynamicFont" id=8]
+size = 46
+font_data = SubResource( 7 )
+
+[sub_resource type="StyleBoxTexture" id=5]
+
+[node name="FimdeJogo" type="Control"]
+margin_right = 1277.0
+margin_bottom = 719.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Voltar_menu" type="Button" parent="."]
+pause_mode = 2
+margin_left = 513.0
+margin_top = 542.0
+margin_right = 703.0
+margin_bottom = 582.0
+rect_scale = Vector2( 1.5, 1.5 )
+text = "Voltar ao Menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 311.0
+margin_top = 111.0
+margin_right = 911.0
+margin_bottom = 511.0
+rect_min_size = Vector2( 300, 0 )
+rect_scale = Vector2( 1.15, 1.15 )
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pontuacao" type="Label" parent="."]
+margin_left = 459.0
+margin_top = 293.0
+margin_right = 791.0
+margin_bottom = 443.0
+rect_min_size = Vector2( 330, 150 )
+theme = SubResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 8 )
+custom_styles/normal = SubResource( 5 )
+text = "Pontuação:
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Numero_pontuacao" type="Label" parent="."]
+margin_left = 817.0
+margin_top = 290.0
+margin_right = 967.0
+margin_bottom = 390.0
+rect_min_size = Vector2( 150, 100 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 8 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Temporizador" type="Timer" parent="."]
+autostart = true
+
+[connection signal="pressed" from="Voltar_menu" to="." method="_on_Voltar_menu_pressed"]
+[connection signal="timeout" from="Temporizador" to="." method="_on_Temporizador_timeout"]

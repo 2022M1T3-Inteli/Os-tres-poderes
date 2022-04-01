@@ -1,7 +1,9 @@
 extends Control
 
+onready var conselheiro = $Juiz
+
 func _ready():
-	pass
+	conselheiro.texture = Global.conselheiro_dados[Global.conselheiro_escolhido]["Busto"]
 
 func _on_Voltar_pressed():
 	get_tree().change_scene("res://Cenas/Interface do Usuário/EscolhaPoder.tscn") #Botão de voltar

@@ -24,7 +24,7 @@ func _on_Poder_Executivo_pressed():
 
 
 func _on_Poder_Legislativo_pressed():
-		get_tree().change_scene("res://Cenas/Poderes/Legislativo/Debates/Debate.tscn") 
+		get_tree().change_scene("res://Cenas/Poderes/Legislativo/LegislativoMenu.tscn") 
 		#Escolhe o poder Legislativo
 
 func _on_PJ_pressed():

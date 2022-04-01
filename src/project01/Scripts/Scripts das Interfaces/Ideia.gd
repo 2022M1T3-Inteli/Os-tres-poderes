@@ -1,7 +1,7 @@
 extends Control
 
-onready var saude = $VBoxContainer/Saude
-onready var seguranca = $"VBoxContainer/Segurança"
+onready var saude = $"VBoxContainer/Voto Impresso"
+onready var seguranca = $"VBoxContainer/Saude"
 onready var educacao = $"VBoxContainer/Educação"
 onready var sociais = $"VBoxContainer/Problemas Sociais"
 var posicao = 1
@@ -12,7 +12,7 @@ func _ready():
 
 func _on_Saude_pressed():
 	get_tree().change_scene("res://Cenas/Poderes/Executivo/Executivo.tscn")
-	Global.ideia = true
+	Global.ideia = "Saude"
 
 func _input(event):
 	if event.is_action_pressed("baixo") or event.is_action_pressed("cima"):
@@ -49,3 +49,8 @@ func _input(event):
 	if event.is_action_released("aceitar"): 
 		if posicao == 1: 
 			_on_Saude_pressed()
+
+
+func _on_Voto_Impresso_pressed():
+	get_tree().change_scene("res://Cenas/Poderes/Executivo/Executivo.tscn")
+	Global.ideia = "Impresso"

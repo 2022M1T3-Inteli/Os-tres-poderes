@@ -11,7 +11,7 @@ func _on_Dano_body_entered(body):
 	## Detecta se algo entrou em contato com a água
 	if body.name == "Jogador":
 		## Checa se é o jogador que esta tocando, para ter a certeza de que é o jogador que esta tocando a barreira e não outra coisa. 
-		Sinais.emit_signal("morreu")
+		Global.emit_signal("morreu")
 		## Emite o sinal para matar o jogador. Emitindo esse sinal, permite a outros scripts que utilizam desse chamado, alterar suas propriedades de acordo com os parâmetros. 
 		queue_free()
 		## Remove o objeto do jogo, quando o jogador morre.

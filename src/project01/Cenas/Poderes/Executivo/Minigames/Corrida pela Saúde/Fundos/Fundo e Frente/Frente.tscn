@@ -4,11 +4,9 @@
 [ext_resource path="res://Recursos/Planos de Fundo/chao.jpg" type="Texture" id=2]
 [ext_resource path="res://Recursos/Shaders/FundoInfinito.gdshader" type="Shader" id=3]
 
-
-[sub_resource type="ShaderMaterial" id=2]
-resource_local_to_scene = true
+[sub_resource type="ShaderMaterial" id=4]
 shader = ExtResource( 3 )
-shader_param/velocidade_rolamento = 0.2
+shader_param/velocidade_rolamento = 0.3
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 640, 13 )
@@ -16,7 +14,7 @@ extents = Vector2( 640, 13 )
 [node name="Frente" type="Node2D"]
 
 [node name="FundoInfinito" parent="." instance=ExtResource( 1 )]
-material = SubResource( 2 )
+material = SubResource( 4 )
 margin_top = 2.0
 margin_right = 1024.0
 margin_bottom = 242.0

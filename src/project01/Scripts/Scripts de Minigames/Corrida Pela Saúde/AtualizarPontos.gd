@@ -2,8 +2,8 @@ extends RichTextLabel
 
 
 func _ready():
-	Sinais.connect("pontuar", self, "atualizarpontos")
-	Sinais.connect("morreu", self, "sair")
+	Global.connect("pontuar", self, "atualizarpontos")
+	Global.connect("morreu", self, "sair")
 		## Conecta ao sinal de pontuar. 
 
 func atualizarpontos(pontos):

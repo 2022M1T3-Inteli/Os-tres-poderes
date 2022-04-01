@@ -4,7 +4,7 @@ export (Array, PackedScene) var cenas
 	## Aqui criamos uma variável export, onde temos um array do tipo PackedScene. Isso vai nos permitir arrastar cenas para o Inspector.
 
 func _ready():
-	Sinais.connect("morreu", self, "sumiu")
+	Global.connect("morreu", self, "sumiu")
 
 var cena_aleatoria = RandomNumberGenerator.new()
 var indice_cena_selecionada = 0 

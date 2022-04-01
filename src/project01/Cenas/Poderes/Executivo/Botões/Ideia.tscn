@@ -35,24 +35,23 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Saude" type="Button" parent="VBoxContainer"]
+[node name="Voto Impresso" type="Button" parent="VBoxContainer"]
 margin_right = 402.0
 margin_bottom = 50.0
 rect_min_size = Vector2( 400, 50 )
 custom_styles/hover = ExtResource( 3 )
-text = "Saúde"
+text = "Voto Impresso"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Segurança" type="Button" parent="VBoxContainer"]
+[node name="Saude" type="Button" parent="VBoxContainer"]
 margin_top = 70.0
 margin_right = 402.0
 margin_bottom = 120.0
 rect_min_size = Vector2( 402, 50 )
 custom_styles/hover = ExtResource( 3 )
-disabled = true
-text = "Segurança"
+text = "Saúde"
 
 [node name="Educação" type="Button" parent="VBoxContainer"]
 margin_top = 140.0
@@ -73,4 +72,5 @@ custom_styles/hover = ExtResource( 3 )
 disabled = true
 text = "Problemas Sociais"
 
+[connection signal="pressed" from="VBoxContainer/Voto Impresso" to="." method="_on_Voto_Impresso_pressed"]
 [connection signal="pressed" from="VBoxContainer/Saude" to="." method="_on_Saude_pressed"]

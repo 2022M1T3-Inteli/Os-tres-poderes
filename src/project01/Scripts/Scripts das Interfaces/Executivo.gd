@@ -22,7 +22,10 @@ func _on_Ideia_pressed():
 	get_tree().change_scene("res://Cenas/Poderes/Executivo/Botões/Ideia.tscn")
 
 func _on_Imprensa_pressed():
-	get_tree().change_scene("res://Cenas/Poderes/Executivo/Minigames/Corrida pela Saúde/CorridaSaude.tscn")
+	if Global.ideia == "Saude":
+		get_tree().change_scene("res://Cenas/Poderes/Executivo/Minigames/Corrida pela Saúde/CorridaSaude.tscn")
+	elif Global.ideia == "Impresso":
+		get_tree().change_scene("res://Cenas/Poderes/Executivo/Minigames/Voto Impresso/Game.tscn")
 
 func _on_Voltar_pressed():
 	get_tree().change_scene("res://Cenas/Interface do Usuário/EscolhaPoder.tscn") #Botão de voltar

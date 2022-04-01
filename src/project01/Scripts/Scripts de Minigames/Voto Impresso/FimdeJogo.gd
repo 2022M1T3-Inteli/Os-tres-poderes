@@ -25,6 +25,7 @@ func _on_Temporizador_timeout():
 
 func _on_Voltar_menu_pressed():
 	get_tree().change_scene("res://Cenas/Poderes/Executivo/Executivo.tscn")
+	get_tree().paused = false
 	Global.etapa2 = true
 	#colocar para onde a cena vai 
 

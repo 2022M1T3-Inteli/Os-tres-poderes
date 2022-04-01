@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/musica de fundo 2.mp3-adac478bb2ea50abd3dae79da6884a0a.mp3str"
+
+[deps]
+
+source_file="res://Recursos/Musicas/musica de fundo 2.mp3"
+dest_files=[ "res://.import/musica de fundo 2.mp3-adac478bb2ea50abd3dae79da6884a0a.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

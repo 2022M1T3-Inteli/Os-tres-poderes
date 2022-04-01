@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/kayakum.mp3-b07f70998b62df94f8fd01542edd7ec3.mp3str"
+
+[deps]
+
+source_file="res://Recursos/Musicas/kayakum.mp3"
+dest_files=[ "res://.import/kayakum.mp3-b07f70998b62df94f8fd01542edd7ec3.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/salty-ditty-by-kevin-macleod-from-filmmusic-io.mp3-724cb11deeca3eff3a9857521528f1d6.mp3str"
+
+[deps]
+
+source_file="res://Recursos/Musicas/salty-ditty-by-kevin-macleod-from-filmmusic-io.mp3"
+dest_files=[ "res://.import/salty-ditty-by-kevin-macleod-from-filmmusic-io.mp3-724cb11deeca3eff3a9857521528f1d6.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

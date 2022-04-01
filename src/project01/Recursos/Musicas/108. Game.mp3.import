@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/108. Game.mp3-b8de9977a9a16de8de489390b440f5da.mp3str"
+
+[deps]
+
+source_file="res://Recursos/Musicas/108. Game.mp3"
+dest_files=[ "res://.import/108. Game.mp3-b8de9977a9a16de8de489390b440f5da.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

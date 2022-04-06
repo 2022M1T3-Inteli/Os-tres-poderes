@@ -18,7 +18,8 @@ var pontostotal = 0.0
 signal morreu
 signal recompensar
 signal pontuar
-
+#Sinais utilizados para realiazar as ações de morte no minigame, recompensar pelos pontos
+#adquiridos pelo jogador no minigame e pontuar para atualizar os pontos, respectivamente.
 var pontuacao = 0
 #essa é a variável global, que salva o valor dos pontos obtidos no mini game
 
@@ -74,7 +75,7 @@ var comissoes = {
 		}
 	}
 }
-
+#Materiais de Pergunta e respostas do debate
 var pergunta_atual = 0  
 var comissao_atual = 0 
 
@@ -150,7 +151,7 @@ var dialogos_dados = {
 		5: "Vá para o prédio do executivo e comece a trabalhar!"
 	}
 }
-
+#Descreve todas os diálogos do Conselheiro
 var conselheiro_dados = {
 	"HomemBranco": {
 		"Busto": load("res://Recursos/Sprites/NPCs/HomemBrancoBusto.png"), 
@@ -169,6 +170,6 @@ var conselheiro_dados = {
 		"Hidden": load("res://Recursos/Sprites/NPCs/MulherNegraHidden.png")
 	}
 }
-
+#Resposável pela mudança da seleção do sprite do Conselheiro
 var conselheiro_escolhido 
 var contexto_atual

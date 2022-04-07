@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Recursos/Botões/selected_button_themes.tres" type="StyleBox" id=1]
 [ext_resource path="res://Recursos/Planos de Fundo/mesa-busto3.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Recursos/Botões/SetaNormal.png" type="Texture" id=4]
 [ext_resource path="res://Recursos/Botões/SetaHover.png" type="Texture" id=5]
 [ext_resource path="res://Recursos/Botões/SetaPressed.png" type="Texture" id=6]
+[ext_resource path="res://Recursos/Musicas/musica de fundo 2.mp3" type="AudioStream" id=7]
 
 [node name="Executivo" type="Control"]
 anchor_right = 1.0
@@ -94,6 +95,10 @@ texture_hover = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="musicaexecutivo" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+autoplay = true
 
 [connection signal="pressed" from="Aprovar" to="." method="_on_Aprovar_pressed"]
 [connection signal="pressed" from="Imprensa" to="." method="_on_Imprensa_pressed"]

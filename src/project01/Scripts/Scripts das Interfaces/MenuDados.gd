@@ -1,5 +1,8 @@
 extends Node2D
 
+onready var easteregg = $EasterEgg
+onready var power = $Power
+onready var loading = $Loading
 onready var pc = $Background
 onready var botoes = $"Opções"
 var pcligado = load("res://Recursos/Planos de Fundo/fundo-torto(1).jpg")
@@ -27,3 +30,19 @@ func _on_Power_pressed():
 	else:
 		pc.texture = pcligado
 		botoes.show()
+#"Liga e Desliga" o Monitor
+
+
+func _on_VideoPlayer_finished():
+	get_tree().change_scene("res://Cenas/Poderes/Executivo/Minigames/Corrida pela Saúde/CorridaSaude.tscn")
+#Inicia a cena do Easter Egg
+
+func _on_EasterEgg_pressed():
+	loading.show()
+	loading.play()
+	if pc.texture == pcligado:
+		pc.texture = pcdesligado
+		botoes.hide()
+	easteregg.hide()
+	power.hide()
+#Responsavel por iniciar o carregamento para o Easter Egg

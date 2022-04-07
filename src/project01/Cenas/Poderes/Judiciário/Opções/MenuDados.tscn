@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scripts/Scripts das Interfaces/MenuDados.gd" type="Script" id=1]
 [ext_resource path="res://Recursos/Planos de Fundo/fundo-torto(1).jpg" type="Texture" id=2]
+[ext_resource path="res://Recursos/videos/Loading (video-converter.com).webm" type="VideoStream" id=3]
 
 [node name="MenuDados" type="Node2D"]
 script = ExtResource( 1 )
@@ -71,8 +72,32 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Loading" type="VideoPlayer" parent="."]
+visible = false
+margin_left = 556.0
+margin_top = 115.0
+margin_right = 914.0
+margin_bottom = 383.0
+stream = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EasterEgg" type="TextureButton" parent="."]
+margin_left = 349.0
+margin_top = 285.0
+margin_right = 389.0
+margin_bottom = 325.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [connection signal="pressed" from="Opções/DadosJogador" to="." method="_on_DadosJogador_pressed"]
 [connection signal="pressed" from="Opções/DadosDebate" to="." method="_on_DadosDebate_pressed"]
 [connection signal="pressed" from="Opções/DadosMinigame" to="." method="_on_DadosMinigame_pressed"]
 [connection signal="pressed" from="Voltar" to="." method="_on_Voltar_pressed"]
 [connection signal="pressed" from="Power" to="." method="_on_Power_pressed"]
+[connection signal="finished" from="Loading" to="." method="_on_VideoPlayer_finished"]
+[connection signal="finished" from="Loading" to="." method="_on_Loading_finished"]
+[connection signal="pressed" from="EasterEgg" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="EasterEgg" to="." method="_on_EasterEgg_pressed"]

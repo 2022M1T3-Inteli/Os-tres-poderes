@@ -9,7 +9,7 @@ func _ready():
 	Global.connect("pontuar", self, "atualizarpontos")
 
 func _on_Button_pressed():
-	get_tree().change_scene("res://Cenas/Poderes/Executivo/Executivo.tscn")
+	get_tree().change_scene("res://Cenas/Poderes/Judiciário/Opções/MenuDados.tscn")
 	## O botão recarrega o jogo
 	Global.etapa2 = true
 

@@ -41,9 +41,12 @@ size_flags_horizontal = 8
 size_flags_vertical = 4
 custom_constants/separation = 35
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="musicamenu" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 1 )
 autoplay = true
+__meta__ = {
+"_editor_description_": "musica tocada no menu e no video de introdução."
+}
 
 [node name="Start" type="TextureButton" parent="."]
 margin_left = 312.0

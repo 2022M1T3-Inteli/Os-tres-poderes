@@ -11,7 +11,7 @@ onready var explicar = $Explicar
 
 var HPJogador  = 100
 var HPInimigo = 100
-var dano =  30
+var dano =  50
 var acertou = 0
 var atual
 var passadas = []
@@ -91,8 +91,15 @@ func _on_Recusar_pressed():
 	acertou = 3 
 
 func proxima_questao(): 
+	if HPInimigo < 50 :
+		get_tree().change_scene("res://vitoria.tscn")
+	#	get_tree().change_scene("res://derrota_vitoria.tscn")
+	if HPJogador < 50 :
+		get_tree().change_scene("res://derrota_vitoria.tscn")
 	if passadas.has(1) and passadas.has(2):
-		get_tree().change_scene("res://Cenas/Interface do Usuário/EscolhaPoder.tscn")
+		
+		print("kkkk")
+		
 	else:
 		var pergunta = RandomNumberGenerator.new()
 		pergunta.randomize()

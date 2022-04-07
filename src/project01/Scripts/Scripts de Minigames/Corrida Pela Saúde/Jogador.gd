@@ -60,6 +60,7 @@ func _input(event):
 	if estado == CORRER:
 		## Se o jogador estiver no chão
 		if event.is_action_pressed("Pulo"):
+			$jump.play()
 			## Adicionamos uma condição que faz com que toda vez que o botão de pulo (configurado no menu Project > Project Settings > Input Map) for pressionado, algo aconteça.
 			estado = PULAR
 				## Se o jogador pressionar o botão de pular, ele está pulando. 
@@ -97,3 +98,12 @@ func morreu():
 	Global.etapa2 = true
 	print(Global.pontosminigame) 
 	print(Global.pontostotal)
+	
+func _process(delta):
+	if Sinais.aguamusic: 
+		$GabrielGostoso.play()
+		Sinais.aguamusic = false
+	if Sinais.morreumusic:
+		$morreumusic.play()
+		Sinais.morreumusic = false
+

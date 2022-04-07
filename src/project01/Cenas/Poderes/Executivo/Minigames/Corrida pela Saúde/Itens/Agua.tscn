@@ -25,6 +25,9 @@ polygon = PoolVector2Array( 32, -241.4, 34.4, -235, 35.4, -235, 44, -231.3, 44, 
 
 [node name="pick_sound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
+__meta__ = {
+"_editor_description_": "som da agua"
+}
 
 [connection signal="body_entered" from="Pegou" to="." method="_on_Pegou_body_entered"]
 [connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]

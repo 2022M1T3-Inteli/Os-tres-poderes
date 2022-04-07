@@ -317,7 +317,7 @@ rect_scale = Vector2( 1, 1.5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_fonts/normal_font = SubResource( 6 )
 
-[node name="debate" type="AudioStreamPlayer" parent="."]
+[node name="musicadebate" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 16 )
 volume_db = -10.0
 autoplay = true

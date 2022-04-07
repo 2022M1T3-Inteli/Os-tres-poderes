@@ -88,7 +88,7 @@ margin_top = 191.0
 margin_right = 1112.0
 margin_bottom = 191.0
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="escolhadepoder" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
 autoplay = true
 

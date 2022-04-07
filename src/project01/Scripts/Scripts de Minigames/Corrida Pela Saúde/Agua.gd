@@ -17,8 +17,7 @@ func _on_Pegou_body_entered(body):
 		queue_free()
 			## Faz a água desaparecer quando for pega pelo Jogador. 
 		$pick_sound.play()
-		#Signals.emit_signal("rewardplayer", 1)
-		#yield (pick_sound, 'null' )
+		
 		queue_free()
 		
 func _on_VisibilityNotifier2D_screen_exited():

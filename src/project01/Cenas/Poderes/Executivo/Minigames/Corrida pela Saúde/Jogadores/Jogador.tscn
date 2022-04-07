@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Scripts/Scripts de Minigames/Corrida Pela Saúde/Jogador.gd" type="Script" id=1]
 [ext_resource path="res://Recursos/Sprites/Minigames/Corrida Pela Saúde/Jogador/pulo2.png" type="Texture" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Recursos/Sprites/Minigames/Corrida Pela Saúde/Jogador/corredor3.png" type="Texture" id=10]
 [ext_resource path="res://Recursos/Musicas/jump1.ogg" type="AudioStream" id=11]
 [ext_resource path="res://Recursos/Musicas/confirmation_001.ogg" type="AudioStream" id=12]
+[ext_resource path="res://Recursos/Musicas/pepSound2.ogg" type="AudioStream" id=13]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -52,6 +53,9 @@ shape = SubResource( 3 )
 
 [node name="jump" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 11 )
+__meta__ = {
+"_editor_description_": "som de pulo do jogador"
+}
 
 [node name="aguamusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 12 )
@@ -61,6 +65,10 @@ __meta__ = {
 }
 
 [node name="morreumusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )
+__meta__ = {
+"_editor_description_": "audio de quando o jogador morre"
+}
 
 [connection signal="body_entered" from="Pes" to="." method="_on_Pes_body_entered"]
 [connection signal="body_exited" from="Pes" to="." method="_on_Pes_body_exited"]

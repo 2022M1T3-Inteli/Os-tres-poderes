@@ -8,7 +8,7 @@ extends Control
 func _ready():
 	pass # Replace with function body.
 	
-	get_node("HpProgress/definicao").text = "perdeu playboy"
+	get_node("HpProgress/definicao").text = "YOU LOSE"
 
 
 

@@ -45,5 +45,23 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Button" type="Button" parent="."]
+margin_left = 569.0
+margin_top = 162.0
+margin_right = 901.0
+margin_bottom = 378.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DadosMinigame" type="Label" parent="."]
+margin_left = 569.0
+margin_top = 165.0
+margin_right = 893.0
+margin_bottom = 360.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [connection signal="pressed" from="Voltar" to="." method="_on_Voltar_pressed"]
 [connection signal="pressed" from="Power" to="." method="_on_Power_pressed"]

@@ -26,28 +26,37 @@ __meta__ = {
 }
 
 [node name="DadosJogador" type="Button" parent="Opções"]
-margin_top = 101.0
+margin_top = 89.0
 margin_right = 358.0
-margin_bottom = 121.0
+margin_bottom = 109.0
 text = "Dados do Jogador"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="DadosDebate" type="Button" parent="Opções"]
-margin_top = 125.0
+margin_top = 113.0
 margin_right = 358.0
-margin_bottom = 145.0
+margin_bottom = 133.0
 text = "Dados do Debate"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="DadosMinigame" type="Button" parent="Opções"]
-margin_top = 149.0
+margin_top = 137.0
 margin_right = 358.0
-margin_bottom = 169.0
+margin_bottom = 157.0
 text = "Dados do Minigame"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Noticias" type="Button" parent="Opções"]
+margin_top = 161.0
+margin_right = 358.0
+margin_bottom = 181.0
+text = "Notícias"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -74,5 +83,6 @@ __meta__ = {
 [connection signal="pressed" from="Opções/DadosJogador" to="." method="_on_DadosJogador_pressed"]
 [connection signal="pressed" from="Opções/DadosDebate" to="." method="_on_DadosDebate_pressed"]
 [connection signal="pressed" from="Opções/DadosMinigame" to="." method="_on_DadosMinigame_pressed"]
+[connection signal="pressed" from="Opções/Noticias" to="." method="_on_Noticias_pressed"]
 [connection signal="pressed" from="Voltar" to="." method="_on_Voltar_pressed"]
 [connection signal="pressed" from="Power" to="." method="_on_Power_pressed"]

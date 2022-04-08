@@ -46,10 +46,10 @@ stream = ExtResource( 1 )
 autoplay = true
 
 [node name="Start" type="TextureButton" parent="."]
-margin_left = 312.0
-margin_top = 237.0
-margin_right = 662.0
-margin_bottom = 337.0
+margin_left = 299.0
+margin_top = 242.0
+margin_right = 649.0
+margin_bottom = 317.0
 rect_min_size = Vector2( 350, 75 )
 size_flags_horizontal = 4
 expand = true
@@ -58,10 +58,10 @@ __meta__ = {
 }
 
 [node name="Sobre" type="TextureButton" parent="."]
-margin_left = 284.0
-margin_top = 334.0
-margin_right = 696.0
-margin_bottom = 415.0
+margin_left = 312.0
+margin_top = 333.0
+margin_right = 662.0
+margin_bottom = 408.0
 rect_min_size = Vector2( 350, 75 )
 size_flags_horizontal = 4
 expand = true
@@ -70,10 +70,10 @@ __meta__ = {
 }
 
 [node name="Sair" type="TextureButton" parent="."]
-margin_left = 290.0
-margin_top = 403.0
-margin_right = 692.0
-margin_bottom = 490.0
+margin_left = 311.0
+margin_top = 406.0
+margin_right = 684.0
+margin_bottom = 481.0
 rect_min_size = Vector2( 350, 75 )
 size_flags_horizontal = 4
 expand = true
@@ -82,6 +82,7 @@ __meta__ = {
 }
 
 [node name="VideoPlayer" type="VideoPlayer" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 stream = ExtResource( 7 )
@@ -90,7 +91,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="pressed" from="Start" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Start" to="." method="_on_Start_pressed"]
+[connection signal="pressed" from="Start" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Sair" to="." method="_on_Button3_pressed"]
 [connection signal="finished" from="VideoPlayer" to="." method="_on_VideoPlayer_finished"]

@@ -13,9 +13,11 @@ func _on_Power_pressed():
 	else:
 		pc.texture = pcligado
 		dados.show()
+#Liga e desliga o monitor
 
 func _on_Voltar_pressed():
 	get_tree().change_scene("res://Cenas/Poderes/Judiciário/Opções/MenuDados.tscn") 
 
 func _process(delta):
-	$DadosMinigame.text = "Sua pontuação foi: " + String(pontuacao)
+	$Dados.text = "Sua pontuação do MiniGame foi: " + String(pontuacao)
+#Puxa as informações do Global.gd e mostra os dados do Minigame na tela do computador.

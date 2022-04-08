@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scripts/Scripts das Interfaces/MenuDados.gd" type="Script" id=1]
-[ext_resource path="res://Recursos/Planos de Fundo/fundo-torto(1).jpg" type="Texture" id=2]
+[ext_resource path="res://Recursos/Planos de Fundo/fundo-pc.jpg" type="Texture" id=2]
 [ext_resource path="res://Recursos/videos/Loading (video-converter.com).webm" type="VideoStream" id=3]
 
 [node name="MenuDados" type="Node2D"]
@@ -97,7 +97,7 @@ __meta__ = {
 [connection signal="pressed" from="Opções/DadosMinigame" to="." method="_on_DadosMinigame_pressed"]
 [connection signal="pressed" from="Voltar" to="." method="_on_Voltar_pressed"]
 [connection signal="pressed" from="Power" to="." method="_on_Power_pressed"]
-[connection signal="finished" from="Loading" to="." method="_on_VideoPlayer_finished"]
 [connection signal="finished" from="Loading" to="." method="_on_Loading_finished"]
-[connection signal="pressed" from="EasterEgg" to="." method="_on_TextureButton_pressed"]
+[connection signal="finished" from="Loading" to="." method="_on_VideoPlayer_finished"]
 [connection signal="pressed" from="EasterEgg" to="." method="_on_EasterEgg_pressed"]
+[connection signal="pressed" from="EasterEgg" to="." method="_on_TextureButton_pressed"]

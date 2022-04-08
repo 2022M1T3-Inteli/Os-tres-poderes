@@ -87,7 +87,7 @@ Faça o Download do JOGO.apk no seu celular.
 Execute o APK e siga as instruções de seu telefone.
 
 ```sh
-Coloque código do prompt de comnando se for necessário
+non existence
 ```
 
 <b>Windows:</b>
@@ -96,13 +96,17 @@ Não há instalação! Apenas executável!
 Encontre o JOGO.exe na pasta executáveis e execute-o como qualquer outro programa.
 
 ```sh
-Coloque código do prompt de comnando se for necessário
+https://github.com/2022M1T3/Projeto5/blob/main/execut%C3%A1veis/Windows/project01.exe?raw=true
 ```
-
 <b>HTML:</b>
 
 Não há instalação!
 Encontre o index.html na pasta executáveis e execute-o como uma página WEB (através de algum browser).
+Versão antiga do Game
+
+```sh
+https://itch.io/queue/c/2399268/eu-presidente?game_id=1463920
+```
 
 <br><br>
 

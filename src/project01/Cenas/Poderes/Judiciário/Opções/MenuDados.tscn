@@ -97,7 +97,7 @@ __meta__ = {
 [connection signal="pressed" from="Opções/DadosMinigame" to="." method="_on_DadosMinigame_pressed"]
 [connection signal="pressed" from="Voltar" to="." method="_on_Voltar_pressed"]
 [connection signal="pressed" from="Power" to="." method="_on_Power_pressed"]
-[connection signal="finished" from="Loading" to="." method="_on_Loading_finished"]
 [connection signal="finished" from="Loading" to="." method="_on_VideoPlayer_finished"]
+[connection signal="finished" from="Loading" to="." method="_on_Loading_finished"]
 [connection signal="pressed" from="EasterEgg" to="." method="_on_EasterEgg_pressed"]
 [connection signal="pressed" from="EasterEgg" to="." method="_on_TextureButton_pressed"]

@@ -93,7 +93,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="pressed" from="Start" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Start" to="." method="_on_Start_pressed"]
+[connection signal="pressed" from="Start" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Sair" to="." method="_on_Button3_pressed"]
 [connection signal="finished" from="VideoPlayer" to="." method="_on_VideoPlayer_finished"]

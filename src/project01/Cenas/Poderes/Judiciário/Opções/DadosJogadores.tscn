@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Recursos/Planos de Fundo/fundo-torto(1).jpg" type="Texture" id=1]
+[ext_resource path="res://Recursos/Planos de Fundo/fundo-pc.jpg" type="Texture" id=1]
 [ext_resource path="res://Scripts/Scripts das Interfaces/Dados.gd" type="Script" id=2]
 
 [node name="DadosJogador" type="Node2D"]

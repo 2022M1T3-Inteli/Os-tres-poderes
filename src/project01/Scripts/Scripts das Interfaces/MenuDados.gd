@@ -5,7 +5,7 @@ onready var power = $Power
 onready var loading = $Loading
 onready var pc = $Background
 onready var botoes = $"Opções"
-var pcligado = load("res://Recursos/Planos de Fundo/fundo-torto(1).jpg")
+var pcligado = load("res://Recursos/Planos de Fundo/fundo-pc.jpg")
 var pcdesligado = load("res://Recursos/Planos de Fundo/PCDesligado.jpg")
 
 func _ready():

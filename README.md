@@ -11,7 +11,7 @@
 <img src="https://cdn.discordapp.com/attachments/937463646181785633/962077071855738880/logo.png"
      </p>     
 
-## Integrantes: <a href="https://www.linkedin.com/in/eric-tachdjian-27044b232/">Eric Tachdjian</a>, <a href="https://www.linkedin.com/in/gabriel-pascoli-73733b200/">Gabriel Pascoli</a>, <a href="https://www.linkedin.com/in/victorbarq/">Luiz Augusto Ferreira</a>, <a href="https://www.linkedin.com/in/pedro-munhoz-de-souza-rivero-340489216/">Pedro Munhoz</a>, <a href="https://www.linkedin.com/in/pedrocrezende/">Pedro Rezende</a>, <a href="https://www.linkedin.com/in/sergiobalucas/">Sergio Lucas</a>, <a href="https://www.linkedin.com/in/victorbarq/">Vinicius Souza</a>. 
+## Integrantes: <a href="https://www.linkedin.com/in/eric-tachdjian-27044b232/">Eric Tachdjian</a>, <a href="https://www.linkedin.com/in/gabriel-pascoli-73733b200/">Gabriel Pascoli</a>, <a href="http://www.linkedin.com/in/luizaugustofranco">Luiz Augusto Ferreira</a>, <a href="https://www.linkedin.com/in/pedro-munhoz-de-souza-rivero-340489216/">Pedro Munhoz</a>, <a href="https://www.linkedin.com/in/pedrocrezende/">Pedro Rezende</a>, <a href="https://www.linkedin.com/in/sergiobalucas/">Sergio Lucas</a>, <a href="https://www.linkedin.com/in/victorbarq/">Vinicius Souza</a>. 
 <br><br>
 <p align="center">
   <a href="#descrição">Descrição</a> ->

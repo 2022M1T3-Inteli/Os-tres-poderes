@@ -6,7 +6,7 @@
 [ext_resource path="res://Recursos/Botões/SetaNormal.png" type="Texture" id=4]
 [ext_resource path="res://Recursos/Botões/SetaHover.png" type="Texture" id=5]
 [ext_resource path="res://Recursos/Botões/SetaPressed.png" type="Texture" id=6]
-[ext_resource path="res://Recursos/Musicas/musica de fundo 2.mp3" type="AudioStream" id=7]
+[ext_resource path="res://Recursos/Musicas/Y2Mate.is - 8-bit Mass Effect - Uncharted Worlds (Galaxy Map Song)---ja8Fuw9pY-160k-1648818477128.mp3" type="AudioStream" id=7]
 
 [node name="Executivo" type="Control"]
 anchor_right = 1.0

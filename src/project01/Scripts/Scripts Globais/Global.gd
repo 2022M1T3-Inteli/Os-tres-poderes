@@ -267,6 +267,14 @@ var conselheiro_dialogo = {
 		14: "Mas é claro!",
 		15: "Mais alguma dúvida?",
 		16: "Tudo certo então! Vamos á Brasília!"
+	},
+	"Apresentação": {
+		0: "Bem vindo ao Planalto Central! Onde todo o corpo governamental federal se encontra, o que nos inclui!",
+		1: "Você estará no famoso Palácio do Planalto, e eu assumirei minha posição no STF.",
+		2: "Documentarei todo seu processo para que o país se lembre da história que estamos escrevendo aqui!",
+		3: "E... pois caso o poder judiciário for acionado, eu preciso de fatos para te defender em frente a meus colegas.",
+		4: "Mas, como eu disse, isso é improvável.",
+		5: "Agora, você "
 	}
 }
 
@@ -303,4 +311,12 @@ var presidente_dialogo = {
 			"Dialogo" : "Não, tudo OK, podemos prosseguir."
 		}
 	}
+}
+
+##
+## Códigos de PEC
+##
+
+var PECs_Available = {
+	0 : "Voto Impresso"
 }

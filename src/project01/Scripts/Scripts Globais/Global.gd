@@ -15,7 +15,9 @@ var poder_escolhido = ""
 var pontosminigame = 0.0
 
 var pontostotal = 0.0
-
+var aguamusic = false
+var morreumusic = false 
+# variaves do minigame corrida pela sáude 
 signal morreu
 signal recompensar
 signal pontuar

@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Recursos/Planos de Fundo/3 poderes.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Scripts das Interfaces/EscolhaPoder.gd" type="Script" id=2]
 [ext_resource path="res://Recursos/Botões/selected_button_themes.tres" type="StyleBox" id=3]
+[ext_resource path="res://Recursos/Musicas/musica de fundo 1.mp3" type="AudioStream" id=4]
 [ext_resource path="res://Recursos/Botões/LegislativoHover.png" type="Texture" id=5]
 [ext_resource path="res://Recursos/Botões/ExecutivoDisabled.png" type="Texture" id=6]
 [ext_resource path="res://Recursos/Botões/JudiciárioDisabled.png" type="Texture" id=10]
@@ -86,6 +87,10 @@ margin_left = 1112.0
 margin_top = 191.0
 margin_right = 1112.0
 margin_bottom = 191.0
+
+[node name="escolhadepoder" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+autoplay = true
 
 [connection signal="mouse_entered" from="Poder Legislativo" to="." method="_on_Poder_Legislativo_mouse_entered"]
 [connection signal="pressed" from="Poder Legislativo" to="." method="_on_Poder_Legislativo_pressed"]

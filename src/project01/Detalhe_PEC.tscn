@@ -1,8 +1,16 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Recursos/Planos de Fundo/cenario_mesa BM.jpg" type="Texture" id=1]
 [ext_resource path="res://Recursos/Botões/Voltar_Hover.png" type="Texture" id=2]
 [ext_resource path="res://Recursos/Botões/Voltar_Normal.png" type="Texture" id=3]
+[ext_resource path="res://Recursos/Botões/texto.png" type="Texture" id=4]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://Recursos/Fontes/Mukta-ExtraBold.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 36
+font_data = SubResource( 1 )
 
 [node name="Detalhe_PEC" type="Control"]
 anchor_right = 1.0
@@ -11,7 +19,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Fundo" type="TextureRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
 texture = ExtResource( 1 )
@@ -20,7 +28,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureButton" type="TextureButton" parent="."]
+[node name="Voltar" type="TextureButton" parent="."]
 margin_left = 25.0
 margin_top = 16.0
 margin_right = 115.0
@@ -31,3 +39,22 @@ texture_hover = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+visible = false
+margin_left = 379.0
+margin_top = 74.0
+margin_right = 845.0
+margin_bottom = 655.0
+texture = ExtResource( 4 )
+
+[node name="Título" type="Label" parent="."]
+margin_left = 385.0
+margin_top = 68.0
+margin_right = 840.0
+margin_bottom = 116.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "PEC Do Voto Impresso"
+align = 1
+valign = 1

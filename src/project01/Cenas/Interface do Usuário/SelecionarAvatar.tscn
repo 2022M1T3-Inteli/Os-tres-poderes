@@ -1,0 +1,169 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://Recursos/Botões/MN_Normal.png" type="Texture" id=1]
+[ext_resource path="res://Recursos/Botões/HN_Disabled.png" type="Texture" id=2]
+[ext_resource path="res://Recursos/Planos de Fundo/Palacio.png" type="Texture" id=3]
+[ext_resource path="res://Recursos/Botões/MB_Hover.png" type="Texture" id=4]
+[ext_resource path="res://Recursos/Botões/MB_Disabled.png" type="Texture" id=5]
+[ext_resource path="res://Recursos/Botões/MN_Disabled.png" type="Texture" id=6]
+[ext_resource path="res://Recursos/Botões/MN_Hover.png" type="Texture" id=7]
+[ext_resource path="res://Recursos/Botões/HN_Hover.png" type="Texture" id=8]
+[ext_resource path="res://Recursos/Botões/HN_Normal.png" type="Texture" id=9]
+[ext_resource path="res://Recursos/Botões/HB_Disabled.png" type="Texture" id=10]
+[ext_resource path="res://Recursos/Botões/HB_Hover.png" type="Texture" id=11]
+[ext_resource path="res://Recursos/Botões/HB_Normal.png" type="Texture" id=12]
+[ext_resource path="res://Recursos/Botões/MB_Normal.png" type="Texture" id=13]
+[ext_resource path="res://Recursos/Textos e Diálogos/conselho.png" type="Texture" id=14]
+[ext_resource path="res://Recursos/Sprites/NPCs/Homem Branco/HB_Lado_Half.png" type="Texture" id=15]
+[ext_resource path="res://Scripts/SelecionarAvatar.gd" type="Script" id=16]
+[ext_resource path="res://Recursos/Sprites/NPCs/Homem Branco/HB_Lado_Hidden_Quarter.png" type="Texture" id=17]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 70.0
+margin_top = 172.0
+margin_right = 520.0
+margin_bottom = 701.0
+custom_constants/separation = 25
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_right = 450.0
+margin_bottom = 252.0
+custom_constants/separation = 50
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HomemBranco" type="TextureButton" parent="VBoxContainer/HBoxContainer"]
+margin_right = 200.0
+margin_bottom = 252.0
+rect_min_size = Vector2( 200, 252 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture_normal = ExtResource( 12 )
+texture_hover = ExtResource( 11 )
+texture_disabled = ExtResource( 10 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MulherNegra" type="TextureButton" parent="VBoxContainer/HBoxContainer"]
+margin_left = 250.0
+margin_right = 450.0
+margin_bottom = 252.0
+rect_min_size = Vector2( 200, 252 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture_normal = ExtResource( 1 )
+texture_hover = ExtResource( 7 )
+texture_disabled = ExtResource( 6 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 277.0
+margin_right = 450.0
+margin_bottom = 529.0
+custom_constants/separation = 50
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HomemNegro" type="TextureButton" parent="VBoxContainer/HBoxContainer2"]
+margin_right = 200.0
+margin_bottom = 252.0
+rect_min_size = Vector2( 200, 252 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture_normal = ExtResource( 9 )
+texture_hover = ExtResource( 8 )
+texture_disabled = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MulherBranca" type="TextureButton" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 250.0
+margin_right = 450.0
+margin_bottom = 252.0
+rect_min_size = Vector2( 200, 252 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture_normal = ExtResource( 13 )
+texture_hover = ExtResource( 4 )
+texture_disabled = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Nome do Selecionado" type="TextureRect" parent="."]
+margin_left = 22.0
+margin_top = 24.0
+margin_right = 778.0
+margin_bottom = 173.0
+texture = ExtResource( 14 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Candidato Passado" type="TextureRect" parent="."]
+visible = false
+margin_left = 885.0
+margin_top = 182.0
+margin_right = 1306.0
+margin_bottom = 1030.0
+rect_scale = Vector2( 1.25, 0.75 )
+texture = ExtResource( 17 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Candidato Selecionado" type="TextureRect" parent="."]
+margin_left = 729.0
+margin_top = 45.0
+margin_right = 1254.0
+margin_bottom = 725.0
+texture = ExtResource( 15 )
+expand = true
+flip_h = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="mouse_entered" from="VBoxContainer/HBoxContainer/HomemBranco" to="." method="_on_HomemBranco_mouse_entered"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/HomemBranco" to="." method="_on_HomemBranco_pressed"]
+[connection signal="mouse_entered" from="VBoxContainer/HBoxContainer/MulherNegra" to="." method="_on_MulherNegra_mouse_entered"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/MulherNegra" to="." method="_on_MulherNegra_pressed"]
+[connection signal="mouse_entered" from="VBoxContainer/HBoxContainer2/HomemNegro" to="." method="_on_HomemNegro_mouse_entered"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/HomemNegro" to="." method="_on_HomemNegro_pressed"]
+[connection signal="mouse_entered" from="VBoxContainer/HBoxContainer2/MulherBranca" to="." method="_on_MulherBranca_mouse_entered"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/MulherBranca" to="." method="_on_MulherBranca_pressed"]

@@ -5,6 +5,7 @@ extends Node
 ##
 var ideia = false
 var etapa2 = false
+var Progresso
 var poder_escolhido = ""
 
 ##
@@ -172,3 +173,150 @@ var conselheiro_dados = {
 
 var conselheiro_escolhido 
 var contexto_atual
+
+##
+## Códigos de Avatar
+##
+
+var NPC = {
+	"Homem_Branco" : {
+		"Frente" : {
+			"Full" : load("res://Recursos/Sprites/NPCs/Homem Branco/HB_Frente_Full.png"),
+			},
+		"Lado" : { 
+			"Full" : load("res://Recursos/Sprites/NPCs/Homem Branco/HB_Lado_Full.png"),
+			"Half" : load("res://Recursos/Sprites/NPCs/Homem Branco/HB_Lado_Half.png"),
+			"Hidden" : {
+				"Half" : load("res://Recursos/Sprites/NPCs/Homem Branco/HB_Lado_Half_Hidden.png"),
+				"Quarter" : load("res://Recursos/Sprites/NPCs/Homem Branco/HB_Lado_Hidden_Quarter.png")
+				}
+			}
+		}, 
+	"Homem_Negro" : {
+		"Frente" : {
+			"Full" : load("res://Recursos/Sprites/NPCs/Homem Negro/HN_Frente_Full.png"),
+			},
+		"Lado" : { 
+			"Full" : load("res://Recursos/Sprites/NPCs/Homem Negro/HN_Lado_Full.png"),
+			"Half" : load("res://Recursos/Sprites/NPCs/Homem Negro/HN_Lado_Half.png"),
+			"Hidden" : {
+				"Half" : load("res://Recursos/Sprites/NPCs/Homem Negro/HN_Lado_Half_Hidden.png"),
+				"Quarter" : load("res://Recursos/Sprites/NPCs/Homem Negro/HN_Lado_Hidden_Quarter.png")
+				}
+			}
+		}, 
+	"Mulher_Branca" : {
+		"Frente" : {
+			"Full" : load("res://Recursos/Sprites/NPCs/Mulher Branca/MB_Frente_Full.png"),
+			},
+		"Lado" : { 
+			"Full" : load("res://Recursos/Sprites/NPCs/Mulher Branca/MB_Lado_Full.png"),
+			"Half" : load("res://Recursos/Sprites/NPCs/Mulher Branca/MB_Lado_Half.png"),
+			"Hidden" : {
+				"Half" : load("res://Recursos/Sprites/NPCs/Mulher Branca/MB_Lado_Half_Hidden.png"),
+				"Quarter" : load("res://Recursos/Sprites/NPCs/Mulher Branca/MB_Quarter_Hidden.png")
+				}
+			}
+		}, 
+	"Mulher_Negra" : {
+		"Frente" : {
+			"Full" : load("res://Recursos/Sprites/NPCs/Mulher Negra/MN_Frente_Full.png"),
+			},
+		"Lado" : { 
+			"Full" : load("res://Recursos/Sprites/NPCs/Mulher Negra/MN_Lado_Full.png"),
+			"Half" : load("res://Recursos/Sprites/NPCs/Mulher Negra/MN_Lado_Half.png"),
+			"Hidden" : {
+				"Half" : load("res://Recursos/Sprites/NPCs/Mulher Negra/MN_Lado_Half_Hidden.png"),
+				"Quarter" : load("res://Recursos/Sprites/NPCs/Mulher Negra/MN_Lado_Quarter_Hidden.png")
+				}
+			}
+		}
+	}
+
+var Presidente
+var Conselheiro
+
+##
+## Códigos de Diálogo
+##
+
+var conselheiro_dialogo = {
+	"Introdução" : {
+		0 : "Olá Presidente! Muito obrigado por ter me escolhido para ser seu conselheiro!",
+		1 : "Gostei muito da sua proposta de governo, acho muito interessante focar seu mandato em PECs que irão melhorar nosso país!",
+		2 : "Tenho um plano para que consigamos aprovar o maior número de PECs possíveis! Gostaria de ouvir?",
+		3 : "Ótimo! Olha só...",
+		4 : "Você que manda! Irei fazer os preparativos para nossa viagem ao planalto."
+	}, 
+	
+	"Tutorial" : {
+		0: "Para que uma PEC seja aprovada, precisamos passar por 3 fases muito importantes:",
+		1: "A primeira é a apresentação da PEC; onde elaboraremos toda a ideia da PEC e iremos a colocar em papel. É aqui que fazemos o sonho virar realidade.",
+		2: "É inevitável que assim que publicarmos essa PEC, a mídia faça barulho. Então, nós vamos ficar um pé a frente deles; iremos fazer um barulho própriamente nosso!",
+		3: "Não se preocupe com o que precisa fazer agora, pois já tenho tudo planejado! A única coisa que você precisa fazer é realizar uma atividade e sorrir de ponta a ponta para as câmeras!",
+		4: "Tenho certeza de que irá se divertir com elas.",
+		5: "A segunda etapa é o Debate do poder legislativo.",
+		6: "O debate é a parte mais importante do processo; seremos avaliados pela câmara dos deputados e pelo senado em 2 instâncias.",
+		7: "Cada uma das instâncias tem uma pergunta principal, e precisaremos dar bons argumentos para convencer os deputados e senadores de que essa é, de fato, uma PEC essencial para o futuro próspero do Brasil.",
+		8: "Sei que parece ser difícil, porém, caso tenhamos o apoio público da última etapa, temos boas chances de convencê-los, afinal, todo o poder emana do povo.",
+		9: "A última etapa é a promulgação!",
+		10: "Daqui pra frente é só alegria! Após ser aprovada pelo senado e câmara, a única coisa que pode parar a PEC é o poder Judiciário, caso provocado.",
+		11: "Porém, não acho que chegaremos a esse ponto. Para provocarmos o Judiciário, teremos que ter feito algo que infringe a constituição ou outros fundamentos do Brasil.",
+		12: "E nós temos somente o bem do país em mente e no coração! Então não acho que isso será problema.",
+		13: "Bastante coisa, né? Você não entendeu alguma coisa?",
+		14: "Mas é claro!",
+		15: "Mais alguma dúvida?",
+		16: "Tudo certo então! Vamos á Brasília!"
+	},
+	"Apresentação": {
+		0: "Bem vindo ao Planalto Central! Onde todo o corpo governamental federal se encontra, o que nos inclui!",
+		1: "Você estará no famoso Palácio do Planalto, e eu assumirei minha posição no STF.",
+		2: "Documentarei todo seu processo para que o país se lembre da história que estamos escrevendo aqui!",
+		3: "E... pois caso o poder judiciário for acionado, eu preciso de fatos para te defender em frente a meus colegas.",
+		4: "Mas, como eu disse, isso é improvável.",
+		5: "Agora, você "
+	}
+}
+
+var presidente_dialogo = {
+	"Introdução" : {
+		1 : {
+			"Escolha" : "Sim",
+			"Dialogo" : "Sim, adoraria ouvir!"
+		},
+		2 : {
+			"Escolha" : "Não", 
+			"Dialogo" : "Acho melhor não, tenho certeza que irei aprendendo com o tempo."
+		}
+	},
+	"Tutorial" : {
+		1 : {
+			"Escolha" : "Fase 1",
+			"Dialogo" : "Não entendi a fase 1, pode me explicar denovo?"
+		},
+		2 : {
+			"Escolha" : "Fase 2", 
+			"Dialogo" : "Não entendi a fase 2, pode me explicar denovo?"
+		}, 
+		3 : {
+			"Escolha" : "Fase 3",
+			"Dialogo" : "Não entendi a fase 3, pode me explicar denovo?"
+		},
+		4 : {
+			"Escolha" : "Tudo",
+			"Dialogo" : "Não entendi nada, pode me explicar denovo?"
+		},
+		5: {
+			"Escolha" : "Entendi tudo",
+			"Dialogo" : "Não, tudo OK, podemos prosseguir."
+		}
+	}
+}
+
+##
+## Códigos de PEC
+##
+
+var PECs_Available = {
+	0 : "Voto Impresso"
+}

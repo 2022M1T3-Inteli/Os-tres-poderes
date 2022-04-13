@@ -3,7 +3,7 @@
 [ext_resource path="res://Recursos/Planos de Fundo/3 poderes.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Scripts das Interfaces/EscolhaPoder.gd" type="Script" id=2]
 [ext_resource path="res://Recursos/Botões/selected_button_themes.tres" type="StyleBox" id=3]
-[ext_resource path="res://Recursos/Musicas/musica de fundo 1.mp3" type="AudioStream" id=4]
+[ext_resource path="res://Recursos/Musicas/Y2Mate.is - 8-bit Mass Effect - Uncharted Worlds (Galaxy Map Song)---ja8Fuw9pY-160k-1648818477128.mp3" type="AudioStream" id=4]
 [ext_resource path="res://Recursos/Botões/LegislativoHover.png" type="Texture" id=5]
 [ext_resource path="res://Recursos/Botões/ExecutivoDisabled.png" type="Texture" id=6]
 [ext_resource path="res://Recursos/Botões/JudiciárioDisabled.png" type="Texture" id=10]
@@ -90,7 +90,11 @@ margin_bottom = 191.0
 
 [node name="escolhadepoder" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
+volume_db = -13.0
 autoplay = true
+__meta__ = {
+"_editor_description_": "musica de fundo da escolha de poderes "
+}
 
 [connection signal="mouse_entered" from="Poder Legislativo" to="." method="_on_Poder_Legislativo_mouse_entered"]
 [connection signal="pressed" from="Poder Legislativo" to="." method="_on_Poder_Legislativo_pressed"]

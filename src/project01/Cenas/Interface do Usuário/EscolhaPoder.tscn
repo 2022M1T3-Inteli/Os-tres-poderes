@@ -71,13 +71,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="voltar" type="Button" parent="."]
+[node name="voltar" type="TextureButton" parent="."]
 margin_left = 35.0
 margin_top = 620.0
 margin_right = 215.0
 margin_bottom = 690.0
-custom_styles/hover = ExtResource( 3 )
-text = "Voltar ao menu principal"
+texture_normal = ExtResource( 3 )
+expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }

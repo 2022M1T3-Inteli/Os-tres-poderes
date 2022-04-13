@@ -1,0 +1,80 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Recursos/botoes/Deu errado jornal.png" type="Texture" id=1]
+[ext_resource path="res://Recursos/Planos de Fundo/computador.png" type="Texture" id=2]
+[ext_resource path="res://Cenas/Poderes/Judiciário/Opções/Jornal.gd" type="Script" id=3]
+[ext_resource path="res://Recursos/botoes/deu certo jornal.png" type="Texture" id=4]
+[ext_resource path="res://Recursos/botoes/jornal hover.png" type="Texture" id=5]
+
+[node name="Jornal" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Background" type="TextureRect" parent="."]
+margin_right = 1280.0
+margin_bottom = 720.0
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Voltar" type="Button" parent="."]
+margin_left = 35.0
+margin_top = 620.0
+margin_right = 215.0
+margin_bottom = 690.0
+text = "Voltar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Jornal deu certo" type="TextureButton" parent="."]
+margin_left = 607.0
+margin_top = 93.0
+margin_right = 880.0
+margin_bottom = 387.0
+texture_normal = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Jornal deu errado" type="TextureButton" parent="."]
+visible = false
+margin_left = 607.0
+margin_top = 95.0
+margin_right = 895.0
+margin_bottom = 384.0
+texture_normal = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="JornalDC" type="TextureButton" parent="."]
+visible = false
+margin_left = 422.0
+margin_top = 19.0
+margin_right = 974.0
+margin_bottom = 626.0
+texture_normal = ExtResource( 4 )
+expand = true
+
+[node name="JornalDE" type="TextureButton" parent="."]
+visible = false
+margin_left = 413.0
+margin_top = 12.0
+margin_right = 974.0
+margin_bottom = 597.0
+texture_normal = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Voltar" to="." method="_on_Voltar_pressed"]
+[connection signal="mouse_entered" from="Jornal deu certo" to="." method="_on_Jornal_deu_certo_mouse_entered"]
+[connection signal="mouse_entered" from="Jornal deu certo" to="." method="_on_Jornal_mouse_entered"]
+[connection signal="mouse_entered" from="Jornal deu errado" to="." method="_on_Jornal_deu_errado_mouse_entered"]
+[connection signal="mouse_exited" from="JornalDC" to="." method="_on_JornalDC_mouse_exited"]
+[connection signal="mouse_exited" from="JornalDE" to="." method="_on_JornalDE_mouse_exited"]

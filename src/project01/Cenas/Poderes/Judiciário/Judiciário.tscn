@@ -1,8 +1,11 @@
+
 [gd_scene load_steps=19 format=2]
+
 
 [ext_resource path="res://Recursos/Botões/CadernoHover.png" type="Texture" id=1]
 [ext_resource path="res://Recursos/Botões/CadernoDisabled.png" type="Texture" id=2]
 [ext_resource path="res://Scripts/Scripts das Interfaces/Judiciário.gd" type="Script" id=3]
+
 [ext_resource path="res://Recursos/Botões/Audiencia (2).png" type="Texture" id=4]
 [ext_resource path="res://Recursos/Botões/AudienciaHover.png" type="Texture" id=5]
 [ext_resource path="res://Recursos/Botões/Fundo-judiciário.png" type="Texture" id=6]
@@ -49,6 +52,7 @@ expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
 
 [node name="Voltar" type="TextureButton" parent="."]
 margin_left = 60.0
@@ -99,6 +103,7 @@ texture_disabled = ExtResource( 15 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
 
 [node name="Caderno" type="TextureButton" parent="VBoxContainer"]
 margin_top = 90.0

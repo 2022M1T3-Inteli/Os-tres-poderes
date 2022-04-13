@@ -1,4 +1,6 @@
+
 [gd_scene load_steps=8 format=2]
+
 
 [ext_resource path="res://Recursos/Botões/selected_button_themes.tres" type="StyleBox" id=1]
 [ext_resource path="res://Recursos/Planos de Fundo/mesa-busto3.png" type="Texture" id=2]
@@ -6,7 +8,9 @@
 [ext_resource path="res://Recursos/Botões/SetaNormal.png" type="Texture" id=4]
 [ext_resource path="res://Recursos/Botões/SetaHover.png" type="Texture" id=5]
 [ext_resource path="res://Recursos/Botões/SetaPressed.png" type="Texture" id=6]
+
 [ext_resource path="res://Recursos/Musicas/Y2Mate.is - 8-bit Mass Effect - Uncharted Worlds (Galaxy Map Song)---ja8Fuw9pY-160k-1648818477128.mp3" type="AudioStream" id=7]
+
 
 [node name="Executivo" type="Control"]
 anchor_right = 1.0
@@ -46,27 +50,21 @@ margin_bottom = 604.0
 custom_styles/hover = ExtResource( 1 )
 text = "Imprensa"
 
-[node name="Ideia" type="Button" parent="."]
+[node name="Ideia" type="TextureButton" parent="."]
 margin_left = 315.0
 margin_top = 503.0
 margin_right = 952.0
 margin_bottom = 604.0
-custom_styles/hover = ExtResource( 1 )
-text = "Idéia de PEC"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+texture_normal = ExtResource( 7 )
+expand = true
 
-[node name="Voltar" type="Button" parent="."]
+[node name="Voltar" type="TextureButton" parent="."]
 margin_left = 35.0
 margin_top = 620.0
 margin_right = 215.0
 margin_bottom = 690.0
-custom_styles/hover = ExtResource( 1 )
-text = "Voltar"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+texture_normal = ExtResource( 8 )
+expand = true
 
 [node name="Direita" type="TextureButton" parent="."]
 margin_left = 1010.0

@@ -1,3 +1,4 @@
+
 [gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scripts/Scripts de Minigames/Voto Impresso/FimdeJogo.gd" type="Script" id=1]
@@ -5,6 +6,7 @@
 [ext_resource path="res://Recursos/Botões/voltarmenu_normal.png" type="Texture" id=3]
 [ext_resource path="res://Recursos/Botões/voltarmenu_hover.png" type="Texture" id=4]
 [ext_resource path="res://Recursos/Objetos/apoio.png" type="Texture" id=5]
+
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://Recursos/Fontes/Mukta-ExtraBold.ttf"
@@ -35,9 +37,11 @@ margin_top = 547.0
 margin_right = 748.0
 margin_bottom = 618.0
 rect_scale = Vector2( 1.5, 1.5 )
+
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 3 )
 texture_hover = ExtResource( 4 )
+
 __meta__ = {
 "_edit_use_anchors_": false
 }

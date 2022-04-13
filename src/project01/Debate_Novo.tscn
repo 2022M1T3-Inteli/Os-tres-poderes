@@ -1,8 +1,30 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Recursos/Objetos/Fundo_Pergunta.png" type="Texture" id=1]
 [ext_resource path="res://Recursos/Planos de Fundo/mesa.png" type="Texture" id=2]
 [ext_resource path="res://Recursos/Planos de Fundo/debate_plano_de_fundo.jpg" type="Texture" id=3]
+[ext_resource path="res://Recursos/Botões/lado.png" type="Texture" id=4]
+[ext_resource path="res://Recursos/Botões/constitucional_hover.png" type="Texture" id=5]
+[ext_resource path="res://Recursos/Botões/Popular_Hover.png" type="Texture" id=6]
+[ext_resource path="res://Recursos/Botões/Group 34.png" type="Texture" id=7]
+[ext_resource path="res://Recursos/Botões/Rectangle 53.png" type="Texture" id=8]
+[ext_resource path="res://Recursos/Botões/Popular_Normal.png" type="Texture" id=9]
+[ext_resource path="res://Recursos/Botões/Governamental_Normal.png" type="Texture" id=10]
+[ext_resource path="res://Recursos/Botões/Governamental_Hover.png" type="Texture" id=11]
+[ext_resource path="res://Recursos/Botões/constitucional_normal.png" type="Texture" id=12]
+[ext_resource path="res://Recursos/Sprites/NPCs/Homem Negro/HN_Lado_Half_Hidden.png" type="Texture" id=13]
+[ext_resource path="res://Recursos/Sprites/NPCs/Homem Branco/HB_Lado_Half.png" type="Texture" id=14]
+[ext_resource path="res://Recursos/Sprites/NPCs/Mulher Negra/MN_Lado_Half_Hidden.png" type="Texture" id=15]
+[ext_resource path="res://Recursos/Sprites/NPCs/Mulher Branca/MB_Lado_Half.png" type="Texture" id=16]
+[ext_resource path="res://Recursos/Objetos/primeira_instancia_normal.png" type="Texture" id=17]
+[ext_resource path="res://Recursos/Objetos/segunda_instancia_normal.png" type="Texture" id=18]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://Recursos/Fontes/Mukta-ExtraBold.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 36
+font_data = SubResource( 1 )
 
 [node name="Debate_Novo" type="Control"]
 anchor_right = 1.0
@@ -11,7 +33,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureRect2" type="TextureRect" parent="."]
+[node name="Plano De Fundo" type="TextureRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
 texture = ExtResource( 3 )
@@ -20,13 +42,165 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="conselheiro" type="TextureRect" parent="."]
+margin_left = 138.0
+margin_top = 50.0
+margin_right = 324.0
+margin_bottom = 335.0
+texture = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="presidente" type="TextureRect" parent="."]
+margin_left = 222.0
+margin_top = 51.0
+margin_right = 448.0
+margin_bottom = 336.0
+texture = ExtResource( 14 )
+
+[node name="deputada_shadow" type="TextureRect" parent="."]
+margin_left = 1032.0
+margin_top = 50.0
+margin_right = 1246.0
+margin_bottom = 335.0
+texture = ExtResource( 15 )
+flip_h = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="deputada" type="TextureRect" parent="."]
+margin_left = 873.0
+margin_top = 48.0
+margin_right = 1099.0
+margin_bottom = 333.0
+texture = ExtResource( 16 )
+flip_h = true
+
+[node name="Mesa" type="TextureRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
 texture = ExtResource( 2 )
 expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="TextureRect3" type="TextureRect" parent="."]
+[node name="titulo" type="TextureRect" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
 texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="titulo"]
+margin_left = 72.0
+margin_top = 4.0
+margin_right = 1234.0
+margin_bottom = 64.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "O que esta PEC irá contribuir para a sociedade Brasileira?"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="governamental" type="TextureButton" parent="."]
+margin_left = 487.0
+margin_top = 404.0
+margin_right = 817.0
+margin_bottom = 464.0
+texture_normal = ExtResource( 10 )
+texture_hover = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="constitucional" type="TextureButton" parent="."]
+margin_left = 877.0
+margin_top = 403.0
+margin_right = 1207.0
+margin_bottom = 463.0
+texture_normal = ExtResource( 12 )
+texture_hover = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="popular" type="TextureButton" parent="."]
+margin_left = 90.0
+margin_top = 402.0
+margin_right = 420.0
+margin_bottom = 462.0
+texture_normal = ExtResource( 9 )
+texture_hover = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="instancia_background" type="TextureRect" parent="."]
+margin_left = 127.0
+margin_top = 576.0
+margin_right = 1147.0
+margin_bottom = 719.0
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="progresso" type="TextureRect" parent="."]
+margin_left = 411.0
+margin_top = 513.0
+margin_right = 857.0
+margin_bottom = 577.0
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lado" type="TextureRect" parent="."]
+margin_left = 1147.0
+margin_top = 696.0
+margin_right = 1277.0
+margin_bottom = 736.0
+rect_pivot_offset = Vector2( 174, -217 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lado2" type="TextureRect" parent="."]
+margin_left = -4.0
+margin_top = 697.0
+margin_right = 126.0
+margin_bottom = 737.0
+rect_pivot_offset = Vector2( 174, -217 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="primeira_instancia" type="TextureRect" parent="."]
+margin_left = 177.0
+margin_top = 626.0
+margin_right = 614.0
+margin_bottom = 675.0
+texture = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="segunda instancia" type="TextureRect" parent="."]
+margin_left = 666.0
+margin_top = 627.0
+margin_right = 1103.0
+margin_bottom = 676.0
+texture = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

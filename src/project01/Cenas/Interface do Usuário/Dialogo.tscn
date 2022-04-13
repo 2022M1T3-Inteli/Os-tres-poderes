@@ -15,6 +15,8 @@
 [ext_resource path="res://Recursos/Sprites/NPCs/Homem Negro/HN_Lado_Half_Hidden.png" type="Texture" id=13]
 [ext_resource path="res://Recursos/Botões/Escolha_Pres_Hover.png" type="Texture" id=14]
 [ext_resource path="res://Recursos/Botões/Escolha_Pres_Normal.png" type="Texture" id=15]
+[ext_resource path="res://Recursos/Planos de Fundo/Office_Start.png" type="Texture" id=16]
+[ext_resource path="res://Recursos/Fontes/Respostas.tres" type="DynamicFont" id=17]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -37,12 +39,6 @@ font_path = "res://Recursos/Fontes/Mukta-Medium.ttf"
 [sub_resource type="DynamicFont" id=5]
 font_data = SubResource( 4 )
 
-[sub_resource type="DynamicFontData" id=6]
-font_path = "res://Recursos/Fontes/Mukta-Medium.ttf"
-
-[sub_resource type="DynamicFont" id=7]
-font_data = SubResource( 6 )
-
 [node name="Conselheiro" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -54,6 +50,7 @@ __meta__ = {
 [node name="Background" type="TextureRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+texture = ExtResource( 16 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -104,7 +101,7 @@ __meta__ = {
 position = Vector2( 1235, 686 )
 frames = SubResource( 1 )
 animation = "blink"
-frame = 10
+frame = 14
 playing = true
 
 [node name="Frase" type="Label" parent="."]
@@ -176,7 +173,7 @@ __meta__ = {
 [node name="Resposta" type="Label" parent="VBoxContainer/Op2"]
 margin_right = 424.0
 margin_bottom = 40.0
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = ExtResource( 17 )
 text = "Opção 1"
 align = 1
 valign = 1
@@ -203,6 +200,7 @@ __meta__ = {
 margin_top = 3.0
 margin_right = 424.0
 margin_bottom = 43.0
+custom_fonts/font = ExtResource( 17 )
 text = "Opção 1"
 align = 1
 valign = 1
@@ -229,6 +227,7 @@ __meta__ = {
 margin_top = 3.0
 margin_right = 424.0
 margin_bottom = 43.0
+custom_fonts/font = ExtResource( 17 )
 text = "Opção 1"
 align = 1
 valign = 1
@@ -252,9 +251,11 @@ __meta__ = {
 }
 
 [node name="Resposta" type="Label" parent="VBoxContainer/Op5"]
+visible = false
 margin_top = 3.0
 margin_right = 424.0
 margin_bottom = 43.0
+custom_fonts/font = ExtResource( 17 )
 text = "Opção 1"
 align = 1
 valign = 1

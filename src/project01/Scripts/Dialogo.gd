@@ -7,7 +7,7 @@ var display = ""
 var letra_atual = 0
 
 var texto = 0
-var skip 
+var skip
 
 var conselheiro_dialogo
 var presidente_dialogo
@@ -25,19 +25,41 @@ var mensagem_final
 func _ready():
 	dialogar()
 
+func _process(delta):
+	if mensagem_atual == "Apresentação" or mensagem_atual == "AcompanhamentoP1": 
+		if $Frase.text == Global.conselheiro_dialogo["AcompanhamentoP1"][1]:
+			$Background.texture = load("res://Recursos/Planos de Fundo/praca_1vez_ano.png")
+		elif $Frase.text == Global.conselheiro_dialogo["AcompanhamentoP1"][2]:
+			$Background.texture = load("res://Recursos/Planos de Fundo/praca_1vez_atual.png")
+		elif $Frase.text == Global.conselheiro_dialogo["AcompanhamentoP1"][3]:
+			$Background.texture = load("res://Recursos/Planos de Fundo/praca_1vez_disponiveis.png")
+		elif $Frase.text == Global.conselheiro_dialogo["AcompanhamentoP1"][8]:
+			$Background.texture = load("res://Recursos/Planos de Fundo/praca_exec1vez.png")
+		else: 
+			$Background.texture = load("res://Recursos/Planos de Fundo/praca_1vez.png")
+	if mensagem_atual == "AcompanhamentoP2": 
+		$Background.texture = load("res://Recursos/Planos de Fundo/exec_1_vez.png")
 
 func dialogar():
-	if progresso_atual == 1:
-		mensagem_atual = "Introdução"
+	if progresso_atual >= 1: 
 		conselheiro_dialogo = true
 		presidente_dialogo = false
-	elif progresso_atual == 2:
-		mensagem_atual = "Tutorial"
-		conselheiro_dialogo = true
-		presidente_dialogo = false
-	elif progresso_atual == 3:
-		Global.Progresso = progresso_atual
-		get_tree().change_scene("res://Cenas/Interface do Usuário/EscolhaPoderes.tscn")
+		if progresso_atual == 1:
+			mensagem_atual = "Introdução"
+		elif progresso_atual == 2:
+			mensagem_atual = "Tutorial"
+		elif progresso_atual == 3:
+			mensagem_atual = "Apresentação"
+		elif progresso_atual == 4: 
+			mensagem_atual = "AcompanhamentoP1"
+		elif progresso_atual == 5: 
+			Global.Progresso = progresso_atual
+			get_tree().change_scene("res://Cenas/Interface do Usuário/EscolhaPoderes.tscn")
+		elif progresso_atual == 6:
+			mensagem_atual = "AcompanhamentoP2" 
+		elif progresso_atual == 7: 
+			Global.Progresso = progresso_atual
+			get_tree().change_scene("res://Cenas/Poderes/Executivo/executivo_novo.tscn")
 	display = ""
 	letra_atual = 0 
 	arrumar_cena()
@@ -87,7 +109,7 @@ func proximo_dialogo():
 		dialogar()
 
 func _input(event):
-	if event.is_action_pressed("ui_accept"):
+	if event.is_action_pressed("proximo"):
 		if conselheiro_dialogo == true:
 			if skip == true: 
 				skip = false
@@ -95,10 +117,10 @@ func _input(event):
 				$Escrever.stop()
 			else:
 				mensagem_final = mensagem_atual
+				resposta_final = resposta_escolhida
 				if mensagem_atual == "Introdução":
 					texto_final = 2
 				elif mensagem_atual == "Tutorial":
-					resposta_final = resposta_escolhida
 					if resposta_escolhida == 0: 
 						texto_final = 13
 					elif resposta_escolhida == 1: 
@@ -107,6 +129,19 @@ func _input(event):
 						texto_final = 8
 					elif resposta_escolhida == 3 or resposta_escolhida == 4:
 						texto_final = 12
+				elif mensagem_atual == "Apresentação": 
+					texto_final = 5
+				elif mensagem_atual == "AcompanhamentoP1": 
+					if resposta_escolhida == 0: 
+						texto_final = 5
+					elif resposta_escolhida == 1: 
+						texto_final = 1
+					elif resposta_escolhida == 2: 
+						texto_final = 2
+					elif resposta_escolhida == 3 or resposta_escolhida == 4: 
+						texto_final = 3
+				elif mensagem_atual == "AcompanhamentoP2": 
+					texto_final = 2
 				proximo_dialogo()
 		if presidente_dialogo == true: 
 			conselheiro_dialogo = true
@@ -136,11 +171,47 @@ func _input(event):
 					$Frase.text = Global.conselheiro_dialogo[mensagem_atual][16]
 					progresso_atual = 3
 					texto = -1
+			elif mensagem_atual == "Apresentação": 
+				if resposta_escolhida == 1: 
+					$Frase.text = Global.conselheiro_dialogo[mensagem_atual][6]
+					progresso_atual = 4
+					texto = -1
+					resposta_escolhida = 0
+				else:
+					$Frase.text = Global.conselheiro_dialogo[mensagem_atual][7]
+					progresso_atual = 5
+					texto = -1
+					resposta_escolhida = 0
+			elif mensagem_atual == "AcompanhamentoP1": 
+				if resposta_escolhida <= 3:
+					$Frase.text = Global.conselheiro_dialogo[mensagem_atual][6]
+				if resposta_escolhida == 1 or resposta_escolhida == 4: 
+					texto = -1
+				elif resposta_escolhida == 2: 
+					texto = 1
+				elif resposta_escolhida == 3: 
+					texto = 2
+				else: 
+					$Frase.text = Global.conselheiro_dialogo[mensagem_atual][8]
+					progresso_atual = 5
+					texto = -1
+			elif mensagem_atual == "AcompanhamentoP2": 
+				if resposta_escolhida == 1: 
+					$Frase.text = Global.conselheiro_dialogo[mensagem_atual][4]
+					texto = -1
+					progresso_atual = 7
+					resposta_escolhida = 0
+				else:
+					$Frase.text = Global.conselheiro_dialogo[mensagem_atual][3]
+					texto = -1
+					resposta_escolhida = 0
 
 func escolhas_presidente():
 	$Frase.text = "(O que devo fazer?)"
 	if (mensagem_atual == "Tutorial" and (resposta_escolhida >= 1 and resposta_escolhida < 5)):
 		$Frase.text = Global.conselheiro_dialogo[mensagem_atual][15]
+	elif (mensagem_atual == "Tutorial" and (resposta_escolhida >= 1 and resposta_escolhida < 5)):
+		$Frase.text = Global.conselheiro_dialogo[mensagem_atual][7]
 	numero_questoes = len(Global.presidente_dialogo[mensagem_atual])
 	if numero_questoes >= 1:
 		$VBoxContainer/Op1.show()

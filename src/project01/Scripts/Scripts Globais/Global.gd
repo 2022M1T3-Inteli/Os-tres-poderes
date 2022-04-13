@@ -3,7 +3,7 @@ extends Node
 ##
 ## Códigos Gerais
 ##
-var ideia = false
+var ideia 
 var etapa2 = false
 var Progresso
 var poder_escolhido = ""
@@ -184,6 +184,7 @@ var NPC = {
 	"Homem_Branco" : {
 		"Frente" : {
 			"Full" : load("res://Recursos/Sprites/NPCs/Homem Branco/HB_Frente_Full.png"),
+			"Half" : load("res://Recursos/Sprites/NPCs/Mulher Negra/HB_Frente_Half.png")
 			},
 		"Lado" : { 
 			"Full" : load("res://Recursos/Sprites/NPCs/Homem Branco/HB_Lado_Full.png"),
@@ -197,6 +198,7 @@ var NPC = {
 	"Homem_Negro" : {
 		"Frente" : {
 			"Full" : load("res://Recursos/Sprites/NPCs/Homem Negro/HN_Frente_Full.png"),
+			"Half" : load("res://Recursos/Sprites/NPCs/Mulher Negra/HN_Frente_Half.png")
 			},
 		"Lado" : { 
 			"Full" : load("res://Recursos/Sprites/NPCs/Homem Negro/HN_Lado_Full.png"),
@@ -210,6 +212,7 @@ var NPC = {
 	"Mulher_Branca" : {
 		"Frente" : {
 			"Full" : load("res://Recursos/Sprites/NPCs/Mulher Branca/MB_Frente_Full.png"),
+			"Half" : load("res://Recursos/Sprites/NPCs/Mulher Negra/MB_Frente_Half.png")
 			},
 		"Lado" : { 
 			"Full" : load("res://Recursos/Sprites/NPCs/Mulher Branca/MB_Lado_Full.png"),
@@ -223,6 +226,7 @@ var NPC = {
 	"Mulher_Negra" : {
 		"Frente" : {
 			"Full" : load("res://Recursos/Sprites/NPCs/Mulher Negra/MN_Frente_Full.png"),
+			"Half" : load("res://Recursos/Sprites/NPCs/Mulher Negra/MN_Frente_Half.png")
 			},
 		"Lado" : { 
 			"Full" : load("res://Recursos/Sprites/NPCs/Mulher Negra/MN_Lado_Full.png"),
@@ -276,7 +280,27 @@ var conselheiro_dialogo = {
 		2: "Documentarei todo seu processo para que o país se lembre da história que estamos escrevendo aqui!",
 		3: "E... pois caso o poder judiciário for acionado, eu preciso de fatos para te defender em frente a meus colegas.",
 		4: "Mas, como eu disse, isso é improvável.",
-		5: "Agora, você "
+		5: "Antes de começarmos, você tem alguma dúvida sobre o que fazer agora?",
+		6: "Certo, vou te explicar...",
+		7: "Ótimo!, então mãos á obra!"
+	},
+	"AcompanhamentoP1" : {
+		0: "Certo, vou começar pela apresentação de o que você tem em sua frente.",
+		1: "Neste canto, temos o ano atual, onde você pode se localizar quanto ao seu tempo de mandato.",
+		2: "Aqui, temos o nome da PEC Atual; como você ainda não escolheu uma PEC, ela está como nenhuma.",
+		3: "Aqui, podemos ver o seu progresso total quanto as PECs; quantas PECs estão disponíveis, se você foi bem sucedido ou não em completá-las, e se há uma delas em progresso.",
+		4: "Após iniciar uma PEC, você terá mais informações para analisar. Porém, é melhor você começar o processo antes de eu te apresentar a elas.",
+		5: "Alguma dúvida?",
+		6: "Claro!", 
+		7: "Mais alguma dúvida?",
+		8: "Ok, vamos agora focar em começar um processo de PEC, começando pela primeira fase; a apresentação. Toda a fase de apresentação se localiza no palácio do planalto, então clique no prédio para começar o processo."
+	},
+	"AcompanhamentoP2" : {
+		0: "Seja bem vindo ao palácio do planalto! Esse é seu escritório, e onde um presidente passa a maior parte do seu tempo.",
+		1: "Para iniciar o processo de PEC, precisamos, primeiro, a idealizar.",
+		2: "Porém, caso você queira ainda mais informações sobre o poder executivo, clique no botão de dúvida acima de você.",
+		3: "Com prazer!", 
+		4: "Boa sorte! Clique no botão de idealizar PEC para começar."
 	}
 }
 
@@ -312,6 +336,48 @@ var presidente_dialogo = {
 			"Escolha" : "Entendi tudo",
 			"Dialogo" : "Não, tudo OK, podemos prosseguir."
 		}
+	}, 
+	"Apresentação" : {
+		1: {
+			"Escolha" : "Sim",
+			"Dialogo" : "Sim, estou muito perdido. Você pode me guiar?"
+		}, 
+		2: {
+			"Escolha" : "Não",
+			"Dialogo" : "Não, acho que sei o que fazer."
+		}
+	},
+	"AcompanhamentoP1" : {
+		1 : {
+			"Escolha" : "Ano atual",
+			"Dialogo" : "Como eu sei o ano atual de meu mandato?"
+		},
+		2 : {
+			"Escolha" : "PEC Atual", 
+			"Dialogo" : "Como eu sei qual é a PEC atual?"
+		}, 
+		3 : {
+			"Escolha" : "PECs Disponíveis", 
+			"Dialogo" : "Como eu sei quantas PECs estão disponíveis e seus estados?"
+		},
+		4 : {
+			"Escolha" : "Explique tudo",
+			"Dialogo" : "Não entendi nada, pode explicar tudo denovo?"
+		},
+		5 : {
+			"Escolha" : "Entendi tudo", 
+			"Dialogo" : "Não, ficou tudo bem claro!"
+		}
+	},
+	"AcompanhamentoP2" : {
+		1 : {
+			"Escolha" : "Ok",
+			"Dialogo" : "Certo. Estou pronto para iniciar minha primeira PEC!"
+		},
+		2 : {
+			"Escolha" : "Pode repetir?", 
+			"Dialogo" : "Pode repetir novamente as instruções?"
+		}
 	}
 }
 
@@ -321,4 +387,37 @@ var presidente_dialogo = {
 
 var PECs_Available = {
 	0 : "Voto Impresso"
+}
+
+var PEC_Escolhida
+
+var detalhe_pec = { 
+	0 : {
+		"Titulo" : "PEC Do Voto Impresso",
+		"Conteudo" : "Querido Presidente, tenho percebido uma alta tendência de desconfiança do povo brasileiro quanto ao processo eleitoral. A raiz do problema parece ser a urna eletrônica, pois ela pode ser comprometida e manipulada dado o empenho de algum partido político ou grupo de pessoas poderosas, sem nenhuma maneira de recapturar os votos legítimos. Minha proposta é que implementemos um sistema de voto impresso, onde a urna eletrônica é utilizada para captar esses votos e legitimizar mais o processo eleitoral"
+	}
+}
+
+var apoio 
+var tempo = {
+	"Meses" : {
+		0 : "Janeiro",
+		1 : "Fevereiro",
+		2 : "Março",
+		3 : "Abril",
+		4 : "Maio",
+		5 : "Junho",
+		6 : "Julho",
+		7 : "Agosto",
+		8 : "Setembro",
+		9 : "Outubro",
+		10 : "Novembro",
+		11 : "Dezembro",
+	}, 
+	"Ano" : {
+		0 : "2022",
+		1 : "2023", 
+		2 : "2024", 
+		3 : "2025"
+	}
 }

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Recursos/Planos de Fundo/DebateHiver.png" type="Texture" id=1]
 [ext_resource path="res://Recursos/Botões/VoltarJud.png" type="Texture" id=2]
@@ -10,10 +10,18 @@
 [ext_resource path="res://Recursos/Planos de Fundo/BotãoDebate.png" type="Texture" id=8]
 [ext_resource path="res://Recursos/Botões/SenadoresH.png" type="Texture" id=9]
 [ext_resource path="res://Recursos/Planos de Fundo/mesaDebate.png" type="Texture" id=10]
+[ext_resource path="res://Recursos/Sprites/NPCs/Homem Negro/HN_Lado_Half.png" type="Texture" id=11]
+[ext_resource path="res://Recursos/Botões/duvida_executivo_disable.png" type="Texture" id=12]
+[ext_resource path="res://Recursos/Sprites/NPCs/Homem Branco/HB_Lado_Half.png" type="Texture" id=13]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Fundo" type="TextureRect" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
 texture = ExtResource( 4 )
@@ -21,7 +29,30 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureRect2" type="TextureRect" parent="."]
+[node name="Conselheiro" type="TextureRect" parent="."]
+margin_left = 160.0
+margin_top = 43.0
+margin_right = 416.0
+margin_bottom = 393.0
+texture = ExtResource( 13 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Presidente" type="TextureRect" parent="."]
+margin_left = 566.0
+margin_top = 43.0
+margin_right = 822.0
+margin_bottom = 393.0
+texture = ExtResource( 11 )
+expand = true
+flip_h = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Mesa" type="TextureRect" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
 texture = ExtResource( 10 )
@@ -29,7 +60,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Debate" type="TextureButton" parent="."]
+[node name="Deputados" type="TextureButton" parent="."]
 margin_left = 846.0
 margin_top = 66.0
 margin_right = 1240.0
@@ -40,7 +71,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureButton2" type="TextureButton" parent="."]
+[node name="Senadores" type="TextureButton" parent="."]
 margin_left = 846.0
 margin_top = 166.0
 margin_right = 1240.0
@@ -51,7 +82,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureButton3" type="TextureButton" parent="."]
+[node name="Voltar" type="TextureButton" parent="."]
 margin_left = 74.0
 margin_top = 51.0
 margin_right = 124.0
@@ -62,13 +93,21 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureButton" type="TextureButton" parent="."]
+[node name="Duvida" type="TextureButton" parent="."]
 margin_left = 451.0
 margin_top = 45.0
 margin_right = 571.0
 margin_bottom = 165.0
 texture_normal = ExtResource( 6 )
 texture_hover = ExtResource( 7 )
+texture_disabled = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
 __meta__ = {
 "_edit_use_anchors_": false
 }

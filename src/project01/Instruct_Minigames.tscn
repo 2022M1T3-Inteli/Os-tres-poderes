@@ -1,0 +1,81 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Recursos/Botões/Anim/Prox_Instruc/T6.png" type="Texture" id=1]
+[ext_resource path="res://Recursos/Botões/Anim/Prox_Instruc/T4.png" type="Texture" id=2]
+[ext_resource path="res://Recursos/Botões/Anim/Prox_Instruc/T7.png" type="Texture" id=3]
+[ext_resource path="res://Recursos/Botões/Anim/Prox_Instruc/T1.png" type="Texture" id=4]
+[ext_resource path="res://Recursos/Objetos/Obj_Voto_Impresso.png" type="Texture" id=5]
+[ext_resource path="res://Recursos/Botões/Anim/Prox_Instruc/T8.png" type="Texture" id=6]
+[ext_resource path="res://Recursos/Planos de Fundo/Fundo_Inst_Voto.png" type="Texture" id=7]
+[ext_resource path="res://Recursos/Botões/Anim/Prox_Instruc/T2.png" type="Texture" id=8]
+[ext_resource path="res://Recursos/Botões/Anim/Prox_Instruc/T3.png" type="Texture" id=9]
+[ext_resource path="res://Recursos/Botões/Anim/Prox_Instruc/T5.png" type="Texture" id=10]
+[ext_resource path="res://Instruct_Minigames.gd" type="Script" id=11]
+[ext_resource path="res://Recursos/Objetos/Inst_Voto_Impresso.png" type="Texture" id=12]
+[ext_resource path="res://Recursos/Botões/iniciar.png" type="Texture" id=13]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 2 ), ExtResource( 10 ), ExtResource( 1 ), ExtResource( 3 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "default",
+"speed": 12.0
+} ]
+
+[node name="Instruct_Minigames" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fundo" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 7 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Objeto" type="TextureRect" parent="."]
+margin_left = 239.0
+margin_top = 75.0
+margin_right = 1060.0
+margin_bottom = 670.0
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Instruct" type="TextureRect" parent="."]
+visible = false
+margin_left = 235.0
+margin_top = 75.0
+margin_right = 1056.0
+margin_bottom = 670.0
+texture = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Prox" type="AnimatedSprite" parent="."]
+position = Vector2( 1140, 375 )
+frames = SubResource( 1 )
+frame = 1
+playing = true
+
+[node name="Iniciar" type="TextureButton" parent="."]
+visible = false
+margin_left = 451.0
+margin_top = 559.0
+margin_right = 862.0
+margin_bottom = 626.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Iniciar" to="." method="_on_Iniciar_pressed"]

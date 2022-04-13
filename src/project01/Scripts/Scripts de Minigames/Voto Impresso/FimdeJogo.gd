@@ -18,15 +18,24 @@ func _process(delta):
 func _on_Temporizador_timeout():
 	if time > 0:
 		time -= 1
+	var pontuacao_atual = Global.pontuacao
+	if pontuacao_atual >= 70: 
+		$Apoio.text = "Por cumprir o objetivo secundário, você obteve o completo apoio do povo."
+		$anjo.texture = load("res://Recursos/Objetos/apoio.png")
+		Global.apoio = true
+	else: 
+		$Apoio.text = "Você não conseguiu cumprir o objetivo secundário, logo, não obteve o completo apoio do povo."
+		$anjo.texture = load("res://Recursos/Objetos/napoio.png")
+		Global.apoio = false
 	#Para o temporizador começar a funcionar, tem que ativar o autostart em seu Inspector!
 	#Assim, ele já começa a rodar com o jogo e realiza a subtração da variável, sendo que
 	#a cada segundo o timer perde um segundo, até o 0
 	
 
 func _on_Voltar_menu_pressed():
-	get_tree().change_scene("res://Cenas/Poderes/Executivo/Executivo.tscn")
+	get_tree().change_scene("res://Cenas/Poderes/Executivo/executivo_novo.tscn")
 	get_tree().paused = false
-	Global.etapa2 = true
+	Global.Progresso = 9
 	#colocar para onde a cena vai 
 
 

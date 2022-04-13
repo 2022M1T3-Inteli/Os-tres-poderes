@@ -45,5 +45,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="dadosjudiciario" type="AudioStreamPlayer" parent="."]
+
 [connection signal="pressed" from="Voltar" to="." method="_on_Voltar_pressed"]
 [connection signal="pressed" from="Power" to="." method="_on_Power_pressed"]

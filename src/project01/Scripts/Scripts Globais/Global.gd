@@ -3,8 +3,9 @@ extends Node
 ##
 ## Códigos Gerais
 ##
-var ideia = false
+var ideia 
 var etapa2 = false
+var Progresso
 var poder_escolhido = ""
 
 ##
@@ -14,7 +15,9 @@ var poder_escolhido = ""
 var pontosminigame = 0.0
 
 var pontostotal = 0.0
-
+var aguamusic = false
+var morreumusic = false 
+# variaves do minigame corrida pela sáude 
 signal morreu
 signal recompensar
 signal pontuar
@@ -173,5 +176,249 @@ var conselheiro_dados = {
 var conselheiro_escolhido 
 var contexto_atual
 
+##
+## Códigos de Avatar
+##
 
+var NPC = {
+	"Homem_Branco" : {
+		"Frente" : {
+			"Full" : load("res://Recursos/Sprites/NPCs/Homem Branco/HB_Frente_Full.png"),
+			"Half" : load("res://Recursos/Sprites/NPCs/Mulher Negra/HB_Frente_Half.png")
+			},
+		"Lado" : { 
+			"Full" : load("res://Recursos/Sprites/NPCs/Homem Branco/HB_Lado_Full.png"),
+			"Half" : load("res://Recursos/Sprites/NPCs/Homem Branco/HB_Lado_Half.png"),
+			"Hidden" : {
+				"Half" : load("res://Recursos/Sprites/NPCs/Homem Branco/HB_Lado_Half_Hidden.png"),
+				"Quarter" : load("res://Recursos/Sprites/NPCs/Homem Branco/HB_Lado_Hidden_Quarter.png")
+				}
+			}
+		}, 
+	"Homem_Negro" : {
+		"Frente" : {
+			"Full" : load("res://Recursos/Sprites/NPCs/Homem Negro/HN_Frente_Full.png"),
+			"Half" : load("res://Recursos/Sprites/NPCs/Mulher Negra/HN_Frente_Half.png")
+			},
+		"Lado" : { 
+			"Full" : load("res://Recursos/Sprites/NPCs/Homem Negro/HN_Lado_Full.png"),
+			"Half" : load("res://Recursos/Sprites/NPCs/Homem Negro/HN_Lado_Half.png"),
+			"Hidden" : {
+				"Half" : load("res://Recursos/Sprites/NPCs/Homem Negro/HN_Lado_Half_Hidden.png"),
+				"Quarter" : load("res://Recursos/Sprites/NPCs/Homem Negro/HN_Lado_Hidden_Quarter.png")
+				}
+			}
+		}, 
+	"Mulher_Branca" : {
+		"Frente" : {
+			"Full" : load("res://Recursos/Sprites/NPCs/Mulher Branca/MB_Frente_Full.png"),
+			"Half" : load("res://Recursos/Sprites/NPCs/Mulher Negra/MB_Frente_Half.png")
+			},
+		"Lado" : { 
+			"Full" : load("res://Recursos/Sprites/NPCs/Mulher Branca/MB_Lado_Full.png"),
+			"Half" : load("res://Recursos/Sprites/NPCs/Mulher Branca/MB_Lado_Half.png"),
+			"Hidden" : {
+				"Half" : load("res://Recursos/Sprites/NPCs/Mulher Branca/MB_Lado_Half_Hidden.png"),
+				"Quarter" : load("res://Recursos/Sprites/NPCs/Mulher Branca/MB_Quarter_Hidden.png")
+				}
+			}
+		}, 
+	"Mulher_Negra" : {
+		"Frente" : {
+			"Full" : load("res://Recursos/Sprites/NPCs/Mulher Negra/MN_Frente_Full.png"),
+			"Half" : load("res://Recursos/Sprites/NPCs/Mulher Negra/MN_Frente_Half.png")
+			},
+		"Lado" : { 
+			"Full" : load("res://Recursos/Sprites/NPCs/Mulher Negra/MN_Lado_Full.png"),
+			"Half" : load("res://Recursos/Sprites/NPCs/Mulher Negra/MN_Lado_Half.png"),
+			"Hidden" : {
+				"Half" : load("res://Recursos/Sprites/NPCs/Mulher Negra/MN_Lado_Half_Hidden.png"),
+				"Quarter" : load("res://Recursos/Sprites/NPCs/Mulher Negra/MN_Lado_Quarter_Hidden.png")
+				}
+			}
+		}
+	}
+
+var Presidente
+var Conselheiro
+
+##
+## Códigos de Diálogo
+##
+
+var conselheiro_dialogo = {
+	"Introdução" : {
+		0 : "Olá Presidente! Muito obrigado por ter me escolhido para ser seu conselheiro!",
+		1 : "Gostei muito da sua proposta de governo, acho muito interessante focar seu mandato em PECs que irão melhorar nosso país!",
+		2 : "Tenho um plano para que consigamos aprovar o maior número de PECs possíveis! Gostaria de ouvir?",
+		3 : "Ótimo! Olha só...",
+		4 : "Você que manda! Irei fazer os preparativos para nossa viagem ao planalto."
+	}, 
 	
+	"Tutorial" : {
+		0: "Para que uma PEC seja aprovada, precisamos passar por 3 fases muito importantes:",
+		1: "A primeira é a apresentação da PEC; onde elaboraremos toda a ideia da PEC e iremos a colocar em papel. É aqui que fazemos o sonho virar realidade.",
+		2: "É inevitável que assim que publicarmos essa PEC, a mídia faça barulho. Então, nós vamos ficar um pé a frente deles; iremos fazer um barulho própriamente nosso!",
+		3: "Não se preocupe com o que precisa fazer agora, pois já tenho tudo planejado! A única coisa que você precisa fazer é realizar uma atividade e sorrir de ponta a ponta para as câmeras!",
+		4: "Tenho certeza de que irá se divertir com elas.",
+		5: "A segunda etapa é o Debate do poder legislativo.",
+		6: "O debate é a parte mais importante do processo; seremos avaliados pela câmara dos deputados e pelo senado em 2 instâncias.",
+		7: "Cada uma das instâncias tem uma pergunta principal, e precisaremos dar bons argumentos para convencer os deputados e senadores de que essa é, de fato, uma PEC essencial para o futuro próspero do Brasil.",
+		8: "Sei que parece ser difícil, porém, caso tenhamos o apoio público da última etapa, temos boas chances de convencê-los, afinal, todo o poder emana do povo.",
+		9: "A última etapa é a promulgação!",
+		10: "Daqui pra frente é só alegria! Após ser aprovada pelo senado e câmara, a única coisa que pode parar a PEC é o poder Judiciário, caso provocado.",
+		11: "Porém, não acho que chegaremos a esse ponto. Para provocarmos o Judiciário, teremos que ter feito algo que infringe a constituição ou outros fundamentos do Brasil.",
+		12: "E nós temos somente o bem do país em mente e no coração! Então não acho que isso será problema.",
+		13: "Bastante coisa, né? Você não entendeu alguma coisa?",
+		14: "Mas é claro!",
+		15: "Mais alguma dúvida?",
+		16: "Tudo certo então! Vamos á Brasília!"
+	},
+	"Apresentação": {
+		0: "Bem vindo ao Planalto Central! Onde todo o corpo governamental federal se encontra, o que nos inclui!",
+		1: "Você estará no famoso Palácio do Planalto, e eu assumirei minha posição no STF.",
+		2: "Documentarei todo seu processo para que o país se lembre da história que estamos escrevendo aqui!",
+		3: "E... pois caso o poder judiciário for acionado, eu preciso de fatos para te defender em frente a meus colegas.",
+		4: "Mas, como eu disse, isso é improvável.",
+		5: "Antes de começarmos, você tem alguma dúvida sobre o que fazer agora?",
+		6: "Certo, vou te explicar...",
+		7: "Ótimo!, então mãos á obra!"
+	},
+	"AcompanhamentoP1" : {
+		0: "Certo, vou começar pela apresentação de o que você tem em sua frente.",
+		1: "Neste canto, temos o ano atual, onde você pode se localizar quanto ao seu tempo de mandato.",
+		2: "Aqui, temos o nome da PEC Atual; como você ainda não escolheu uma PEC, ela está como nenhuma.",
+		3: "Aqui, podemos ver o seu progresso total quanto as PECs; quantas PECs estão disponíveis, se você foi bem sucedido ou não em completá-las, e se há uma delas em progresso.",
+		4: "Após iniciar uma PEC, você terá mais informações para analisar. Porém, é melhor você começar o processo antes de eu te apresentar a elas.",
+		5: "Alguma dúvida?",
+		6: "Claro!", 
+		7: "Mais alguma dúvida?",
+		8: "Ok, vamos agora focar em começar um processo de PEC, começando pela primeira fase; a apresentação. Toda a fase de apresentação se localiza no palácio do planalto, então clique no prédio para começar o processo."
+	},
+	"AcompanhamentoP2" : {
+		0: "Seja bem vindo ao palácio do planalto! Esse é seu escritório, e onde um presidente passa a maior parte do seu tempo.",
+		1: "Para iniciar o processo de PEC, precisamos, primeiro, a idealizar.",
+		2: "Porém, caso você queira ainda mais informações sobre o poder executivo, clique no botão de dúvida acima de você.",
+		3: "Com prazer!", 
+		4: "Boa sorte! Clique no botão de idealizar PEC para começar."
+	}
+}
+
+var presidente_dialogo = {
+	"Introdução" : {
+		1 : {
+			"Escolha" : "Sim",
+			"Dialogo" : "Sim, adoraria ouvir!"
+		},
+		2 : {
+			"Escolha" : "Não", 
+			"Dialogo" : "Acho melhor não, tenho certeza que irei aprendendo com o tempo."
+		}
+	},
+	"Tutorial" : {
+		1 : {
+			"Escolha" : "Fase 1",
+			"Dialogo" : "Não entendi a fase 1, pode me explicar denovo?"
+		},
+		2 : {
+			"Escolha" : "Fase 2", 
+			"Dialogo" : "Não entendi a fase 2, pode me explicar denovo?"
+		}, 
+		3 : {
+			"Escolha" : "Fase 3",
+			"Dialogo" : "Não entendi a fase 3, pode me explicar denovo?"
+		},
+		4 : {
+			"Escolha" : "Tudo",
+			"Dialogo" : "Não entendi nada, pode me explicar denovo?"
+		},
+		5: {
+			"Escolha" : "Entendi tudo",
+			"Dialogo" : "Não, tudo OK, podemos prosseguir."
+		}
+	}, 
+	"Apresentação" : {
+		1: {
+			"Escolha" : "Sim",
+			"Dialogo" : "Sim, estou muito perdido. Você pode me guiar?"
+		}, 
+		2: {
+			"Escolha" : "Não",
+			"Dialogo" : "Não, acho que sei o que fazer."
+		}
+	},
+	"AcompanhamentoP1" : {
+		1 : {
+			"Escolha" : "Ano atual",
+			"Dialogo" : "Como eu sei o ano atual de meu mandato?"
+		},
+		2 : {
+			"Escolha" : "PEC Atual", 
+			"Dialogo" : "Como eu sei qual é a PEC atual?"
+		}, 
+		3 : {
+			"Escolha" : "PECs Disponíveis", 
+			"Dialogo" : "Como eu sei quantas PECs estão disponíveis e seus estados?"
+		},
+		4 : {
+			"Escolha" : "Explique tudo",
+			"Dialogo" : "Não entendi nada, pode explicar tudo denovo?"
+		},
+		5 : {
+			"Escolha" : "Entendi tudo", 
+			"Dialogo" : "Não, ficou tudo bem claro!"
+		}
+	},
+	"AcompanhamentoP2" : {
+		1 : {
+			"Escolha" : "Ok",
+			"Dialogo" : "Certo. Estou pronto para iniciar minha primeira PEC!"
+		},
+		2 : {
+			"Escolha" : "Pode repetir?", 
+			"Dialogo" : "Pode repetir novamente as instruções?"
+		}
+	}
+}
+
+##
+## Códigos de PEC
+##
+
+var PECs_Available = {
+	0 : "Voto Impresso"
+}
+
+var PEC_Escolhida
+
+var detalhe_pec = { 
+	0 : {
+		"Titulo" : "PEC Do Voto Impresso",
+		"Conteudo" : "Querido Presidente, tenho percebido uma alta tendência de desconfiança do povo brasileiro quanto ao processo eleitoral. A raiz do problema parece ser a urna eletrônica, pois ela pode ser comprometida e manipulada dado o empenho de algum partido político ou grupo de pessoas poderosas, sem nenhuma maneira de recapturar os votos legítimos. Minha proposta é que implementemos um sistema de voto impresso, onde a urna eletrônica é utilizada para captar esses votos e legitimizar mais o processo eleitoral"
+	}
+}
+
+var apoio 
+var tempo = {
+	"Meses" : {
+		0 : "Janeiro",
+		1 : "Fevereiro",
+		2 : "Março",
+		3 : "Abril",
+		4 : "Maio",
+		5 : "Junho",
+		6 : "Julho",
+		7 : "Agosto",
+		8 : "Setembro",
+		9 : "Outubro",
+		10 : "Novembro",
+		11 : "Dezembro",
+	}, 
+	"Ano" : {
+		0 : "2022",
+		1 : "2023", 
+		2 : "2024", 
+		3 : "2025"
+	}
+}
+

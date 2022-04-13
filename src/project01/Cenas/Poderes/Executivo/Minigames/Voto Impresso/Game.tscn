@@ -4,8 +4,6 @@
 [ext_resource path="res://Recursos/Sprites/Minigames/Voto Impresso/Confetes.png" type="Texture" id=2]
 [ext_resource path="res://Cenas/Poderes/Executivo/Minigames/Voto Impresso/Urna.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Recursos/Sprites/Minigames/Voto Impresso/Fundo amarelo.png" type="Texture" id=4]
-[ext_resource path="res://Scripts/Scripts de Minigames/Voto Impresso/Confetes.gd" type="Script" id=5]
-[ext_resource path="res://Scripts/Scripts de Minigames/Voto Impresso/FundoAmarelo.gd" type="Script" id=6]
 [ext_resource path="res://Scripts/Scripts de Minigames/Voto Impresso/Cor fundo.gdshader" type="Shader" id=8]
 [ext_resource path="res://Scripts/Scripts de Minigames/Voto Impresso/Pontos.gd" type="Script" id=9]
 [ext_resource path="res://Scripts/Scripts de Minigames/Voto Impresso/Gerador.gd" type="Script" id=10]
@@ -15,6 +13,25 @@
 
 [sub_resource type="ShaderMaterial" id=20]
 shader = ExtResource( 8 )
+
+[sub_resource type="Shader" id=21]
+code = "//aqui a linguagem é semelhante ao C+
+shader_type canvas_item;
+uniform float vel = 0.4;
+uniform float des = 0f;
+//são as variáveis
+void fragment () {
+	COLOR = texture (TEXTURE, UV + vec2(0, -1f) * TIME * vel);
+	/* cor é textura para manter a imagem dos confetes.
+	vec 2 é para mostrar que o efeito vem de cima para baixo, pois x não tem valor, só o eixo Y.
+	multiplica-se pelo tempo para ter a animação com a mudança de frames e multiplica por uma variável
+	para controlar a velocidade do confete caindo */
+}"
+
+[sub_resource type="ShaderMaterial" id=22]
+shader = SubResource( 21 )
+shader_param/vel = 0.4
+shader_param/des = 0.0
 
 [sub_resource type="DynamicFontData" id=15]
 font_path = "res://Recursos/Fontes/Kenney Blocks.ttf"
@@ -51,13 +68,12 @@ material = SubResource( 20 )
 position = Vector2( 643.25, 361.25 )
 scale = Vector2( 0.679862, 0.981582 )
 texture = ExtResource( 4 )
-script = ExtResource( 6 )
 
 [node name="Confetes" type="Sprite" parent="."]
+material = SubResource( 22 )
 position = Vector2( 641.5, 360 )
-scale = Vector2( 0.384223, 0.214757 )
+scale = Vector2( 0.390222, 0.214757 )
 texture = ExtResource( 2 )
-script = ExtResource( 5 )
 
 [node name="Urna" parent="." instance=ExtResource( 3 )]
 position = Vector2( 624, 658 )

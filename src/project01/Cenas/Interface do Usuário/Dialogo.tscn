@@ -1,0 +1,271 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://Recursos/Textos e Diálogos/presidentedialogo.png" type="Texture" id=1]
+[ext_resource path="res://Recursos/Botões/Anim/Prox_Dialogo/next_5.png" type="Texture" id=2]
+[ext_resource path="res://Recursos/Botões/Anim/Prox_Dialogo/Next_3.png" type="Texture" id=3]
+[ext_resource path="res://Recursos/Textos e Diálogos/conselho_dialogo.png" type="Texture" id=4]
+[ext_resource path="res://Recursos/Botões/Anim/Prox_Dialogo/Next_1.png" type="Texture" id=5]
+[ext_resource path="res://Recursos/Botões/Anim/Prox_Dialogo/next_6.png" type="Texture" id=6]
+[ext_resource path="res://Recursos/Botões/Anim/Prox_Dialogo/Next_2.png" type="Texture" id=7]
+[ext_resource path="res://Recursos/Botões/Anim/Prox_Dialogo/next_7.png" type="Texture" id=8]
+[ext_resource path="res://Recursos/Botões/Anim/Prox_Dialogo/next_8.png" type="Texture" id=9]
+[ext_resource path="res://Recursos/Botões/Anim/Prox_Dialogo/Next_4.png" type="Texture" id=10]
+[ext_resource path="res://Scripts/Dialogo.gd" type="Script" id=11]
+[ext_resource path="res://Recursos/Sprites/NPCs/Homem Branco/HB_Lado_Half_Hidden.png" type="Texture" id=12]
+[ext_resource path="res://Recursos/Sprites/NPCs/Homem Negro/HN_Lado_Half_Hidden.png" type="Texture" id=13]
+[ext_resource path="res://Recursos/Botões/Escolha_Pres_Hover.png" type="Texture" id=14]
+[ext_resource path="res://Recursos/Botões/Escolha_Pres_Normal.png" type="Texture" id=15]
+[ext_resource path="res://Recursos/Planos de Fundo/Office_Start.png" type="Texture" id=16]
+[ext_resource path="res://Recursos/Fontes/Respostas.tres" type="DynamicFont" id=17]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 5 ), ExtResource( 7 ), ExtResource( 3 ), ExtResource( 10 ), ExtResource( 2 ), ExtResource( 6 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 6 ), ExtResource( 2 ), ExtResource( 10 ), ExtResource( 5 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "blink",
+"speed": 14.0
+} ]
+
+[sub_resource type="DynamicFontData" id=2]
+font_path = "res://Recursos/Fontes/Mukta-Medium.ttf"
+
+[sub_resource type="DynamicFont" id=3]
+size = 34
+font_data = SubResource( 2 )
+
+[sub_resource type="DynamicFontData" id=4]
+font_path = "res://Recursos/Fontes/Mukta-Medium.ttf"
+
+[sub_resource type="DynamicFont" id=5]
+font_data = SubResource( 4 )
+
+[node name="Conselheiro" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Conselheiro" type="TextureRect" parent="."]
+margin_left = 98.0
+margin_top = 284.0
+margin_right = 312.0
+margin_bottom = 569.0
+texture = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Presidente" type="TextureRect" parent="."]
+margin_left = 1012.0
+margin_top = 286.0
+margin_right = 1198.0
+margin_bottom = 571.0
+texture = ExtResource( 13 )
+flip_h = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dialogo_Presidente" type="TextureRect" parent="."]
+visible = false
+margin_left = 30.0
+margin_top = 523.0
+margin_right = 1270.0
+margin_bottom = 713.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dialogo_Conselheiro" type="TextureRect" parent="."]
+margin_left = 30.0
+margin_top = 523.0
+margin_right = 1270.0
+margin_bottom = 713.0
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Botao_proximo" type="AnimatedSprite" parent="."]
+position = Vector2( 1235, 686 )
+frames = SubResource( 1 )
+animation = "blink"
+frame = 5
+playing = true
+
+[node name="Frase" type="Label" parent="."]
+margin_left = 62.0
+margin_top = 579.0
+margin_right = 1220.0
+margin_bottom = 702.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_constants/line_spacing = -25
+custom_fonts/font = SubResource( 3 )
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Escrever" type="Timer" parent="."]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 436.0
+margin_top = 137.0
+margin_right = 860.0
+margin_bottom = 357.0
+rect_pivot_offset = Vector2( -161, 43 )
+custom_constants/separation = 35
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Op1" type="TextureButton" parent="VBoxContainer"]
+visible = false
+margin_right = 424.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 424, 40 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture_normal = ExtResource( 15 )
+texture_hover = ExtResource( 14 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Resposta" type="Label" parent="VBoxContainer/Op1"]
+margin_right = 424.0
+margin_bottom = 41.0
+custom_fonts/font = SubResource( 5 )
+text = "Opção 1"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Op2" type="TextureButton" parent="VBoxContainer"]
+visible = false
+margin_right = 424.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 424, 40 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture_normal = ExtResource( 15 )
+texture_hover = ExtResource( 14 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Resposta" type="Label" parent="VBoxContainer/Op2"]
+margin_right = 424.0
+margin_bottom = 40.0
+custom_fonts/font = ExtResource( 17 )
+text = "Opção 1"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Op3" type="TextureButton" parent="VBoxContainer"]
+visible = false
+margin_top = 15.0
+margin_right = 424.0
+margin_bottom = 55.0
+rect_min_size = Vector2( 424, 40 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture_normal = ExtResource( 15 )
+texture_hover = ExtResource( 14 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Resposta" type="Label" parent="VBoxContainer/Op3"]
+margin_top = 3.0
+margin_right = 424.0
+margin_bottom = 43.0
+custom_fonts/font = ExtResource( 17 )
+text = "Opção 1"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Op4" type="TextureButton" parent="VBoxContainer"]
+visible = false
+margin_top = 52.0
+margin_right = 424.0
+margin_bottom = 92.0
+rect_min_size = Vector2( 424, 40 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture_normal = ExtResource( 15 )
+texture_hover = ExtResource( 14 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Resposta" type="Label" parent="VBoxContainer/Op4"]
+margin_top = 3.0
+margin_right = 424.0
+margin_bottom = 43.0
+custom_fonts/font = ExtResource( 17 )
+text = "Opção 1"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Op5" type="TextureButton" parent="VBoxContainer"]
+visible = false
+margin_top = 90.0
+margin_right = 424.0
+margin_bottom = 130.0
+rect_min_size = Vector2( 424, 40 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture_normal = ExtResource( 15 )
+texture_hover = ExtResource( 14 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Resposta" type="Label" parent="VBoxContainer/Op5"]
+visible = false
+margin_top = 3.0
+margin_right = 424.0
+margin_bottom = 43.0
+custom_fonts/font = ExtResource( 17 )
+text = "Opção 1"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="timeout" from="Escrever" to="." method="_on_Escrever_timeout"]
+[connection signal="pressed" from="VBoxContainer/Op1" to="." method="_on_Op1_pressed"]
+[connection signal="pressed" from="VBoxContainer/Op2" to="." method="_on_Op2_pressed"]
+[connection signal="pressed" from="VBoxContainer/Op3" to="." method="_on_Op3_pressed"]
+[connection signal="pressed" from="VBoxContainer/Op4" to="." method="_on_Op4_pressed"]
+[connection signal="pressed" from="VBoxContainer/Op5" to="." method="_on_Op5_pressed"]

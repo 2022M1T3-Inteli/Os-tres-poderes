@@ -1,25 +1,20 @@
 extends Control
 
-onready var imprensa = $Imprensa
-onready var ideia = $Ideia
-onready var aprovar = $Aprovar
-onready var direita = $Direita
-onready var esquerda = $Esquerda
-
 func _ready():
 	pass
 
 func _process(delta):
-	if Global.ideia: 
-		imprensa.disabled = false
-		ideia.disabled = true
-		aprovar.disabled = true
-	else: 
-		imprensa.disabled = true
-		aprovar.disabled = true
+	if Global.Progresso == 7: 
+		$idealizar_pec.disabled = false
 
-func _on_Ideia_pressed():
+func _on_idealizar_pec_pressed():
 	get_tree().change_scene("res://Cenas/Poderes/Executivo/Botões/Ideia.tscn")
+
+func _on_voltar_pressed():
+	get_tree().change_scene("res://Cenas/Interface do Usuário/EscolhaPoderes.tscn")
+
+func _on_imprensa_pressed():
+	pass # Replace with function body.
 
 func _on_Imprensa_pressed():
 	if Global.ideia == "Saude":

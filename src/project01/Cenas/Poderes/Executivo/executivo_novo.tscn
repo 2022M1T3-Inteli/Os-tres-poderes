@@ -1,0 +1,106 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Recursos/Botões/imprensa_hover.png" type="Texture" id=1]
+[ext_resource path="res://Recursos/Botões/duvida_executivo.png" type="Texture" id=2]
+[ext_resource path="res://Recursos/Botões/idealizar_pec_normal.png" type="Texture" id=3]
+[ext_resource path="res://Recursos/Botões/publicar_pec_hover.png" type="Texture" id=4]
+[ext_resource path="res://Recursos/Botões/idealizar_pec_hover.png" type="Texture" id=5]
+[ext_resource path="res://Recursos/Planos de Fundo/mesa-busto3.png" type="Texture" id=6]
+[ext_resource path="res://Recursos/Botões/imprensa_normal.png" type="Texture" id=7]
+[ext_resource path="res://Recursos/Botões/publicar_pec_normal.png" type="Texture" id=8]
+[ext_resource path="res://Recursos/Botões/Voltar_Hover.png" type="Texture" id=9]
+[ext_resource path="res://Recursos/Botões/VoltarJud.png" type="Texture" id=10]
+[ext_resource path="res://Recursos/Botões/Imprensa_disabled.png" type="Texture" id=11]
+[ext_resource path="res://Recursos/Botões/duvida_executivo_normal.png" type="Texture" id=12]
+[ext_resource path="res://Recursos/Botões/idealizar_pec_disabled.png" type="Texture" id=13]
+[ext_resource path="res://Recursos/Botões/Publicar_pec_disabled.png" type="Texture" id=14]
+[ext_resource path="res://Recursos/Botões/duvida_executivo_disable.png" type="Texture" id=15]
+[ext_resource path="res://Scripts/Scripts das Interfaces/executivo_novo.gd" type="Script" id=16]
+
+[node name="executivo_novo" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 6 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="voltar" type="TextureButton" parent="."]
+margin_left = 42.0
+margin_top = 33.0
+margin_right = 132.0
+margin_bottom = 84.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 10 )
+texture_hover = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="imprensa" type="TextureButton" parent="."]
+margin_left = 489.0
+margin_top = 525.0
+margin_right = 776.0
+margin_bottom = 595.0
+mouse_default_cursor_shape = 2
+disabled = true
+texture_normal = ExtResource( 7 )
+texture_hover = ExtResource( 1 )
+texture_disabled = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="publicar_pec" type="TextureButton" parent="."]
+margin_left = 835.0
+margin_top = 524.0
+margin_right = 1122.0
+margin_bottom = 594.0
+mouse_default_cursor_shape = 2
+disabled = true
+texture_normal = ExtResource( 8 )
+texture_hover = ExtResource( 4 )
+texture_disabled = ExtResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="idealizar_pec" type="TextureButton" parent="."]
+margin_left = 155.0
+margin_top = 523.0
+margin_right = 442.0
+margin_bottom = 593.0
+mouse_default_cursor_shape = 2
+disabled = true
+texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 5 )
+texture_disabled = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Informar" type="TextureButton" parent="."]
+margin_left = 604.0
+margin_top = 131.0
+margin_right = 664.0
+margin_bottom = 191.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 12 )
+texture_hover = ExtResource( 2 )
+texture_disabled = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="voltar" to="." method="_on_voltar_pressed"]
+[connection signal="pressed" from="imprensa" to="." method="_on_imprensa_pressed"]
+[connection signal="pressed" from="idealizar_pec" to="." method="_on_idealizar_pec_pressed"]

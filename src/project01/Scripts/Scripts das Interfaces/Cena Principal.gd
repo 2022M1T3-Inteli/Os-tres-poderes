@@ -40,3 +40,7 @@ func _input(event):
 
 func _process(delta):
 	texto.text = String(Global.dialogos_dados[Global.contexto_atual][textoatual])
+
+
+func _on_skip_pressed():
+	get_tree().change_scene("res://Cenas/Interface do Usuário/EscolhaPoder.tscn")

@@ -3,7 +3,7 @@
 [ext_resource path="res://Recursos/Musicas/kayakum.mp3" type="AudioStream" id=1]
 [ext_resource path="res://Scripts/Scripts das Interfaces/MainMenu.gd" type="Script" id=2]
 [ext_resource path="res://Recursos/Planos de Fundo/intro.jpg" type="Texture" id=3]
-[ext_resource path="res://Recursos/videos/My Movie 1 (2).webm" type="VideoStream" id=7]
+[ext_resource path="res://intro.ogv" type="VideoStream" id=4]
 
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
@@ -41,9 +41,12 @@ size_flags_horizontal = 8
 size_flags_vertical = 4
 custom_constants/separation = 35
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="musicamenu" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 1 )
 autoplay = true
+__meta__ = {
+"_editor_description_": "musica tocada no menu e no video de introdução."
+}
 
 [node name="Start" type="TextureButton" parent="."]
 margin_left = 299.0
@@ -51,6 +54,7 @@ margin_top = 242.0
 margin_right = 649.0
 margin_bottom = 317.0
 rect_min_size = Vector2( 350, 75 )
+mouse_default_cursor_shape = 2
 size_flags_horizontal = 4
 expand = true
 __meta__ = {
@@ -63,6 +67,7 @@ margin_top = 333.0
 margin_right = 662.0
 margin_bottom = 408.0
 rect_min_size = Vector2( 350, 75 )
+mouse_default_cursor_shape = 2
 size_flags_horizontal = 4
 expand = true
 __meta__ = {
@@ -75,6 +80,7 @@ margin_top = 406.0
 margin_right = 684.0
 margin_bottom = 481.0
 rect_min_size = Vector2( 350, 75 )
+mouse_default_cursor_shape = 2
 size_flags_horizontal = 4
 expand = true
 __meta__ = {
@@ -85,13 +91,13 @@ __meta__ = {
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
-stream = ExtResource( 7 )
+stream = ExtResource( 4 )
 autoplay = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="pressed" from="Start" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Start" to="." method="_on_Start_pressed"]
+[connection signal="pressed" from="Start" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Sair" to="." method="_on_Button3_pressed"]
 [connection signal="finished" from="VideoPlayer" to="." method="_on_VideoPlayer_finished"]

@@ -63,7 +63,7 @@ __meta__ = {
 [node name="Prox" type="AnimatedSprite" parent="."]
 position = Vector2( 1140, 375 )
 frames = SubResource( 1 )
-frame = 1
+frame = 6
 playing = true
 
 [node name="Iniciar" type="TextureButton" parent="."]

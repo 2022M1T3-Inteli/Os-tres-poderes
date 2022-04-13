@@ -77,6 +77,11 @@ proximo={
  ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="agua"
+2d_physics/layer_2="jogador"
+
 [physics]
 
 common/enable_pause_aware_picking=true

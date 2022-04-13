@@ -60,6 +60,7 @@ func _input(event):
 	if estado == CORRER:
 		## Se o jogador estiver no chão
 		if event.is_action_pressed("Pulo"):
+			$jump.play()
 			## Adicionamos uma condição que faz com que toda vez que o botão de pulo (configurado no menu Project > Project Settings > Input Map) for pressionado, algo aconteça.
 			estado = PULAR
 				## Se o jogador pressionar o botão de pular, ele está pulando. 
@@ -70,17 +71,18 @@ func _on_Pes_body_entered(body):
 	if body is StaticBody2D:
 		## Aqui nós checamos se o corpo que está em contato com os pés do jogador é o StaticBody2D, que, na cena "Frente" representa a caixa de colisão do chão. 
 		estado = CORRER
-			## Se os pés estão no chão, o jogador está correndo. 
-
+			## Se os pés estão no chão, o jogador está correndo.
 
 func _on_Pes_body_exited(body):
 	## Aqui, o nó "Pes" checa se algum corpo que estava em colisão com ele deixou de estar. Neste caso, o nó representa o pé do jogador. E nossa intenção é saber se os pés dele sairam do chão. 
 	if body is StaticBody2D:
+		#$aguamusic.play()
 		## Aqui nós checamos se o corpo que parou de entrar em contato com os pés do jogador é o StaticBody2D, que, na cena "Frente" representa a caixa de colisão do chão. 
 		estado = PULAR
 			## Se os pés estiverem no ar, o jogador está pulando. 
 
 func recompensar(addponto):
+	$aguamusic.play()
 	## Função para recompensar o jogador por pegar uma água.  
 	pontos += addponto
 		## Aqui, somamos cada ponto para a pontuação. Somente aciona com o sinal.  
@@ -97,3 +99,12 @@ func morreu():
 	Global.etapa2 = true
 	print(Global.pontosminigame) 
 	print(Global.pontostotal)
+
+
+func _process(delta):
+	if Global.aguamusic: 
+		$aguamusic.play()
+		Global.aguamusic = false
+	if Global.morreumusic:
+		$morreumusic.play()
+		Global.morreumusic = false

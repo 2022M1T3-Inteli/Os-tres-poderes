@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Cenas/Poderes/Executivo/Minigames/Voto Impresso/Votos.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Recursos/Sprites/Minigames/Voto Impresso/Confetes.png" type="Texture" id=2]
@@ -15,6 +15,25 @@
 
 [sub_resource type="ShaderMaterial" id=20]
 shader = ExtResource( 8 )
+
+[sub_resource type="Shader" id=21]
+code = "//aqui a linguagem é semelhante ao C+
+shader_type canvas_item;
+uniform float vel = 0.4;
+uniform float des = 0f;
+//são as variáveis
+void fragment () {
+	COLOR = texture (TEXTURE, UV + vec2(0, -1f) * TIME * vel);
+	/* cor é textura para manter a imagem dos confetes.
+	vec 2 é para mostrar que o efeito vem de cima para baixo, pois x não tem valor, só o eixo Y.
+	multiplica-se pelo tempo para ter a animação com a mudança de frames e multiplica por uma variável
+	para controlar a velocidade do confete caindo */
+}"
+
+[sub_resource type="ShaderMaterial" id=22]
+shader = SubResource( 21 )
+shader_param/vel = 0.4
+shader_param/des = 0.0
 
 [sub_resource type="DynamicFontData" id=15]
 font_path = "res://Recursos/Fontes/Kenney Blocks.ttf"
@@ -54,8 +73,9 @@ texture = ExtResource( 4 )
 script = ExtResource( 6 )
 
 [node name="Confetes" type="Sprite" parent="."]
+material = SubResource( 22 )
 position = Vector2( 641.5, 360 )
-scale = Vector2( 0.384223, 0.214757 )
+scale = Vector2( 0.390222, 0.214757 )
 texture = ExtResource( 2 )
 script = ExtResource( 5 )
 

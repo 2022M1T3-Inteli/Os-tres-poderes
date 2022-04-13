@@ -8,7 +8,7 @@
 [ext_resource path="res://Cenas/Poderes/Executivo/Minigames/Corrida pela Saúde/Itens/Agua.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Cenas/Poderes/Executivo/Minigames/Corrida pela Saúde/Interface/Pontos.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Cenas/Poderes/Executivo/Minigames/Corrida pela Saúde/Interface/FimDeJogo.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Recursos/Musicas/Minigame.mp3" type="AudioStream" id=9]
+[ext_resource path="res://Recursos/Musicas/musica de fundo 3.mp3" type="AudioStream" id=9]
 
 [node name="CorridaSaude" type="Node2D"]
 
@@ -40,6 +40,9 @@ margin_top = 2.0
 margin_right = 1275.0
 margin_bottom = 720.0
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="musica de fundo do minigame" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 9 )
 autoplay = true
+__meta__ = {
+"_editor_description_": "musica de fundo do minigame"
+}

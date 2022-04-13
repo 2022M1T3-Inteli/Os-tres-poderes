@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/Scripts de Minigames/Voto Impresso/FimdeJogo.gd" type="Script" id=1]
 [ext_resource path="res://Recursos/Sprites/Minigames/Voto Impresso/paper_da_pontuação-removebg-preview.png" type="Texture" id=2]
+[ext_resource path="res://Recursos/botoes /voltar.png" type="Texture" id=3]
 
 [sub_resource type="Theme" id=6]
 
@@ -22,14 +23,15 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Voltar_menu" type="Button" parent="."]
+[node name="Voltar_menu" type="TextureButton" parent="."]
 pause_mode = 2
 margin_left = 513.0
 margin_top = 542.0
 margin_right = 703.0
 margin_bottom = 582.0
 rect_scale = Vector2( 1.5, 1.5 )
-text = "Voltar ao Menu"
+texture_normal = ExtResource( 3 )
+expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }

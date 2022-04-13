@@ -26,10 +26,10 @@ __meta__ = {
 }
 
 [node name="Dados" type="RichTextLabel" parent="."]
-margin_left = 572.0
-margin_top = 135.0
-margin_right = 871.0
-margin_bottom = 361.0
+margin_left = 574.0
+margin_top = 133.0
+margin_right = 873.0
+margin_bottom = 359.0
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 text = "Dados do Minigame:"
 __meta__ = {

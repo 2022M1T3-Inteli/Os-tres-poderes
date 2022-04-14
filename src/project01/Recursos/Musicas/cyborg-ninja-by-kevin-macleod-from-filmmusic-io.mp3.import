@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/cyborg-ninja-by-kevin-macleod-from-filmmusic-io.mp3-3cc2981f2279dc20a32f3a79e07c7978.mp3str"
+
+[deps]
+
+source_file="res://Recursos/Musicas/cyborg-ninja-by-kevin-macleod-from-filmmusic-io.mp3"
+dest_files=[ "res://.import/cyborg-ninja-by-kevin-macleod-from-filmmusic-io.mp3-3cc2981f2279dc20a32f3a79e07c7978.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

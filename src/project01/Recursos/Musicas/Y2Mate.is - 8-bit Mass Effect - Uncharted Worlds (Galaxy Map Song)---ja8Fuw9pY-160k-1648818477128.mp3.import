@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Y2Mate.is - 8-bit Mass Effect - Uncharted Worlds (Galaxy Map Song)---ja8Fuw9pY-160k-1648818477128.mp3-4ee6f257a71a00af168681ddc636366c.mp3str"
+
+[deps]
+
+source_file="res://Recursos/Musicas/Y2Mate.is - 8-bit Mass Effect - Uncharted Worlds (Galaxy Map Song)---ja8Fuw9pY-160k-1648818477128.mp3"
+dest_files=[ "res://.import/Y2Mate.is - 8-bit Mass Effect - Uncharted Worlds (Galaxy Map Song)---ja8Fuw9pY-160k-1648818477128.mp3-4ee6f257a71a00af168681ddc636366c.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

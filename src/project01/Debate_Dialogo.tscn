@@ -1,0 +1,112 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Recursos/Objetos/frase_opos.png" type="Texture" id=1]
+[ext_resource path="res://Recursos/Planos de Fundo/mesa.png" type="Texture" id=2]
+[ext_resource path="res://Recursos/Planos de Fundo/debate_plano_de_fundo.jpg" type="Texture" id=3]
+[ext_resource path="res://Debate_Dialogo.gd" type="Script" id=4]
+[ext_resource path="res://Recursos/Sprites/NPCs/Homem Negro/HN_Lado_Half_Hidden.png" type="Texture" id=13]
+[ext_resource path="res://Recursos/Sprites/NPCs/Homem Branco/HB_Lado_Half.png" type="Texture" id=14]
+[ext_resource path="res://Recursos/Sprites/NPCs/Mulher Negra/MN_Lado_Half_Hidden.png" type="Texture" id=15]
+[ext_resource path="res://Recursos/Sprites/NPCs/Mulher Branca/MB_Lado_Half.png" type="Texture" id=16]
+[ext_resource path="res://Recursos/Sprites/NPCs/Homem Negro/HN_Lado_Half.png" type="Texture" id=19]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://Recursos/Fontes/Mukta-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+font_data = SubResource( 1 )
+
+[node name="Debate_Novo" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Plano De Fundo" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="conselheiro" type="TextureButton" parent="."]
+margin_left = 138.0
+margin_top = 50.0
+margin_right = 324.0
+margin_bottom = 335.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 13 )
+texture_hover = ExtResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="presidente" type="TextureRect" parent="."]
+margin_left = 222.0
+margin_top = 51.0
+margin_right = 448.0
+margin_bottom = 336.0
+mouse_filter = 2
+texture = ExtResource( 14 )
+
+[node name="deputada_shadow" type="TextureRect" parent="."]
+margin_left = 1032.0
+margin_top = 50.0
+margin_right = 1246.0
+margin_bottom = 335.0
+mouse_filter = 2
+texture = ExtResource( 15 )
+flip_h = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="deputada" type="TextureRect" parent="."]
+margin_left = 873.0
+margin_top = 72.0
+margin_right = 1079.0
+margin_bottom = 333.0
+mouse_filter = 2
+texture = ExtResource( 16 )
+expand = true
+flip_h = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Mesa" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Balao" type="TextureRect" parent="."]
+margin_left = 54.0
+margin_top = 370.0
+margin_right = 1258.0
+margin_bottom = 586.0
+texture = ExtResource( 1 )
+
+[node name="Texto" type="Label" parent="."]
+margin_left = 84.0
+margin_top = 429.0
+margin_right = 1229.0
+margin_bottom = 568.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_constants/line_spacing = -8
+custom_fonts/font = SubResource( 2 )
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}

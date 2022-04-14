@@ -1,0 +1,88 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Scripts das Interfaces/MenuDados.gd" type="Script" id=1]
+[ext_resource path="res://Recursos/Planos de Fundo/fundo-torto(1).jpg" type="Texture" id=2]
+
+[node name="MenuDados" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Background" type="TextureRect" parent="."]
+margin_right = 1280.0
+margin_bottom = 720.0
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Opções" type="VBoxContainer" parent="."]
+margin_left = 566.0
+margin_top = 111.0
+margin_right = 924.0
+margin_bottom = 382.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DadosJogador" type="Button" parent="Opções"]
+margin_top = 89.0
+margin_right = 358.0
+margin_bottom = 109.0
+text = "Dados do Jogador"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DadosDebate" type="Button" parent="Opções"]
+margin_top = 113.0
+margin_right = 358.0
+margin_bottom = 133.0
+text = "Dados do Debate"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DadosMinigame" type="Button" parent="Opções"]
+margin_top = 137.0
+margin_right = 358.0
+margin_bottom = 157.0
+text = "Dados do Minigame"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Noticias" type="Button" parent="Opções"]
+margin_top = 161.0
+margin_right = 358.0
+margin_bottom = 181.0
+text = "Notícias"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Voltar" type="Button" parent="."]
+margin_left = 35.0
+margin_top = 620.0
+margin_right = 215.0
+margin_bottom = 690.0
+text = "Voltar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Power" type="TextureButton" parent="."]
+margin_left = 918.0
+margin_top = 382.0
+margin_right = 958.0
+margin_bottom = 422.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Opções/DadosJogador" to="." method="_on_DadosJogador_pressed"]
+[connection signal="pressed" from="Opções/DadosDebate" to="." method="_on_DadosDebate_pressed"]
+[connection signal="pressed" from="Opções/DadosMinigame" to="." method="_on_DadosMinigame_pressed"]
+[connection signal="pressed" from="Opções/Noticias" to="." method="_on_Noticias_pressed"]
+[connection signal="pressed" from="Voltar" to="." method="_on_Voltar_pressed"]
+[connection signal="pressed" from="Power" to="." method="_on_Power_pressed"]

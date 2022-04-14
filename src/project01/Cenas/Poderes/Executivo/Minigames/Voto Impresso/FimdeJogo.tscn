@@ -1,0 +1,107 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Scripts/Scripts de Minigames/Voto Impresso/FimdeJogo.gd" type="Script" id=1]
+[ext_resource path="res://Recursos/Objetos/pont_final_voto.png" type="Texture" id=2]
+[ext_resource path="res://Recursos/Botões/voltarmenu_normal.png" type="Texture" id=3]
+[ext_resource path="res://Recursos/Botões/voltarmenu_hover.png" type="Texture" id=4]
+[ext_resource path="res://Recursos/Objetos/apoio.png" type="Texture" id=5]
+[ext_resource path="res://Recursos/Planos de Fundo/Fundo_Inst_Voto.png" type="Texture" id=6]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://Recursos/Fontes/Mukta-ExtraBold.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 54
+font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFontData" id=3]
+font_path = "res://Recursos/Fontes/Mukta-ExtraBold.ttf"
+
+[sub_resource type="DynamicFont" id=4]
+size = 22
+font_data = SubResource( 3 )
+
+[node name="FimdeJogo" type="Control"]
+margin_right = 1277.0
+margin_bottom = 719.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 3.0
+margin_bottom = 1.0
+texture = ExtResource( 6 )
+
+[node name="Voltar_menu" type="TextureButton" parent="."]
+pause_mode = 2
+margin_left = 408.0
+margin_top = 547.0
+margin_right = 748.0
+margin_bottom = 618.0
+rect_scale = Vector2( 1.5, 1.5 )
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fundo" type="TextureRect" parent="."]
+margin_left = 311.0
+margin_top = 49.0
+margin_right = 911.0
+margin_bottom = 449.0
+rect_min_size = Vector2( 300, 0 )
+rect_scale = Vector2( 1.15, 1.15 )
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Numero_pontuacao" type="Label" parent="."]
+margin_left = 587.0
+margin_top = 271.0
+margin_right = 737.0
+margin_bottom = 371.0
+rect_min_size = Vector2( 150, 100 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "0"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Temporizador" type="Timer" parent="."]
+autostart = true
+
+[node name="Apoio" type="Label" parent="."]
+margin_left = 336.0
+margin_top = 345.0
+margin_right = 846.0
+margin_bottom = 499.0
+custom_fonts/font = SubResource( 4 )
+text = "Por cumprir o objetivo secundário, você obteve o completo apoio do povo."
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="anjo" type="TextureRect" parent="."]
+margin_left = 853.0
+margin_top = 366.0
+margin_right = 953.0
+margin_bottom = 466.0
+texture = ExtResource( 5 )
+
+[connection signal="pressed" from="Voltar_menu" to="." method="_on_Voltar_menu_pressed"]
+[connection signal="timeout" from="Temporizador" to="." method="_on_Temporizador_timeout"]

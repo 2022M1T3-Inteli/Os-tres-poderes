@@ -1,0 +1,135 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://Recursos/Botões/CadernoHover.png" type="Texture" id=1]
+[ext_resource path="res://Recursos/Botões/CadernoDisabled.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/Scripts das Interfaces/Judiciário.gd" type="Script" id=3]
+[ext_resource path="res://Recursos/Botões/Audiencia (2).png" type="Texture" id=4]
+[ext_resource path="res://Recursos/Botões/AudienciaHover.png" type="Texture" id=5]
+[ext_resource path="res://Recursos/Botões/Fundo-judiciário.png" type="Texture" id=6]
+[ext_resource path="res://Recursos/Botões/MesaJud.png" type="Texture" id=7]
+[ext_resource path="res://Recursos/Botões/ProgressoHover.png" type="Texture" id=8]
+[ext_resource path="res://Recursos/Botões/CadernoNormal.png" type="Texture" id=9]
+[ext_resource path="res://Recursos/Botões/ProgressoNor.png" type="Texture" id=10]
+[ext_resource path="res://Recursos/Botões/VoltarJud.png" type="Texture" id=11]
+[ext_resource path="res://Recursos/Sprites/NPCs/Homem Branco/HB_Frente_Half.png" type="Texture" id=12]
+[ext_resource path="res://Recursos/Botões/PerguntaN.png" type="Texture" id=13]
+[ext_resource path="res://Recursos/Botões/PerguntaH.png" type="Texture" id=14]
+[ext_resource path="res://Recursos/Botões/ProgressoDisabled.png" type="Texture" id=15]
+[ext_resource path="res://Recursos/Botões/duvida_executivo_disable.png" type="Texture" id=16]
+[ext_resource path="res://Recursos/Botões/AudienciaDisabled.png" type="Texture" id=17]
+[ext_resource path="res://Recursos/Botões/Voltar_Hover.png" type="Texture" id=18]
+
+[node name="Judiciario" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 6 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Juiz" type="TextureRect" parent="."]
+margin_left = 454.0
+margin_top = 159.0
+margin_right = 833.0
+margin_bottom = 721.0
+texture = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Mesa" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 7 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Voltar" type="TextureButton" parent="."]
+margin_left = 60.0
+margin_top = 56.0
+margin_right = 150.0
+margin_bottom = 107.0
+texture_normal = ExtResource( 11 )
+texture_hover = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pergunta" type="TextureButton" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_left = 611.0
+margin_top = 45.0
+margin_right = 696.0
+margin_bottom = 131.0
+texture_normal = ExtResource( 13 )
+texture_hover = ExtResource( 14 )
+texture_disabled = ExtResource( 16 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 832.0
+margin_top = 288.0
+margin_right = 1189.0
+margin_bottom = 538.0
+custom_constants/separation = 20
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Progresso" type="TextureButton" parent="VBoxContainer"]
+margin_right = 357.0
+margin_bottom = 70.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture_normal = ExtResource( 10 )
+texture_hover = ExtResource( 8 )
+texture_disabled = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Caderno" type="TextureButton" parent="VBoxContainer"]
+margin_top = 90.0
+margin_right = 357.0
+margin_bottom = 160.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture_normal = ExtResource( 9 )
+texture_hover = ExtResource( 1 )
+texture_disabled = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Audiencia" type="TextureButton" parent="VBoxContainer"]
+margin_top = 180.0
+margin_right = 357.0
+margin_bottom = 250.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture_normal = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+texture_disabled = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Voltar" to="." method="_on_Voltar_pressed"]
+[connection signal="pressed" from="VBoxContainer/Caderno" to="." method="_on_Caderno_pressed"]

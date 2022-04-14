@@ -78,25 +78,14 @@ Há uma pasta <b>antigos</b>: Onde estarão todas as versões antigas da documen
 <br><br>
 
 ## Instalação
-
-<b>Windows:</b>
-
-Executável do jogo, onde se pode baixar e modificar.
-Encontre o JOGO.exe na pasta executáveis e execute-o como qualquer outro programa.
-
-```sh
-https://github.com/2022M1T3/Projeto5/blob/main/execut%C3%A1veis/Windows/project01.exe?raw=true
-```
      
 <b>HTML:</b>
 <br>
      
-Copiar e Colar na Web para jogar.
-
-```sh
-https://itch.io/queue/c/2399268/eu-presidente?game_id=1463920
-```
-
+Clique no nome do jogo ou Copie o endereço do link e Cole na Web para jogar. 
+<br>
+<a href="https://itch.io/queue/c/2399268/eu-presidente?game_id=1463920">Os Três Poderes</a>
+     
 <br><br>
 
 ## Exemplos de uso
@@ -113,35 +102,35 @@ Através da cópia/clone/ download do repositório, altere os dados do readme.md
 
 ## Configuração para Desenvolvimento
 
-Descreva como instalar todas as dependências para desenvolvimento e como rodar um test-suite automatizado de algum tipo. Se necessário, faça isso para múltiplas plataformas.
-
-Para abrir este projeto você necessita das seguintes ferramentas:
+Para abrir este projeto você necessita da seguinte ferramenta, designada abaixo:
 
 -<a href="https://godotengine.org/download">GODOT</a>
 
-```sh
-make install
-npm test
-Coloque código do prompt de comnando se for necessário
-```
 <br><br>
 
 ## Histórico de lançamentos
 
-A cada atualização os detalhes devem ser lançados aqui.
+- GDD
 
-* 0.2.1 - 25/01/2022
-    * MUDANÇA: Atualização de docs (código do módulo permanece inalterado)
-* 0.2.0 - 15/01/2022
-    * MUDANÇA: Remove `setDefaultXYZ()`
-    * ADD: Adiciona `init()`
-* 0.1.1 - 11/01/2022
-    * CONSERTADO: Crash quando chama `baz()` (Obrigado @NomeDoContribuidorGeneroso!)
-* 0.1.0 - 10/01/2022
-    * O primeiro lançamento adequado
-    * MUDANÇA: Renomeia `foo()` para `bar()`
-* 0.0.1 - 01/01/2022
-    * Trabalho em andamento
+* 0.1 - 11/02/2022
+
+* 0.2 - 09/02/2022
+
+* 1.1 - 25/02/2022
+
+* 2.1 - 07/03/2022
+
+* 2.2 - 11/03/2022
+
+* 3.1 - 25/03/2022
+
+* 3.2 - 28/03/2022
+
+* 3.3 - 03/04/2022
+
+* 4.1 - 04/04/2022
+
+* 4.2 - 12/04/2022    
 
 <br><br>
 
@@ -155,10 +144,10 @@ A cada atualização os detalhes devem ser lançados aqui.
 
 Aqui estão as referências usadas no projeto.
 
-1. Músicas: https://soundcloud.com/music-gamer-freecopyright/bit-quest-8bit-electronicaexperimental.
+Músicas:<br>
+1. https://soundcloud.com/music-gamer-freecopyright/bit-quest-8bit-electronicaexperimental.
 2. https://soundcloud.com/kevin-9-1/bit-quest
-3. https://soundcloud.com/musica-sin-copyright-632208812/salty-ditty-kevin-macleod
-4. Texturas e designs: https://www.educamaisbrasil.com.br/enem/geografia/poder-judiciario
+3. https://soundcloud.com/musica-sin-copyright-632208812/salty-ditty-kevin-macleod <br>
+Texturas e designs:<br>
+4. https://www.educamaisbrasil.com.br/enem/geografia/poder-judiciario
 5. https://plenarinho.leg.br/index.php/2017/09/os-tres-poderes/
-6. 
-7. 

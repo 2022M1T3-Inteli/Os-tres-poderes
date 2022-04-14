@@ -103,4 +103,5 @@ __meta__ = {
 
 [connection signal="pressed" from="voltar" to="." method="_on_voltar_pressed"]
 [connection signal="pressed" from="imprensa" to="." method="_on_imprensa_pressed"]
+[connection signal="pressed" from="publicar_pec" to="." method="_on_publicar_pec_pressed"]
 [connection signal="pressed" from="idealizar_pec" to="." method="_on_idealizar_pec_pressed"]

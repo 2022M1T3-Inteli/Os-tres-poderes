@@ -20,6 +20,11 @@ func _ready():
 	if qtde_PECs >= 5:
 		$HUD_Principal/HBoxContainer/PEC_Available5.show()
 	passagem_tempo = 48 / (qtde_PECs * 5)
+	if Global.Progresso == -2:
+		$HUD_Principal/HBoxContainer/PEC_Available.texture = load("res://Recursos/Objetos/PEC_Ok.png")
+		$HUD_Principal/Final.show()
+		$HUD_Principal/Data.text = "Dezembro, 2024"
+		$HUD_Principal/PEC_Atual.text = "Nenhum"
 	if Global.Progresso == -1: 
 		if Global.apoio == true: 
 			Global.apoio = false
@@ -65,6 +70,11 @@ func _ready():
 			if Global.Progresso >= 17: 
 				$Progresso/Deputados.texture = pronto
 				$Progresso/Senado.texture = load("res://Recursos/Objetos/Senado_Current.png")
+				if Global.Progresso >= 27: 
+					$Progresso/Senado.texture = pronto 
+					$Progresso/Promulgar.texture = load("res://Recursos/Objetos/Promulgar_Current.png")
+					$HUD_Principal/Fase_Atual.texture = load("res://Recursos/Objetos/HUD_Fase3.png")
+					$Progresso/Progresso_Title.texture = load("res://Recursos/Objetos/Progresso_Title3.png")
 
 func _process(delta):
 	$HUD_Principal/Data.text = String(Global.tempo["Meses"][tempo_atual] + "," + Global.tempo["Ano"][ano_atual])
@@ -87,3 +97,7 @@ func passar_tempo():
 		tempo_atual = 0 
 		if ano_atual > 3: 
 			ano_atual = 3
+
+
+func _on_Final_pressed():
+	get_tree().change_scene("res://Win.tscn")

@@ -371,3 +371,4 @@ __meta__ = {
 [connection signal="pressed" from="Leg" to="." method="_on_Leg_pressed"]
 [connection signal="pressed" from="Exec" to="." method="_on_Exec_pressed"]
 [connection signal="pressed" from="Jud" to="." method="_on_Jud_pressed"]
+[connection signal="pressed" from="HUD_Principal/Final" to="." method="_on_Final_pressed"]

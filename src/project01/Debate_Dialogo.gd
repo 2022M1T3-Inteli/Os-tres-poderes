@@ -1,6 +1,9 @@
 extends Control
 
 func _ready():
+	$presidente.texture = Global.NPC[Global.Presidente]["Lado"]["Half"]
+	$conselheiro.texture_normal = Global.NPC[Global.Conselheiro]["Lado"]["Hidden"]["Half"]
+	$conselheiro.texture_hover = Global.NPC[Global.Conselheiro]["Lado"]["Half"]
 	if Global.Progresso == 10:
 		$Texto.text = String(Global.perguntas_debate[Global.PEC_Escolhida]["Inicio"][0])
 	if Global.Progresso == 12: 
@@ -12,6 +15,9 @@ func _ready():
 	if Global.Progresso == 18: 
 		$Texto.text = String(Global.perguntas_debate[Global.PEC_Escolhida]["Inicio"][2])
 	if Global.Progresso == 20:
+		$Balao.texture = load("res://Recursos/Objetos/frase_pres.png")
+		$Texto.text = Global.carregar_resposta
+	if Global.Progresso == 24:
 		$Balao.texture = load("res://Recursos/Objetos/frase_pres.png")
 		$Texto.text = Global.carregar_resposta
 
@@ -71,5 +77,11 @@ func _input(event):
 			else:
 				Global.senado_falho = true
 				Global.Progresso = -1
+		elif Global.Progresso == 25: 
+			$Texto.text = "O Senado decide que a PEC deverá ser promulgada."
+			Global.Progresso = 26
+		elif Global.Progresso == 26: 
+			get_tree().change_scene("res://Cenas/Poderes/Legislativo/Menu.tscn")
+			Global.Progresso = 27
 		elif Global.Progresso == -1: 
 			get_tree().change_scene("res://Cenas/Interface do Usuário/EscolhaPoderes.tscn")

@@ -132,3 +132,4 @@ __meta__ = {
 }
 
 [connection signal="pressed" from="Voltar" to="." method="_on_Voltar_pressed"]
+[connection signal="pressed" from="VBoxContainer/Caderno" to="." method="_on_Caderno_pressed"]

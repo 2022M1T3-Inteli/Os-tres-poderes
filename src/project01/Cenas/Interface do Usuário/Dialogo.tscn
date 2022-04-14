@@ -107,7 +107,7 @@ __meta__ = {
 position = Vector2( 1235, 686 )
 frames = SubResource( 1 )
 animation = "blink"
-frame = 9
+frame = 6
 playing = true
 
 [node name="Frase" type="Label" parent="."]

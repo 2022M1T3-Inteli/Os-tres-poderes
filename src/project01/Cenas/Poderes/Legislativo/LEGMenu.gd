@@ -2,12 +2,15 @@ extends Control
 
 
 func _ready():
-	if Global.Progresso >= 9 and Global.Progresso < 17: 
-		Global.Progresso = 10
-		$Deputados.disabled = false
-	if Global.Progresso >= 17:
-		Global.Progresso = 18 
-		$Senadores.disabled = false
+	$Presidente.texture = Global.NPC[Global.Presidente]["Lado"]["Half"]
+	$Conselheiro.texture = Global.NPC[Global.Conselheiro]["Lado"]["Half"]
+	if Global.Progresso < 27:
+		if Global.Progresso >= 9 and Global.Progresso < 17: 
+			Global.Progresso = 10
+			$Deputados.disabled = false
+		if Global.Progresso >= 17:
+			Global.Progresso = 18 
+			$Senadores.disabled = false
 
 
 func _on_Deputados_pressed():

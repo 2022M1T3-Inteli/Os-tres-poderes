@@ -11,6 +11,8 @@ func _ready():
 		$imprensa.disabled = false
 	elif Global.Progresso == 9: 
 		$imprensa.disabled = true
+	elif Global.Progresso == 27: 
+		$publicar_pec.disabled = false
 
 
 func _process(delta):
@@ -26,3 +28,7 @@ func _on_voltar_pressed():
 func _on_imprensa_pressed():
 	if Global.PEC_Escolhida == 0: 
 		get_tree().change_scene("res://Instruct_Minigames.tscn")
+
+
+func _on_publicar_pec_pressed():
+	get_tree().change_scene("res://Endgame.tscn")

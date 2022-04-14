@@ -18,4 +18,4 @@ func _on_Start_pressed():
 
 func _on_VideoPlayer_finished():
 	intro.hide()
-	##intro.autoplay = false
+#Finaliza e esconde o vídeo de introdução

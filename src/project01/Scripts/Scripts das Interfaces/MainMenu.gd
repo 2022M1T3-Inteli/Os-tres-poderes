@@ -19,3 +19,7 @@ func _on_Start_pressed():
 func _on_VideoPlayer_finished():
 	intro.hide()
 	##intro.autoplay = false
+
+
+func _on_Sobre_pressed():
+	get_tree().change_scene("res://Sobre.tscn")

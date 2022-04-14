@@ -8,5 +8,5 @@ func _on_Voltar_pressed():
 
 
 func _on_Voto_Impresso_pressed():
-	get_tree().change_scene("res://Detalhe_PEC.tscn")
+	get_tree().change_scene("res://Cenas/Poderes/Executivo/Botões/Detalhe_PEC.tscn")
 	Global.PEC_Escolhida = 0 

@@ -184,7 +184,7 @@ var NPC = {
 	"Homem_Branco" : {
 		"Frente" : {
 			"Full" : load("res://Recursos/Sprites/NPCs/Homem Branco/HB_Frente_Full.png"),
-			"Half" : load("res://Recursos/Sprites/NPCs/Mulher Negra/HB_Frente_Half.png")
+			"Half" : load("res://Recursos/Sprites/NPCs/Homem Branco/HB_Frente_Half.png")
 			},
 		"Lado" : { 
 			"Full" : load("res://Recursos/Sprites/NPCs/Homem Branco/HB_Lado_Full.png"),
@@ -202,7 +202,7 @@ var NPC = {
 	"Homem_Negro" : {
 		"Frente" : {
 			"Full" : load("res://Recursos/Sprites/NPCs/Homem Negro/HN_Frente_Full.png"),
-			"Half" : load("res://Recursos/Sprites/NPCs/Mulher Negra/HN_Frente_Half.png")
+			"Half" : load("res://Recursos/Sprites/NPCs/Homem Negro/HN_Frente_Half.png")
 			},
 		"Lado" : { 
 			"Full" : load("res://Recursos/Sprites/NPCs/Homem Negro/HN_Lado_Full.png"),
@@ -220,7 +220,7 @@ var NPC = {
 	"Mulher_Branca" : {
 		"Frente" : {
 			"Full" : load("res://Recursos/Sprites/NPCs/Mulher Branca/MB_Frente_Full.png"),
-			"Half" : load("res://Recursos/Sprites/NPCs/Mulher Negra/MB_Frente_Half.png")
+			"Half" : load("res://Recursos/Sprites/NPCs/Mulher Branca/MB_Frente_Half.png")
 			},
 		"Lado" : { 
 			"Full" : load("res://Recursos/Sprites/NPCs/Mulher Branca/MB_Lado_Full.png"),
@@ -454,3 +454,73 @@ var midia = {
 
 	}
 }
+
+var perguntas_debate = {
+	0 : {
+		"Deputados" : {
+			0 : "Como a PEC do voto impresso contribuirá para a sociedade brasileira?",
+			1 : "Como serão arcados os altos custos para realização da PEC?"
+		}, 
+		"Senadores" : {
+			2 : "Você tem alguma conexão de possível lucro com a promulgação dessa PEC?", 
+			3 : "Como você acha que deve se resolver essa falta de mão de obra?"
+		}, 
+		"Inicio" : {
+			0 : "Presidente, a câmara se encontra curiosa quanto a sua proposta de PEC; o voto eletrônico é entendido pela maioria como o método mais seguro para se fazer democracia. Por favor, explique como a PEC do voto impresso contribuirá para a sociedade brasileira.", 
+			1 : "Para executar essa PEC, certamente uma suma significativa de dinheiro será obrigatoriamente alocada para essa mudança. Como serão arcados os altos custos para realização da PEC?", 
+			2 : "Vem a atenção do senado que você, presidente, é primo de uma das empresas que mantêm as urnas eletrônicas e ficariam com o trabalho de as alterá-las para o uso do voto impresso. Você tem alguma conexão de possível lucro com a promulgação dessa PEC?",
+			3 : "Com todas essas mudanças, também há de se esperar uma necessidade de treino para mesários e disponibilidade maior de pessoal durante as eleições. Como você acha que deve se resolver essa falta de mão de obra?"
+		}
+	}, 
+}
+
+var respostas_debate = {
+	0 : {
+	"Popular" : {
+		0 : "Os cidadãos poderão ter a comprovação em mãos de que seu voto foi para o representante escolhido.", 
+		1 : "Embora possa ser investido mais na saúde, algumas partes da sociedade querem mais clareza eleitoral.",
+		2 : "Não, e iremos procurar outro fornecedor para evitar escândalos.",
+		3 : "Devemos oferecer as vagas a cidadãos sorteados aleatoriamente."
+	}, 
+	"Governamental" : {
+		0 : "Os governantes que já estão no poder se sentirão mais confortáveis nas eleições.",
+		1 : "O governo pode pedir ao Banco Central para imprimir mais dinheiro para pagar a PEC.",
+		2 : "Não, porém os planos devem continuar pois teremos muito trabalho de achar outro fornecedor.", 
+		3 : "Devemos deixar os próprios políticos explicarem como funciona.", 
+	}, 
+	"Constitucional" : {
+		0 : "Adicionando melhorias na lei já em prática do Código Eleitoral.", 
+		1 : "A PEC pode ser encaixada no Teto de Gastos (limite de gastos do governo) se cortar despesas.", 
+		2 : "Iremos parar o processo da PEC, pois seria um crime de nepotismo, ou seja, há o abuso de poder por um alto cargo indicar familiares para trabalhar com o governo.", 
+		3 : "A Constituição diz que o mais recomendado é contratar profissionais qualificados que passarem em um concurso público.",
+		}
+	}
+}
+
+var react_debate = {
+	0 : {
+	"Popular" : {
+		0 : "A Câmara dos Deputados achou digna a justificativa e é a favor da continuidade da PEC.", 
+		1 : "A Câmara concluiu que o governo perderia apoio popular com o investimento na PEC do voto impresso e não na saúde, então foi contra a continuidade da PEC.",
+		2 : "O Senado entendeu essa como a melhor solução, pois há pessoas qualificadas sem ligações com o Presidente, então foi a favor da continuidade da PEC.",
+		3 : "O Senado viu com preocupação uma tarefa tão importante ficar nas mãos de pessoas que podem não entender sobre o assunto, então foi contra a continuidade da PEC."
+	}, 
+	"Governamental" : {
+		0 : "A Câmara dos Deputados foi contra a continuidade da PEC pois a disputa eleitoral poderia ser injusta.",
+		1 : "A Câmara julgou que a impressão de dinheiro aumentaria a inflação, deixando tudo mais caro para o cidadão. Então a Câmara foi contra a continuidade da PEC.",
+		2 : "O Senado entende que nem sempre o Presidente precisa ser agradado e, nesse caso, a imagem popular e constitucional da PEC dependeria da mudança de fornecedor. Então o Senado foi contra a continuidade da PEC com esses termos.", 
+		3 : "O Senado achou que isso daria vantagem eleitoral e ajudaria os políticos envolvidos com popularidade, então foi contra a proposta e barrou a PEC.", 
+	}, 
+	"Constitucional" : {
+		0 : "A Câmara dos Deputados não teve embasamento jurídico para afirmar que a PEC não fere uma Cláusula Pétrea da Constituição (uma lei que não pode ser mudada), então foi contra a continuidade da PEC.", 
+		1 : "A Câmara viu que teria como encaixar a PEC no Teto de Gastos com o corte de pequenas despesas, então foi a favor da continuidade da PEC.", 
+		2 : "O Senado ouviu a Lei e parou o processamento da PEC, pois, nesses termos, de fato um crime estaria sendo cometido.", 
+		3 : "O Senado achou coerente a proposta, pois a mudança exige conhecimento técnico, indo a favor da continuidade da PEC.",
+		}
+	}
+}
+
+var carregar_resposta
+var carregar_react
+var deputado_falho
+var senado_falho

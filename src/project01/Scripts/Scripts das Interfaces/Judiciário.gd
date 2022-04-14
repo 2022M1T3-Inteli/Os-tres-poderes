@@ -1,12 +1,10 @@
 extends Control
 
-onready var conselheiro = $Juiz
-
 func _ready():
-	conselheiro.texture = Global.conselheiro_dados[Global.conselheiro_escolhido]["Busto"]
+	$Juiz.texture = Global.NPC[Global.Conselheiro]["Frente"]["Half"]
 
 func _on_Voltar_pressed():
-	get_tree().change_scene("res://Cenas/Interface do Usuário/EscolhaPoder.tscn") #Botão de voltar
+	get_tree().change_scene("res://Cenas/Interface do Usuário/EscolhaPoderes.tscn") #Botão de voltar
 
 
 func _on_Dados_Gerais_pressed():

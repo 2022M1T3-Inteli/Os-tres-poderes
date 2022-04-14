@@ -1,4 +1,4 @@
-extends Control
+xtends Control
 
 onready var PL = $"Poder Legislativo"
 onready var PJ = $"Poder Judiciário"

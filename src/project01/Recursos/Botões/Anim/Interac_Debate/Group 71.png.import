@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/website.png-7f897c6b3b4aaf826d99381e74e25ac5.stex"
+path="res://.import/Group 71.png-5c993254fa1296285a1b69cf5e0d20f2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Recursos/Objetos/website.png"
-dest_files=[ "res://.import/website.png-7f897c6b3b4aaf826d99381e74e25ac5.stex" ]
+source_file="res://Recursos/Botões/Anim/Interac_Debate/Group 71.png"
+dest_files=[ "res://.import/Group 71.png-5c993254fa1296285a1b69cf5e0d20f2.stex" ]
 
 [params]
 

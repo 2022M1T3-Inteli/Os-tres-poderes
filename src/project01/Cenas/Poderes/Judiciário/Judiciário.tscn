@@ -36,10 +36,15 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Juiz" type="Sprite" parent="."]
-position = Vector2( 641, 466 )
-scale = Vector2( 0.926385, 0.9 )
+[node name="Juiz" type="TextureRect" parent="."]
+margin_left = 454.0
+margin_top = 159.0
+margin_right = 833.0
+margin_bottom = 721.0
 texture = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Mesa" type="TextureRect" parent="."]
 anchor_right = 1.0
@@ -66,10 +71,10 @@ margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="TextureButton" type="TextureButton" parent="."]
-margin_left = 604.0
-margin_top = 116.0
-margin_right = 689.0
-margin_bottom = 202.0
+margin_left = 611.0
+margin_top = 45.0
+margin_right = 696.0
+margin_bottom = 131.0
 texture_normal = ExtResource( 13 )
 texture_hover = ExtResource( 14 )
 texture_disabled = ExtResource( 16 )
@@ -125,3 +130,5 @@ texture_disabled = ExtResource( 17 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[connection signal="pressed" from="Voltar" to="." method="_on_Voltar_pressed"]

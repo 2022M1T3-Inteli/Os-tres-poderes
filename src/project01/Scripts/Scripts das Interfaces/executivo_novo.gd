@@ -18,7 +18,7 @@ func _process(delta):
 
 
 func _on_idealizar_pec_pressed():
-	get_tree().change_scene("res://Ideia_Novo.tscn")
+	get_tree().change_scene("res://Cenas/Poderes/Executivo/Botões/Ideia_Novo.tscn")
 
 func _on_voltar_pressed():
 	get_tree().change_scene("res://Cenas/Interface do Usuário/EscolhaPoderes.tscn")

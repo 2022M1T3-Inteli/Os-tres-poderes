@@ -33,7 +33,7 @@ func _on_Temporizador_timeout():
 	
 
 func _on_Voltar_menu_pressed():
-	get_tree().change_scene("res://Cenas/Poderes/Executivo/executivo_novo.tscn")
+	get_tree().change_scene("res://Cenas/Poderes/Judiciário/Opções/Jornal.tscn")
 	get_tree().paused = false
 	Global.Progresso = 9
 	#colocar para onde a cena vai 

@@ -5,6 +5,7 @@ var passagem_tempo = 0
 var tempo_atual = 1
 var ano_atual = 0
 var progresso_atual = Global.Progresso
+var pronto = load("res://Recursos/Objetos/Parte_Ok.png")
 
 func _ready():
 	qtde_PECs = len(Global.PECs_Available)
@@ -21,6 +22,18 @@ func _ready():
 	if progresso_atual == 4:
 		pass
 	passagem_tempo = 48 / (qtde_PECs * 5)
+	if Global.Progresso >= 8: 
+		passar_tempo()
+		$Progresso.show()
+		$HUD_Principal/Fase_Atual.show()
+		$HUD_Principal/HBoxContainer/PEC_Available.texture = load("res://Recursos/Objetos/PEC_Current.png")
+		$HUD_Principal/PEC_Atual.text = Global.PECs_Available[Global.PEC_Escolhida]
+	if Global.Progresso == 9: 
+		passar_tempo()
+		$Progresso/Imprensa.texture = pronto
+		$Progresso/Deputados.texture = load("res://Recursos/Objetos/Deputados_Current.png")
+		$Leg.disabled = false
+		$Jud.disabled = false
 
 func _process(delta):
 	$HUD_Principal/Data.text = String(Global.tempo["Meses"][tempo_atual] + "," + Global.tempo["Ano"][ano_atual])

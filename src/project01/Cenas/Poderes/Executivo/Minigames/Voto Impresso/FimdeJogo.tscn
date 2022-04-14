@@ -1,12 +1,11 @@
-
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scripts/Scripts de Minigames/Voto Impresso/FimdeJogo.gd" type="Script" id=1]
 [ext_resource path="res://Recursos/Objetos/pont_final_voto.png" type="Texture" id=2]
 [ext_resource path="res://Recursos/Botões/voltarmenu_normal.png" type="Texture" id=3]
 [ext_resource path="res://Recursos/Botões/voltarmenu_hover.png" type="Texture" id=4]
 [ext_resource path="res://Recursos/Objetos/apoio.png" type="Texture" id=5]
-
+[ext_resource path="res://Recursos/Planos de Fundo/Fundo_Inst_Voto.png" type="Texture" id=6]
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://Recursos/Fontes/Mukta-ExtraBold.ttf"
@@ -30,6 +29,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 3.0
+margin_bottom = 1.0
+texture = ExtResource( 6 )
+
 [node name="Voltar_menu" type="TextureButton" parent="."]
 pause_mode = 2
 margin_left = 408.0
@@ -37,11 +43,9 @@ margin_top = 547.0
 margin_right = 748.0
 margin_bottom = 618.0
 rect_scale = Vector2( 1.5, 1.5 )
-
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 3 )
 texture_hover = ExtResource( 4 )
-
 __meta__ = {
 "_edit_use_anchors_": false
 }

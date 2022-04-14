@@ -193,8 +193,12 @@ var NPC = {
 				"Half" : load("res://Recursos/Sprites/NPCs/Homem Branco/HB_Lado_Half_Hidden.png"),
 				"Quarter" : load("res://Recursos/Sprites/NPCs/Homem Branco/HB_Lado_Hidden_Quarter.png")
 				}
-			}
-		}, 
+			}, 
+		"Apoio" : {
+			"Sim" : load("res://Recursos/Sprites/NPCs/Homem Branco/HB_Apoio.png"), 
+			"Não" : load("res://Recursos/Sprites/NPCs/Homem Branco/HB_Napoio.png")
+		}
+	}, 
 	"Homem_Negro" : {
 		"Frente" : {
 			"Full" : load("res://Recursos/Sprites/NPCs/Homem Negro/HN_Frente_Full.png"),
@@ -207,8 +211,12 @@ var NPC = {
 				"Half" : load("res://Recursos/Sprites/NPCs/Homem Negro/HN_Lado_Half_Hidden.png"),
 				"Quarter" : load("res://Recursos/Sprites/NPCs/Homem Negro/HN_Lado_Hidden_Quarter.png")
 				}
-			}
-		}, 
+			}, 
+		"Apoio" : {
+			"Sim" : load("res://Recursos/Sprites/NPCs/Homem Negro/HN_Apoio.png"), 
+			"Não" : load("res://Recursos/Sprites/NPCs/Homem Negro/HN_Napoio.png")
+		}
+	}, 
 	"Mulher_Branca" : {
 		"Frente" : {
 			"Full" : load("res://Recursos/Sprites/NPCs/Mulher Branca/MB_Frente_Full.png"),
@@ -221,8 +229,12 @@ var NPC = {
 				"Half" : load("res://Recursos/Sprites/NPCs/Mulher Branca/MB_Lado_Half_Hidden.png"),
 				"Quarter" : load("res://Recursos/Sprites/NPCs/Mulher Branca/MB_Quarter_Hidden.png")
 				}
-			}
-		}, 
+			}, 
+		"Apoio" : {
+			"Sim" : load("res://Recursos/Sprites/NPCs/Mulher Branca/MB_Apoio.png"), 
+			"Não" : load("res://Recursos/Sprites/NPCs/Mulher Branca/MB_Napoio.png")
+		}
+	}, 
 	"Mulher_Negra" : {
 		"Frente" : {
 			"Full" : load("res://Recursos/Sprites/NPCs/Mulher Negra/MN_Frente_Full.png"),
@@ -235,9 +247,13 @@ var NPC = {
 				"Half" : load("res://Recursos/Sprites/NPCs/Mulher Negra/MN_Lado_Half_Hidden.png"),
 				"Quarter" : load("res://Recursos/Sprites/NPCs/Mulher Negra/MN_Lado_Quarter_Hidden.png")
 				}
-			}
+			}, 
+		"Apoio" : {
+			"Sim" : load("res://Recursos/Sprites/NPCs/Mulher Negra/MN_Apoio.png"), 
+			"Não" : load("res://Recursos/Sprites/NPCs/Mulher Negra/MN_Napoio.png")
 		}
 	}
+}
 
 var Presidente
 var Conselheiro
@@ -399,6 +415,7 @@ var detalhe_pec = {
 }
 
 var apoio 
+
 var tempo = {
 	"Meses" : {
 		0 : "Janeiro",
@@ -422,3 +439,18 @@ var tempo = {
 	}
 }
 
+var midia = {
+	0 : {
+		"Apoio" : {
+			"Site" : "noticias.com/presidente-revoluciona-brasil-co...", 
+			"Titulo" : "Presidente luta pelo voto impresso e seguro, garante mais segurança no processo eleitoral Brasileiro",
+			"Contexto" : "O presidente recentemente teve a brilhante idéia de introduzir o voto impresso, durante sua campanha...."
+		}, 
+		"Contra" : {
+			"Site" : "noticias.com/presidente-ameaça-brasil-com-P....", 
+			"Titulo" : "Seria este o fim da democracia? Presidente introduz PEC do Voto Impresso que facilita fraudes eleitorais.",
+			"Contexto" : "Recentemente, o atual presidente da república brasileira fez campanha para sua nova PEC do voto impresso, que representa grande ..."
+		}
+
+	}
+}

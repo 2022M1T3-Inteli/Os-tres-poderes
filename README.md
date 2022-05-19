@@ -39,18 +39,18 @@
 O jogo têm um foco principal em conteúdo educacional, buscando fazer os jovens aprender um pouco sobre política de forma simples e divertida, além de os instigarem a pesquisar e saber cada vez mais.   
 <br><br>
 
-## Estrutura de pastas
-
-» Raiz<br>
-|--> documentos<br>
-  &emsp;| antigos<br>
-  &emsp;| Modelo GDD v4.2 - Constituição na Escola - CF88.pdf<br>
-|--> executáveis<br> 
-  &emsp;|--> HTML<br>
-  &emsp;|--> Windows<br>
-|--> imagens<br>
-|--> src<br>
-  &emsp;| project01<br>
+## 🛠 Estrutura de pastas
+    
+- Raiz<br><br>
+| --> documentos<br>
+  &emsp;| --> antigos<br>
+  &emsp;|  Modelo GDD v4.2 - Constituição na Escola - CF88.pdf<br>
+| --> executáveis<br>
+  &emsp;| --> windows<br>
+  &emsp;| --> html<br>
+| --> imagens<br>
+| --> src<br>
+    &emsp;| --> project01<br>
 | readme.md<br>
 
 <br>
